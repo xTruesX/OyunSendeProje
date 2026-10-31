@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e525b435dff6f3df5bb509836d41dbde, type: 3}
+  m_Name: 30_Magara_YerYarildi
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Dialogue.DialogueAsset
+  lines:
+  - speaker: {fileID: 0}
+    text: "Birden ma\u011Faran\u0131n i\xE7indeki yer yar\u0131ld\u0131!"
+    duration: 0
+    setFlag: yarik_acildi
+  - speaker: {fileID: 0}
+    text: "Yar\u0131ktan k\u0131rm\u0131z\u0131, turuncu \u0131\u015F\u0131klar ve \xE7\u0131\u011Fl\u0131klar y\xFCkseliyordu."
+    duration: 0
+    setFlag: 
+  - speaker: {fileID: 11400000, guid: 1b85c12ef309323b2bffc83efae91dcb, type: 2}
+    text: "Bu ses... Bu \u0131\u015F\u0131k..."
+    duration: 0
+    setFlag: 
+  - speaker: {fileID: 0}
+    text: "B\xF6r\xFChan korkuyordu. Ama \xDClgen Han'\u0131 kurtarma iste\u011Fi ona cesaret verdi."
+    duration: 0
+    setFlag: 
+  - speaker: {fileID: 11400000, guid: 1b85c12ef309323b2bffc83efae91dcb, type: 2}
+    text: "Babam beni bekliyor. Geri d\xF6nmek yok."
+    duration: 0
+    setFlag: 

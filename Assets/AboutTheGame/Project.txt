@@ -1,0 +1,92 @@
+Geliştirici Dokümanı: Börühan
+
+1. Proje Kimlik Kartı
+Oyun Adı: Börühan: Yeraltının Katları (Çalışma Başlığı)
+
+Oyun Türü: Dark Fantasy Action-RPG / Hack & Slash (Metroidvania ögeleriyle)
+
+Kamera Açısı: Kuşbakışı (Undertale tarzı)
+
+Hedef Kitle: God of War, Hades, Nioh ve Black Myth: Wukong seven aksiyon/mitoloji meraklıları.
+
+Görsel Stil: Türk-Altay mitolojisinden beslenen stilize, karanlık ve atmosferik 2D grafikler.
+
+2. Oyunun Hikayesi ve Dünyası
+Evren ve Arka Plan
+Dünyanın ve göklerin dengesinin henüz kurulduğu kadim zamanlarda, karanlığın ve yer altının efendisi Erlik Han pusudaydı. Göklerin ve aydınlığın hakimi Ülgen Han yeryüzünü korurken, ulu tanrıların atası Kayra Han ise evrenin en yüksek katında tüm bu dengenin izleyicisiydi.
+
+Giriş (Masalsı Başlangıç ve Ülgen Han)
+Evvel zaman içinde, dondurucu bir kış gecesinde Ülgen Han karlar ortasında can çekişen yetim bir insan bebek bulur. Kıyamayıp onu göklerin ocağına taşır ve adını Börühan koyar. Börühan yıldızların sütüyle, rüzgarın fısıltısıyla ve demir tozuyla büyütülür; yarı-tanrısal bir kudrete erişir.
+
+İncitici Olay ve Kayra Han’ın Rolü
+Erlik Han, kıskançlıkla göklere saldırır. Ülgen Han’ı hileyle gafil avlayıp yeraltının dokuzuncu katındaki paslı demir kazıklara hapseder. Göklerin ışığı söner.
+
+Börühan, babasını kurtarmak için tek başına cehennemin kapısına dayandığında acı bir gerçekle yüzleşir: Erlik Han, sıradan bir ölümlünün kılıcını kırıp geçebilecek kadar güçlüdür. Börühan’ın kaba kuvveti onu alt etmeye yetmez.
+İşte tam bu noktada, evrenin ulu yaratıcısı Kayra Han devreye girer. Börühan, Kayra Han’ın ocağına başvurur. Kayra Han, delikanlının gözlerindeki o sarsılmaz sadakati ve intikam ateşini görür; ona kendi kudretinden bir kıvılcım (İlk Kut) bağışlar. Ancak Kayra Han uyarır: "Bu kıvılcım seni sadece korur; Erlik'i yenmek istiyorsan, yeraltının katlarında yendiğin her dehşetin özünü kendi ellerinle söküp almalısın."
+
+Böylece Börühan, yarı-tanrısal gücün ilk adımıyla birlikte yeraltının dokuz katına doğru inmeye başlar.
+
+3. Karakterler
+Börühan (Oyuncu / Ana Karakter): Ülgen Han tarafından büyütülen, Kayra Han’ın kutsadığı ve katları indikçe düşman güçlerini emerek büyüyen genç yarı-tanrı savaşçı.
+
+Ülgen Han (Korunan / Baba): Göklerin hakimi. Dokuzuncu katta zincirlenmiş durumdadır; Börühan’a zihinsel olarak rehberlik eder.
+
+Erlik Han (Ana Düşman / Final Boss): Yeraltının, ölümün ve karanlığın efendisi. Ülgen Han’ı hapsederek evrenin dengesini sarsmıştır.
+
+Kayra Han (Ulu Tanrı / Mentor): Evrenin yaratıcısı ve baş tanrısı. Hikayenin hemen başında Börühan’a ilk kıvılcımı veren ve ona güçlenme yolunu açan kadim varlık.
+
+4. Oynanış ve Temel Mekanikler (Core Gameplay)
+Dövüş Sistemi (Combat Mechanics)
+Kombat Hissi: Hızlı, hissi yüksek ve vurucu kombolar. Light Attack (Hızlı Kılıç) ve Heavy Attack (Ağır Balyoz/Savaş Baltası) kombinasyonları.
+
+Parry ve Dodge (Savuşturma ve Kaçınma): Doğru zamanlanmış savuşturmalar düşmanın dengesini bozar ve "Kut Yıkımı" bitirici vuruşlarını tetikler.
+
+Ana Fark Yaratan Mekanik: Kut Sömürüsü (Ability Absorption)
+Kayra Han’ın verdiği ilk kıvılcım bir "kap" görevi görür. Börühan yendiği her ana düşmanın ve kat muhafızının özünü (Kut) söküp alarak onların güçlerini doğrudan kendi kılıcına ve bedenine entegre eder:
+
+Yalanın İyesi'ni Yenince: Hakikat Gözü kazanılır (Gizli geçitleri ve düşman illüzyonlarını görme).
+
+Buz Devini Yenince: Kuru-Kut kazanılır (Kılıca dondurucu element hasarı ekler ve çevresel buz direnci sağlar).
+
+Tunç Orduyu Yenince: Ruhani Süvari çağırabilme yeteneği açılır.
+
+Kat Bazlı Seviye Tasarımı (Level Design & World Structure)
+Oyun, klasikliğin dışına çıkan 9 Farklı Cehennem Katından oluşur. Her kat tamamen farklı bir çevresel tema, bulmaca yapısı ve düşman ekolojisine sahiptir:
+
+1. Kat: Yalanlar ve Sırlar Çölü
+
+Tema: Milyonlarca kırık yalandan oluşan kristalize kum çölü.
+
+Oynanış: Oyuncu zihinsel illüzyonlarla ve yanılsama yaratan düşmanlarla savaşır. "Hakikat Nefesi" yeteneği ile doğru yolları bulur.
+
+3. Kat: Kam-Su (Katran ve Kızgın Bakır Nehirleri)
+
+Tema: Erimiş metallerin aktığı, platform öğelerinin yoğun olduğu kat.
+
+Oynanış: Sıcaklık direnci yönetimi ve nehirler üzerinde hareket etme bulmacaları.
+
+7. Kat: Kut Çeşmesi ve Kadim Sırlar
+
+Tema: Antik runik yazılarla kaplı, Börühan'ın güçlerinin zirveye ulaştığı alan.
+
+9. Kat: Erlik'in Tahtı
+
+Tema: Zifiri karanlık, devasa zincirler ve Ülgen Han'ın tutsak edildiği meydan.
+
+5. İlerleme Sistemi (Progression System)
+Rune & Skill Tree (Ata Ağacı): Kayra Han'dan aldığı özü ve yeraltında topladığı güçleri üç farklı daldan geliştirir:
+
+Gök Dalı (Ülgen Han'ın Mirası): Hız, yıldırım ve hava komboları.
+
+Yer Dalı (Yeraltı Özleri): Dayanıklılık, taş ve demir zırh yetenekleri.
+
+Ulu Öz (Kayra Han'ın Kıvılcımı): Çalınan düşman yeteneklerinin hasarını ve pasif buff'larını artıran nihai ağaç.
+
+Gear Customization (Ekipman): Yeraltında bulunan kadim demirlerle kılıç, kalkan ve zırh parçalarını dövme (crafting) imkanı.
+
+6. Neden Bu Oyun Yatırım Almalı? (USP - Unique Selling Points)
+Doygunluğa Ulaşmamış Kadim Mitoloji: İskandinav, Yunan ve Mısır mitolojisinin aksine, küresel pazarda henüz keşfedilmemiş çok zengin bir Türk-Altay Mitolojisi atmosferi sunar.
+
+Tanrısal Hiyerarşi ve Güçlenme Döngüsü: Kayra Han'a başvurma, ondan alınan yetersiz kıvılcımı yeraltındaki düşmanları avlayarak büyütme mekaniği (Risk/Reward döngüsü) oynanışa derinlik katar.
+
+Modüler Dövüş Esnekliği: Düşman güçlerini emme mekaniği sayesinde oyuncular kendi oynanış tarzlarına (Build) göre dinamik bir dövüş deneyimi yaşar.

@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e525b435dff6f3df5bb509836d41dbde, type: 3}
+  m_Name: 21_Gok_KayraHan
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Dialogue.DialogueAsset
+  lines:
+  - speaker: {fileID: 0}
+    text: "B\xF6r\xFChan ona her \u015Feyi anlatmak istiyordu, ama Kayra Han zaten her \u015Feyi biliyordu."
+    duration: 0
+    setFlag: 
+  - speaker: {fileID: 11400000, guid: 215f383d1c9ec4cb4ae02aae97f6954d, type: 2}
+    text: "Seni yukar\u0131dan izledim, evlat. \xC7ok zor zamanlar ge\xE7iriyorsun."
+    duration: 0
+    setFlag: 
+  - speaker: {fileID: 11400000, guid: 215f383d1c9ec4cb4ae02aae97f6954d, type: 2}
+    text: "S\xF6yle bakal\u0131m, nedir benden istedi\u011Fin?"
+    duration: 0
+    setFlag: 
+  - speaker: {fileID: 11400000, guid: 1b85c12ef309323b2bffc83efae91dcb, type: 2}
+    text: "Ulu Kayra Han... Yeterince g\xFC\xE7l\xFC de\u011Filim. \xDClgen Han'a nas\u0131l ula\u015Faca\u011F\u0131m\u0131 da bilmiyorum."
+    duration: 0
+    setFlag: 
+  - speaker: {fileID: 11400000, guid: 215f383d1c9ec4cb4ae02aae97f6954d, type: 2}
+    text: "\xD6yleyse sana g\xFCc\xFCmden bir par\xE7a vereyim. Bir k\u0131v\u0131lc\u0131m..."
+    duration: 0
+    setFlag: 
+  - speaker: {fileID: 0}
+    text: "B\xF6r\xFChan'\u0131n k\u0131l\u0131c\u0131 alev ald\u0131, g\xF6zleri k\u0131z\u0131la d\xF6nd\xFC. \u0130\xE7inde bir g\xFC\xE7 kabard\u0131\u011F\u0131n\u0131 hissetti."
+    duration: 0
+    setFlag: kut_kivilcimi
+  - speaker: {fileID: 11400000, guid: 215f383d1c9ec4cb4ae02aae97f6954d, type: 2}
+    text: "Bu k\u0131v\u0131lc\u0131m seni yaln\u0131zca korur. Erlik'i yenmek istiyorsan, yeralt\u0131n\u0131n katlar\u0131nda yendi\u011Fin her deh\u015Fetin \xF6z\xFCn\xFC kendi ellerinle s\xF6k\xFCp almal\u0131s\u0131n."
+    duration: 0
+    setFlag: 
+  - speaker: {fileID: 11400000, guid: 215f383d1c9ec4cb4ae02aae97f6954d, type: 2}
+    text: "Karanl\u0131ktan da karanl\u0131k bir ma\u011Farada, arad\u0131\u011F\u0131n yeri bulacaks\u0131n."
+    duration: 0
+    setFlag: 
+  - speaker: {fileID: 11400000, guid: 1b85c12ef309323b2bffc83efae91dcb, type: 2}
+    text: "Sa\u011F ol, Ulu Han. Babam\u0131 geri getirece\u011Fim."
+    duration: 0
+    setFlag: 

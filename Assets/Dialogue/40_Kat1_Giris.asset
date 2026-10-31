@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e525b435dff6f3df5bb509836d41dbde, type: 3}
+  m_Name: 40_Kat1_Giris
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Dialogue.DialogueAsset
+  lines:
+  - speaker: {fileID: 0}
+    text: "Yar\u0131k, B\xF6r\xFChan'\u0131n arkas\u0131ndan kapand\u0131."
+    duration: 0
+    setFlag: 
+  - speaker: {fileID: 0}
+    text: "Cehennemin ilk kat\u0131ndayd\u0131: Yalanlar ve S\u0131rlar \xC7\xF6l\xFC."
+    duration: 0
+    setFlag: 
+  - speaker: {fileID: 0}
+    text: "Buras\u0131, yery\xFCz\xFCndeyken birbirine ihanet etmi\u015F, dostunu s\u0131rt\u0131ndan vurmu\u015F ya da s\u0131r saklay\u0131p g\xFCveni zedelemi\u015F ruhlar\u0131n cezaland\u0131r\u0131ld\u0131\u011F\u0131 yerdi."
+    duration: 0
+    setFlag: 
+  - speaker: {fileID: 0}
+    text: "\xC7\xF6l\xFCn r\xFCzg\xE2r\u0131, insan\u0131n kula\u011F\u0131na en g\xFCvendi\u011Fi ki\u015Filerin sesleriyle f\u0131s\u0131ldar; yalanlar\u0131, iftiralar\u0131 ve \u015F\xFCpheyi b\xFCy\xFCterek kalbi kurutur."
+    duration: 0
+    setFlag: 
+  - speaker: {fileID: 11400000, guid: 84ebdd9607b946e368d16726ebe1701c, type: 2}
+    text: "\xDClgen Han seni ger\xE7ekten evlad\u0131 olarak m\u0131 sevdi... yoksa seni kendi b\xFCy\xFCk plan\u0131 i\xE7in bir ara\xE7 m\u0131 yapt\u0131?"
+    duration: 0
+    setFlag: 
+  - speaker: {fileID: 11400000, guid: 84ebdd9607b946e368d16726ebe1701c, type: 2}
+    text: "Ya bir g\xFCn seni y\xFCz\xFCst\xFC b\u0131rak\u0131rsa?"
+    duration: 0
+    setFlag: 
+  - speaker: {fileID: 11400000, guid: 1b85c12ef309323b2bffc83efae91dcb, type: 2}
+    text: "Susun... Onu tan\u0131yorum. Sizi dinlemeyece\u011Fim."
+    duration: 0
+    setFlag: 

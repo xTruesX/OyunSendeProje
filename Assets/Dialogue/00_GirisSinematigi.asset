@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e525b435dff6f3df5bb509836d41dbde, type: 3}
+  m_Name: 00_GirisSinematigi
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Dialogue.DialogueAsset
+  lines:
+  - speaker: {fileID: 0}
+    text: "Evvel zaman i\xE7inde, kalbur saman i\xE7inde..."
+    duration: 0
+    setFlag: 
+  - speaker: {fileID: 0}
+    text: "So\u011Fuk bir k\u0131\u015F gecesinde \xDClgen Han yery\xFCz\xFCn\xFC seyrederken, yeni do\u011Fmu\u015F ve donmak \xFCzere olan bir insan bebe\u011Fi g\xF6rd\xFC."
+    duration: 0
+    setFlag: 
+  - speaker: {fileID: 0}
+    text: "Ona k\u0131yamad\u0131 ve onu kendi himayesi alt\u0131na ald\u0131. O bebe\u011Fin ad\u0131 B\xF6r\xFChan'd\u0131."
+    duration: 0
+    setFlag: 
+  - speaker: {fileID: 0}
+    text: "G\xF6klerin oca\u011F\u0131nda, y\u0131ld\u0131zlar\u0131n diliyle b\xFCy\xFCt\xFCld\xFC; demir tozuyla biledi bileklerini, r\xFCzg\xE2r\u0131n f\u0131s\u0131lt\u0131s\u0131yla ku\u015Fand\u0131 ruhunu."
+    duration: 0
+    setFlag: 
+  - speaker: {fileID: 0}
+    text: "Fakat yeralt\u0131n\u0131n efendisi Erlik Han, k\u0131skan\xE7l\u0131\u011F\u0131 ve nefretiyle bir tuzak kurarak \xDClgen Han'\u0131 gafil avlad\u0131."
+    duration: 0
+    setFlag: 
+  - speaker: {fileID: 0}
+    text: "G\xF6klerin nuru s\xF6n\xFCp \xDClgen Han yeralt\u0131n\u0131n dokuzuncu kat\u0131ndaki pasl\u0131 demir kaz\u0131klara mahk\xFBm edildi\u011Finde..."
+    duration: 0
+    setFlag: 
+  - speaker: {fileID: 0}
+    text: "...B\xF6r\xFChan i\xE7in art\u0131k \xE7ocukluk \xE7ok geride kalm\u0131\u015Ft\u0131."
+    duration: 0
+    setFlag: 
