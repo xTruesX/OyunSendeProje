@@ -35,5 +35,8 @@ namespace Boruhan.Story
 
             GameSession.TravelTo(targetScene, targetSpawn);
         }
+
+        void OnDrawGizmos() =>
+            ZoneGizmo.Draw(this, new Color(0.3f, 1f, 0.45f), $"Kapı → {targetScene}" + (string.IsNullOrEmpty(targetSpawn) ? "" : $" ({targetSpawn})"));
     }
 }

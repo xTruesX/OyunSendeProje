@@ -27,11 +27,11 @@ namespace Boruhan.EditorTools
     /// </summary>
     public static class PrologueBuilder
     {
-        const string ArtDir = "Assets/Art/Placeholder";
+        internal const string ArtDir = "Assets/Art/Placeholder";
         const string DialogueDir = "Assets/Dialogue";
         const string SpeakerDir = "Assets/Dialogue/Konusmacilar";
         const string PrefabDir = "Assets/Prefabs";
-        const string SceneDir = "Assets/Scenes";
+        internal const string SceneDir = "Assets/Scenes";
         const string VideoDir = "Assets/StreamingAssets/Videolar";
         const string IntroVideoFile = "giris_sinematigi.mp4";
         public const string SkipHintText = "Atlamak için Enter / Boşluk / Tıkla";
@@ -44,19 +44,19 @@ namespace Boruhan.EditorTools
         static Font titleFont;
         static Scene previousActive;
 
-        enum Shape { Box, Circle, Tile, Steps, Figure }
+        internal enum Shape { Box, Circle, Tile, Steps, Figure, Mountain }
 
         [MenuItem("Börühan/Prolog Sahnelerini Oluştur")]
         public static void Build()
         {
-            uiFont = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
-            titleFont = AssetDatabase.LoadAssetAtPath<Font>("Assets/Font/CinzelDecorative-Bold.ttf") ?? uiFont;
+            EnsureFonts();
 
             foreach (var dir in new[] { ArtDir, DialogueDir, SpeakerDir, PrefabDir, SceneDir, VideoDir })
                 Directory.CreateDirectory(dir);
 
             ConfigureYSorting();
             CreateEmptyVideoFile();
+            MapKit.EnsureAssets();
 
             var speakers = CreateSpeakers();
             var dialogues = CreateDialogues(speakers);
@@ -76,6 +76,14 @@ namespace Boruhan.EditorTools
             Debug.Log(created.Count > 0
                 ? $"[Börühan] Oluşturulan sahneler: {string.Join(", ", created)}"
                 : "[Börühan] Tüm sahneler zaten var; yeniden oluşturmak için sahne dosyasını silin.");
+        }
+
+        static void EnsureFonts()
+        {
+            if (uiFont == null)
+                uiFont = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
+            if (titleFont == null)
+                titleFont = AssetDatabase.LoadAssetAtPath<Font>("Assets/Font/CinzelDecorative-Bold.ttf") ?? uiFont;
         }
 
         // ================= Project setup =================
@@ -122,9 +130,14 @@ namespace Boruhan.EditorTools
         // ================= Placeholder art =================
 
         /// <summary>Creates a placeholder PNG if missing. Replace the PNG with real art and every use updates.</summary>
-        static Sprite Art(string name, int width, int height, Color color, Shape shape, bool bottomPivot = true)
+        internal static Sprite Art(string name, int width, int height, Color color, Shape shape, bool bottomPivot = true) =>
+            Art(ArtDir, name, width, height, color, shape, bottomPivot ? new Vector2(0.5f, 0f) : new Vector2(0.5f, 0.5f));
+
+        /// <summary>Same as above, in any folder and with an exact pivot (0-1). Tall tiles use this to stand on their cell.</summary>
+        internal static Sprite Art(string folder, string name, int width, int height, Color color, Shape shape, Vector2 pivot)
         {
-            var path = $"{ArtDir}/{name}.png";
+            Directory.CreateDirectory(folder);
+            var path = $"{folder}/{name}.png";
             if (!File.Exists(path))
             {
                 var tex = new Texture2D(width, height, TextureFormat.RGBA32, false);
@@ -143,7 +156,8 @@ namespace Boruhan.EditorTools
 
                 var settings = new TextureImporterSettings();
                 importer.ReadTextureSettings(settings);
-                settings.spriteAlignment = (int)(bottomPivot ? SpriteAlignment.BottomCenter : SpriteAlignment.Center);
+                settings.spriteAlignment = (int)SpriteAlignment.Custom;
+                settings.spritePivot = pivot;
                 settings.spriteMeshType = SpriteMeshType.FullRect;
                 settings.wrapMode = shape == Shape.Tile ? TextureWrapMode.Repeat : TextureWrapMode.Clamp;
                 importer.SetTextureSettings(settings);
@@ -181,6 +195,13 @@ namespace Boruhan.EditorTools
                     case Shape.Steps:
                         bool side = x < 2 || x >= w - 2;
                         c = side ? dark : (y / 4) % 2 == 0 ? color : Color.Lerp(color, Color.white, 0.25f);
+                        break;
+                    case Shape.Mountain:
+                        // Triangle peak with a snowy top third.
+                        float half = (w / 2f) * (1f - (float)y / h);
+                        float dx = Mathf.Abs(x + 0.5f - w / 2f);
+                        if (dx <= half)
+                            c = y > h * 0.66f ? new Color32(235, 238, 245, 255) : dx > half - 1f ? dark : color;
                         break;
                     case Shape.Figure:
                         // Body on the bottom 65%, a lighter head on top.
@@ -350,12 +371,12 @@ namespace Boruhan.EditorTools
 
         // ================= Prefabs =================
 
-        class Prefabs
+        internal class Prefabs
         {
             public GameObject player, hud, dialogueBox;
         }
 
-        static Prefabs CreatePrefabs()
+        internal static Prefabs CreatePrefabs()
         {
             var prefabs = new Prefabs
             {
@@ -367,6 +388,7 @@ namespace Boruhan.EditorTools
                 return prefabs;
 
             // Build in a throwaway scene so the user's open scenes are untouched.
+            EnsureFonts();
             var temp = BeginScene();
             if (prefabs.player == null)
                 prefabs.player = SavePrefab(BuildPlayer(), "Boruhan");
@@ -590,6 +612,7 @@ namespace Boruhan.EditorTools
             SkipHint(canvas.transform);
 
             Instantiate(p.dialogueBox);
+            MapKit.AddSceneMusic(MapKit.GetTrack("Sinematik"));
 
             var cutscene = new GameObject("Sinematik").AddComponent<CutscenePlayer>();
             Set(cutscene, "videoPlayer", video);
@@ -607,6 +630,7 @@ namespace Boruhan.EditorTools
             var ctx = GameplayScene(p, "Otağ", area, new Vector2(-3.5f, 0.5f), new Color(0.04f, 0.03f, 0.03f), 0.35f, new Color(1f, 0.85f, 0.7f), 5f);
 
             Floor(ctx.world, "Zemin", Art("Otag_Zemin", 16, 16, new Color32(110, 45, 40, 255), Shape.Tile), area);
+            MapKit.AddSceneMusic(MapKit.GetTrack("Otag"));
             var wall = Floor(ctx.world, "UstDuvar", Art("Otag_Duvar", 16, 16, new Color32(120, 90, 60, 255), Shape.Tile), new Rect(area.xMin, area.yMax, area.width, 2.5f));
             wall.GetComponent<SpriteRenderer>().sortingOrder = -90;
 
@@ -642,8 +666,9 @@ namespace Boruhan.EditorTools
             var area = new Rect(-32f, -22f, 64f, 44f);
             var ctx = GameplayScene(p, "Bozkır", area, new Vector2(0f, -14f), new Color(0.02f, 0.03f, 0.07f), 0.5f, new Color(0.7f, 0.78f, 1f), 6f);
 
-            Floor(ctx.world, "Zemin", Art("Bozkir_Kar", 16, 16, new Color32(170, 180, 200, 255), Shape.Tile), area);
+            MapKit.CreateRoomMap(area, MapKit.GetTheme("Bozkir"), ctx.camera);
             RoomBounds(ctx.world, area);
+            MapKit.AddSceneMusic(MapKit.GetTrack("Bozkir"));
 
             // Yurt (exterior)
             Prop(ctx.world, "Otag", Art("Otag_Dis", 64, 48, new Color32(200, 180, 150, 255), Shape.Box), new Vector2(0f, -12f), 1.6f);
@@ -714,6 +739,7 @@ namespace Boruhan.EditorTools
 
             Floor(ctx.world, "Zemin", Art("Bulut_Zemin", 16, 16, new Color32(225, 225, 240, 255), Shape.Tile), area);
             RoomBounds(ctx.world, area);
+            MapKit.AddSceneMusic(MapKit.GetTrack("Gok"));
 
             var cloud = Art("Bulut", 48, 24, new Color32(245, 245, 255, 255), Shape.Box);
             foreach (var pos in new[] { new Vector2(-7f, 3f), new Vector2(7f, 2f), new Vector2(-6f, -3f), new Vector2(6.5f, -4f) })
@@ -736,8 +762,9 @@ namespace Boruhan.EditorTools
             var area = new Rect(-5f, -15f, 10f, 30f);
             var ctx = GameplayScene(p, "Karanlık Mağara", area, new Vector2(0f, -12.5f), Color.black, 0.08f, new Color(0.6f, 0.6f, 0.8f), 5f);
 
-            Floor(ctx.world, "Zemin", Art("Magara_Zemin", 16, 16, new Color32(55, 45, 40, 255), Shape.Tile), area);
+            MapKit.CreateRoomMap(area, MapKit.GetTheme("Magara"), ctx.camera);
             RoomBounds(ctx.world, area);
+            MapKit.AddSceneMusic(MapKit.GetTrack("Magara"));
 
             var stalagmite = Art("Sarkit", 12, 20, new Color32(80, 70, 65, 255), Shape.Box);
             var positions = new[] { new Vector2(-4f, -9f), new Vector2(3.8f, -6f), new Vector2(-3.5f, -1f), new Vector2(4f, 3f), new Vector2(-4.2f, 7f), new Vector2(3.5f, 11f), new Vector2(-3f, 12.5f), new Vector2(2.5f, -11f) };
@@ -773,6 +800,7 @@ namespace Boruhan.EditorTools
             SkipHint(canvas.transform);
 
             Instantiate(p.dialogueBox);
+            MapKit.AddSceneMusic(MapKit.GetTrack("Kat1"));
 
             var cutscene = new GameObject("Sinematik").AddComponent<CutscenePlayer>();
             Set(cutscene, "subtitles", d.floor1);
@@ -786,14 +814,14 @@ namespace Boruhan.EditorTools
 
         // ================= Scene building helpers =================
 
-        class GameplayContext
+        internal class GameplayContext
         {
             public Transform world;
             public PlayerController player;
             public CameraFollow camera;
         }
 
-        static GameplayContext GameplayScene(Prefabs p, string location, Rect area, Vector2 defaultSpawn, Color background, float lightIntensity, Color lightColor, float cameraSize)
+        internal static GameplayContext GameplayScene(Prefabs p, string location, Rect area, Vector2 defaultSpawn, Color background, float lightIntensity, Color lightColor, float cameraSize)
         {
             var light = new GameObject("GlobalIsik").AddComponent<Light2D>();
             light.lightType = Light2D.LightType.Global;
@@ -827,9 +855,9 @@ namespace Boruhan.EditorTools
             return new GameplayContext { world = world, player = player, camera = follow };
         }
 
-        static GameObject Instantiate(GameObject prefab) => (GameObject)PrefabUtility.InstantiatePrefab(prefab, SceneManager.GetActiveScene());
+        internal static GameObject Instantiate(GameObject prefab) => (GameObject)PrefabUtility.InstantiatePrefab(prefab, SceneManager.GetActiveScene());
 
-        static GameObject SpriteObject(Transform parent, string name, Sprite sprite, Vector2 localPosition, int order)
+        internal static GameObject SpriteObject(Transform parent, string name, Sprite sprite, Vector2 localPosition, int order)
         {
             var go = new GameObject(name);
             go.transform.SetParent(parent, false);
@@ -841,7 +869,7 @@ namespace Boruhan.EditorTools
         }
 
         /// <summary>A standing object, y-sorted by its base, with a collider covering its footprint.</summary>
-        static GameObject Prop(Transform parent, string name, Sprite sprite, Vector2 position, float footprintHeight, float footprintWidthScale = 0.9f)
+        internal static GameObject Prop(Transform parent, string name, Sprite sprite, Vector2 position, float footprintHeight, float footprintWidthScale = 0.9f)
         {
             var go = SpriteObject(parent, name, sprite, Vector2.zero, 0);
             go.transform.position = position;
@@ -868,7 +896,7 @@ namespace Boruhan.EditorTools
             return go;
         }
 
-        static void Wall(Transform parent, string name, Rect r)
+        internal static void Wall(Transform parent, string name, Rect r)
         {
             var go = new GameObject(name);
             go.transform.SetParent(parent, false);
@@ -876,7 +904,7 @@ namespace Boruhan.EditorTools
             go.AddComponent<BoxCollider2D>().size = r.size;
         }
 
-        static void RoomBounds(Transform parent, Rect a)
+        internal static void RoomBounds(Transform parent, Rect a)
         {
             Wall(parent, "SinirSol", new Rect(a.xMin - 1f, a.yMin - 1f, 1f, a.height + 2f));
             Wall(parent, "SinirSag", new Rect(a.xMax, a.yMin - 1f, 1f, a.height + 2f));
@@ -884,15 +912,16 @@ namespace Boruhan.EditorTools
             Wall(parent, "SinirUst", new Rect(a.xMin, a.yMax, a.width, 1f));
         }
 
-        static void Spawn(Transform parent, string id, Vector2 position)
+        internal static GameObject Spawn(Transform parent, string id, Vector2 position)
         {
             var go = new GameObject($"Baslangic_{id}");
             go.transform.SetParent(parent, false);
             go.transform.position = position;
             go.AddComponent<SpawnPoint>().id = id;
+            return go;
         }
 
-        static void Door(Transform parent, string name, Vector2 position, Vector2 size, string scene, string spawn, string requiredFlag = null, DialogueAsset locked = null)
+        internal static GameObject Door(Transform parent, string name, Vector2 position, Vector2 size, string scene, string spawn, string requiredFlag = null, DialogueAsset locked = null)
         {
             var go = new GameObject(name);
             go.transform.SetParent(parent, false);
@@ -905,9 +934,10 @@ namespace Boruhan.EditorTools
             Set(door, "targetSpawn", spawn);
             Set(door, "requiredFlag", requiredFlag ?? "");
             Set(door, "lockedDialogue", locked);
+            return go;
         }
 
-        static StoryTrigger Trigger(Transform parent, string name, Vector2 position, Vector2 size, DialogueAsset dialogue, string requiredFlag, string onceFlag)
+        internal static StoryTrigger Trigger(Transform parent, string name, Vector2 position, Vector2 size, DialogueAsset dialogue, string requiredFlag, string onceFlag)
         {
             var go = new GameObject(name);
             go.transform.SetParent(parent, false);
@@ -922,7 +952,7 @@ namespace Boruhan.EditorTools
             return trigger;
         }
 
-        static void StartTrigger(Transform parent, string name, DialogueAsset dialogue, string requiredFlag, string onceFlag)
+        internal static void StartTrigger(Transform parent, string name, DialogueAsset dialogue, string requiredFlag, string onceFlag)
         {
             var go = new GameObject(name);
             go.transform.SetParent(parent, false);
@@ -933,7 +963,7 @@ namespace Boruhan.EditorTools
             Set(trigger, "onceFlag", onceFlag ?? "");
         }
 
-        static void Interact(GameObject go, string prompt, DialogueAsset dialogue, string completedFlag = null, DialogueAsset repeat = null)
+        internal static void Interact(GameObject go, string prompt, DialogueAsset dialogue, string completedFlag = null, DialogueAsset repeat = null)
         {
             var interactable = go.AddComponent<Interactable>();
             Set(interactable, "prompt", prompt);
@@ -942,7 +972,7 @@ namespace Boruhan.EditorTools
             Set(interactable, "repeatDialogue", repeat);
         }
 
-        static void Activator(Transform parent, string name, string flag, bool activeWhenSet, params GameObject[] targets)
+        internal static void Activator(Transform parent, string name, string flag, bool activeWhenSet, params GameObject[] targets)
         {
             var go = new GameObject(name);
             go.transform.SetParent(parent, false);
@@ -952,7 +982,7 @@ namespace Boruhan.EditorTools
             SetArray(activator, "targets", targets);
         }
 
-        static void PointLight(Light2D light, Color color, float intensity, float radius)
+        internal static void PointLight(Light2D light, Color color, float intensity, float radius)
         {
             light.lightType = Light2D.LightType.Point;
             light.color = color;
@@ -961,7 +991,7 @@ namespace Boruhan.EditorTools
             light.pointLightInnerRadius = radius * 0.15f;
         }
 
-        static Camera CreateCamera(float size, Color background)
+        internal static Camera CreateCamera(float size, Color background)
         {
             var go = new GameObject("Main Camera") { tag = "MainCamera" };
             go.transform.position = new Vector3(0f, 0f, -10f);
@@ -973,7 +1003,7 @@ namespace Boruhan.EditorTools
             return cam;
         }
 
-        static Scene BeginScene()
+        internal static Scene BeginScene()
         {
             previousActive = SceneManager.GetActiveScene();
             var scene = EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Additive);
@@ -981,7 +1011,7 @@ namespace Boruhan.EditorTools
             return scene;
         }
 
-        static void CloseScene(Scene scene)
+        internal static void CloseScene(Scene scene)
         {
             if (previousActive.IsValid())
                 SceneManager.SetActiveScene(previousActive);
@@ -1084,7 +1114,7 @@ namespace Boruhan.EditorTools
 
         // ================= Serialized field helpers =================
 
-        static void Set(Object target, string field, object value)
+        internal static void Set(Object target, string field, object value)
         {
             var so = new SerializedObject(target);
             var prop = so.FindProperty(field);
@@ -1107,7 +1137,7 @@ namespace Boruhan.EditorTools
             so.ApplyModifiedPropertiesWithoutUndo();
         }
 
-        static void SetArray(Object target, string field, params GameObject[] values)
+        internal static void SetArray(Object target, string field, params GameObject[] values)
         {
             var so = new SerializedObject(target);
             var prop = so.FindProperty(field);

@@ -58,6 +58,12 @@ namespace Boruhan.Story
             });
         }
 
+        void OnDrawGizmos()
+        {
+            if (!playOnStart)
+                ZoneGizmo.Draw(this, new Color(1f, 0.85f, 0.2f), $"Hikaye: {(dialogue != null ? dialogue.name : "(diyalog yok)")}");
+        }
+
         bool CanPlay()
         {
             if (!string.IsNullOrEmpty(requiredFlag) && !GameSession.HasFlag(requiredFlag))

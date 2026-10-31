@@ -11,6 +11,9 @@ namespace Boruhan.Story
         {
             Gizmos.color = Color.cyan;
             Gizmos.DrawWireSphere(transform.position, 0.3f);
+#if UNITY_EDITOR
+            UnityEditor.Handles.Label(transform.position + Vector3.up * 0.6f, $"Varış: {id}");
+#endif
         }
     }
 }
