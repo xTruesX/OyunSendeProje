@@ -199,6 +199,8 @@ MonoBehaviour:
   targetSpawn: kapi
   requiredFlag: 
   lockedDialogue: {fileID: 0}
+  lockedTargetScene: 
+  lockedTargetSpawn: 
 --- !u!61 &97845891
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -386,6 +388,8 @@ MonoBehaviour:
   targetSpawn: merdiven_ust
   requiredFlag: 
   lockedDialogue: {fileID: 0}
+  lockedTargetScene: 
+  lockedTargetSpawn: 
 --- !u!61 &142705892
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -46899,6 +46903,8 @@ MonoBehaviour:
   targetSpawn: giris
   requiredFlag: kut_kivilcimi
   lockedDialogue: {fileID: 11400000, guid: f7ff3ccdd003044f395130131a749f84, type: 2}
+  lockedTargetScene: SavasOdasi
+  lockedTargetSpawn: giris
 --- !u!61 &1431720933
 BoxCollider2D:
   m_ObjectHideFlags: 0

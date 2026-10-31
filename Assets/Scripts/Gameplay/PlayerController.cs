@@ -18,6 +18,15 @@ namespace Boruhan.Gameplay
         Vector2 moveInput;
 
         public bool InputEnabled { get; set; } = true;
+        /// <summary>Scales walking speed, e.g. while swinging the sword.</summary>
+        public float SpeedMultiplier { get; set; } = 1f;
+        public Vector2 MoveInput => moveInput;
+        public bool IsSlowed => Time.time < slowUntil;
+
+        Vector2 forcedVelocity;
+        float forcedUntil;
+        float slowMultiplier = 1f;
+        float slowUntil;
         public Vector2 Facing { get; private set; } = Vector2.down;
 
         /// <summary>Last non-zero movement direction (8-way, normalized). Used by the talisman.</summary>
@@ -56,11 +65,31 @@ namespace Boruhan.Gameplay
 
         void FixedUpdate()
         {
-            body.linearVelocity = moveInput * moveSpeed;
+            if (Time.time < forcedUntil)
+                body.linearVelocity = forcedVelocity;
+            else
+                body.linearVelocity = moveInput * moveSpeed * SpeedMultiplier * (IsSlowed ? slowMultiplier : 1f);
+        }
+
+        /// <summary>Moves at a fixed velocity for a moment, ignoring input (dodge, knockback, sword lunge).</summary>
+        public void ForceVelocity(Vector2 velocity, float seconds)
+        {
+            forcedVelocity = velocity;
+            forcedUntil = Time.time + seconds;
+        }
+
+        /// <summary>Slows walking (e.g. the Korku curse). The stronger slow wins if two overlap.</summary>
+        public void ApplySlow(float multiplier, float seconds)
+        {
+            slowMultiplier = IsSlowed ? Mathf.Min(slowMultiplier, multiplier) : multiplier;
+            slowUntil = Mathf.Max(slowUntil, Time.time + seconds);
         }
 
         public void Teleport(Vector2 position)
         {
+            // RoomManager may place the player before this object's Awake has run.
+            if (body == null)
+                body = GetComponent<Rigidbody2D>();
             body.position = position;
             body.linearVelocity = Vector2.zero;
             transform.position = position;

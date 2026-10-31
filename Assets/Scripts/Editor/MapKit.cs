@@ -70,6 +70,14 @@ namespace Boruhan.EditorTools
                 ("BulutDuvari", 16, 16, new Color32(245, 245, 255, 255), Shape.Tile, true, false),
                 ("BulutKulesi", 32, 40, new Color32(250, 250, 255, 255), Shape.Box, true, true));
 
+            CreateSet("Col",
+                ("KristalKum", 16, 16, new Color32(200, 172, 125, 255), Shape.Tile, false, false),
+                ("KristalKum2", 16, 16, new Color32(186, 158, 112, 255), Shape.Tile, false, false),
+                ("KirikKristal", 16, 16, new Color32(170, 230, 255, 255), Shape.Circle, false, false),
+                ("KumTepesi", 16, 16, new Color32(150, 120, 82, 255), Shape.Tile, true, false),
+                ("KumTepesiZirve", 32, 40, new Color32(172, 140, 96, 255), Shape.Mountain, true, true),
+                ("KristalSutun", 16, 36, new Color32(160, 220, 240, 255), Shape.Box, true, true));
+
             CreateSet("IcMekan",
                 ("Kece", 16, 16, new Color32(110, 45, 40, 255), Shape.Tile, false, false),
                 ("Tahta", 16, 16, new Color32(130, 95, 60, 255), Shape.Tile, false, false),
@@ -208,6 +216,9 @@ namespace Boruhan.EditorTools
             Theme("Gok", GetTile("Gok", "Bulut"), GetTile("Gok", "BulutDuvari"),
                 new TileBase[] { GetTile("Gok", "BulutKulesi") }, 3,
                 new Color(0.16f, 0.18f, 0.32f), new Color(1f, 0.97f, 0.9f), 1f, 5f, GetTrack("Gok"));
+            Theme("Col", GetTile("Col", "KristalKum"), GetTile("Col", "KumTepesi"),
+                new TileBase[] { GetTile("Col", "KumTepesiZirve"), GetTile("Col", "KristalSutun") }, 4,
+                new Color(0.08f, 0.06f, 0.05f), new Color(1f, 0.9f, 0.75f), 0.85f, 6f, GetTrack("Kat1"));
             Theme("IcMekan", GetTile("IcMekan", "Kece"), GetTile("IcMekan", "Duvar"),
                 new TileBase[0], 2,
                 new Color(0.04f, 0.03f, 0.03f), new Color(1f, 0.85f, 0.7f), 0.5f, 5f, GetTrack("Otag"));

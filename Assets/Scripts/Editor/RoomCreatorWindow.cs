@@ -1,6 +1,7 @@
 using System.IO;
 using System.Linq;
 using Boruhan.Audio;
+using Boruhan.Combat;
 using Boruhan.Dialogue;
 using Boruhan.Map;
 using Boruhan.Story;
@@ -28,6 +29,7 @@ namespace Boruhan.EditorTools
         string doorSpawn = "giris";
         string spawnId = "yeni_varis";
         MusicTrack music;
+        EnemyDefinition enemy;
 
         Vector2 scroll;
 
@@ -101,6 +103,17 @@ namespace Boruhan.EditorTools
                 music = (MusicTrack)EditorGUILayout.ObjectField("Müzik", music, typeof(MusicTrack), false);
                 if (GUILayout.Button("Sahne Müziği Ayarla", GUILayout.Width(140)))
                     SetMusic();
+            }
+
+            EditorGUILayout.Space();
+            using (new EditorGUILayout.HorizontalScope())
+            {
+                enemy = (EnemyDefinition)EditorGUILayout.ObjectField(new GUIContent("Düşman", "Assets/Combat/Dusmanlar"), enemy, typeof(EnemyDefinition), false);
+                using (new EditorGUI.DisabledScope(enemy == null))
+                {
+                    if (GUILayout.Button("Düşman Ekle", GUILayout.Width(140)))
+                        Created(CombatKit.PlaceEnemy(enemy, PlacePoint(), Parent()), "Düşman");
+                }
             }
 
             Header("3. Haritayı Boya");

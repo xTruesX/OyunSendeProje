@@ -17,13 +17,17 @@ namespace Boruhan.Story
         [SerializeField] string requiredFlag;
         [Tooltip("Shown when the door is still locked.")]
         [SerializeField] DialogueAsset lockedDialogue;
+        [Tooltip("Optional: while locked, lead here instead of showing the locked dialogue.")]
+        [SerializeField] string lockedTargetScene;
+        [SerializeField] string lockedTargetSpawn;
 
         void OnTriggerEnter2D(Collider2D other)
         {
             if (!other.CompareTag("Player") || DialogueRunner.IsBusy || ScreenFader.IsBusy)
                 return;
 
-            if (!string.IsNullOrEmpty(requiredFlag) && !GameSession.HasFlag(requiredFlag))
+            bool locked = !string.IsNullOrEmpty(requiredFlag) && !GameSession.HasFlag(requiredFlag);
+            if (locked && string.IsNullOrEmpty(lockedTargetScene))
             {
                 DialogueRunner.Play(lockedDialogue);
                 return;
@@ -33,10 +37,14 @@ namespace Boruhan.Story
             if (player != null)
                 player.InputEnabled = false;
 
-            GameSession.TravelTo(targetScene, targetSpawn);
+            if (locked)
+                GameSession.TravelTo(lockedTargetScene, lockedTargetSpawn);
+            else
+                GameSession.TravelTo(targetScene, targetSpawn);
         }
 
         void OnDrawGizmos() =>
-            ZoneGizmo.Draw(this, new Color(0.3f, 1f, 0.45f), $"Kapı → {targetScene}" + (string.IsNullOrEmpty(targetSpawn) ? "" : $" ({targetSpawn})"));
+            ZoneGizmo.Draw(this, new Color(0.3f, 1f, 0.45f), $"Kapı → {targetScene}" + (string.IsNullOrEmpty(targetSpawn) ? "" : $" ({targetSpawn})")
+                + (string.IsNullOrEmpty(lockedTargetScene) ? "" : $"\nKilitliyken → {lockedTargetScene}"));
     }
 }

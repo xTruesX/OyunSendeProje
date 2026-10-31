@@ -44,7 +44,7 @@ namespace Boruhan.EditorTools
         static Font titleFont;
         static Scene previousActive;
 
-        internal enum Shape { Box, Circle, Tile, Steps, Figure, Mountain }
+        internal enum Shape { Box, Circle, Tile, Steps, Figure, Mountain, Crescent }
 
         [MenuItem("Börühan/Prolog Sahnelerini Oluştur")]
         public static void Build()
@@ -195,6 +195,13 @@ namespace Boruhan.EditorTools
                     case Shape.Steps:
                         bool side = x < 2 || x >= w - 2;
                         c = side ? dark : (y / 4) % 2 == 0 ? color : Color.Lerp(color, Color.white, 0.25f);
+                        break;
+                    case Shape.Crescent:
+                        // A sword arc bulging to the right (the swing direction).
+                        float cr = Mathf.Min(w, h) / 2f;
+                        var cp = new Vector2(x + 0.5f - w / 2f, y + 0.5f - h / 2f);
+                        if (cp.magnitude <= cr && (cp - new Vector2(-cr * 0.5f, 0f)).magnitude > cr * 0.9f)
+                            c = color;
                         break;
                     case Shape.Mountain:
                         // Triangle peak with a snowy top third.
@@ -693,7 +700,10 @@ namespace Boruhan.EditorTools
 
             // The cave
             Prop(ctx.world, "Magara", Art("Magara_Agzi", 48, 40, new Color32(15, 12, 14, 255), Shape.Box), new Vector2(-24f, 8f), 1.2f);
-            Door(ctx.world, "MagaraGirisi", new Vector2(-24f, 7.8f), new Vector2(1.4f, 0.6f), SceneNames.Cave, "giris", StoryFlags.KutSpark, d.caveLocked);
+            var caveDoor = Door(ctx.world, "MagaraGirisi", new Vector2(-24f, 7.8f), new Vector2(1.4f, 0.6f), SceneNames.Cave, "giris", StoryFlags.KutSpark, d.caveLocked);
+            // Before Kayra Han's spark the cave leads to the combat test room.
+            Set(caveDoor.GetComponent<SceneDoor>(), "lockedTargetScene", CombatKit.TestRoom);
+            Set(caveDoor.GetComponent<SceneDoor>(), "lockedTargetSpawn", "giris");
             Spawn(ctx.world, "magara_agzi", new Vector2(-24f, 6.2f));
 
             // Scenery

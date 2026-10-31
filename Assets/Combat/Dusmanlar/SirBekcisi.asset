@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-1207784444550060306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3400057d0363c63828b287cb7181af93, type: 3}
+  m_Name: "H\xFCcum"
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Combat.LungeAbility
+  displayName: "H\xFCcum"
+  cooldown: 6
+  minRange: 3
+  maxRange: 7.5
+  weight: 1
+  windup: 0.9
+  recovery: 0.9
+  telegraphColor: {r: 1, g: 0.25, b: 0.2, a: 0.35}
+  damage: 20
+  distance: 5
+  speed: 10
+  hitRadius: 0.9
+  knockback: 6
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bb9f4eb288c94bb7a974d6f903086f9, type: 3}
+  m_Name: SirBekcisi
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Combat.EnemyDefinition
+  displayName: "S\u0131r Bek\xE7isi"
+  description: "Saklanan s\u0131rlar\u0131n ta\u015F bek\xE7isi. Kalkan\u0131n\u0131 a\u011F\u0131r sald\u0131r\u0131yla k\u0131r, yere vuru\u015Flar\u0131ndan ka\xE7."
+  difficulty: 2
+  isBoss: 0
+  sprite: {fileID: 21300000, guid: 77c69587cffc956ef8006214ae49ea37, type: 3}
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  scale: 1.3
+  footSize: {x: 1.2, y: 0.5}
+  maxHealth: 170
+  moveSpeed: 1.5
+  contactDamage: 8
+  knockbackResistance: 0.8
+  poise: 45
+  staggerTime: 0.35
+  aggroRange: 5.5
+  preferredDistance: 1.8
+  strafe: 0
+  abilities:
+  - {fileID: 2845037315227654848}
+  - {fileID: 9091666083319219562}
+  - {fileID: -1207784444550060306}
+--- !u!114 &2845037315227654848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8609addddcae0129beea58e9fbe8524, type: 3}
+  m_Name: "Ta\u015F Kalkan"
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Combat.GuardAbility
+  displayName: "Ta\u015F Kalkan"
+  cooldown: 7
+  minRange: 0
+  maxRange: 6
+  weight: 1
+  windup: 0.3
+  recovery: 0.4
+  telegraphColor: {r: 1, g: 0.25, b: 0.2, a: 0.35}
+  duration: 3
+  damageTaken: 0.15
+  moveSpeedMultiplier: 0.4
+--- !u!114 &9091666083319219562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 578b0e10293f6ce79ab3519ed188f7de, type: 3}
+  m_Name: Yer Sarsma
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Combat.AreaSlamAbility
+  displayName: Yer Sarsma
+  cooldown: 4.5
+  minRange: 0
+  maxRange: 2.5
+  weight: 1
+  windup: 0.85
+  recovery: 0.8
+  telegraphColor: {r: 1, g: 0.25, b: 0.2, a: 0.35}
+  damage: 18
+  radius: 2
+  waves: 2
+  waveInterval: 0.45
+  waveGrowth: 1.6
+  knockback: 7
