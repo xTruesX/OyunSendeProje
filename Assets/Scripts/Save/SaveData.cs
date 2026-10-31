@@ -20,6 +20,9 @@ namespace Boruhan.Save
         /// <summary>SpawnPoint id to place the player at when entering sceneName (used when hasPosition is false).</summary>
         public string spawnId;
 
+        /// <summary>Börühan's current health. Below 0 = full.</summary>
+        public float playerHealth = -1f;
+
         /// <summary>Story progress. See Core.StoryFlags for the names used.</summary>
         public List<string> flags = new List<string>();
 

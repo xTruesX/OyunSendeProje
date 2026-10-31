@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e525b435dff6f3df5bb509836d41dbde, type: 3}
+  m_Name: kat3_calis_zafer
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Dialogue.DialogueAsset
+  lines:
+  - speaker: {fileID: 0}
+    text: "A\u011F\u0131r darbeler ve uzun bir sava\u015F\u0131n sonunda \xC7al\u0131\u015F Han yenildi."
+    duration: 0
+    setFlag: 
+  - speaker: {fileID: 0}
+    text: "Etraftaki zehirli gaz da\u011F\u0131ld\u0131."
+    duration: 0
+    setFlag: 
+  - speaker: {fileID: 0}
+    text: "B\xF6r\xFChan \xC7al\u0131\u015F Han'\u0131n \xF6z\xFCnden zehir ve veba ba\u011F\u0131\u015F\u0131kl\u0131\u011F\u0131 elde etti. Art\u0131k zehirler onu etkileyemezdi."
+    duration: 0
+    setFlag: zehir_bagisikligi
+  - speaker: {fileID: 0}
+    text: "Ve yerin en dibine, son kata inen yol a\xE7\u0131ld\u0131."
+    duration: 0
+    setFlag: 

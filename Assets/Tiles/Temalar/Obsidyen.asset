@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6262ce72b34c8886ac3c4024be4c92c, type: 3}
+  m_Name: Obsidyen
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Map.RoomTheme
+  floor: {fileID: 11400000, guid: 7dd216ae58000fd25b4f0739a039c48f, type: 2}
+  borderFill: {fileID: 11400000, guid: 41b7a6fb2eef7f9278600818997fd4fd, type: 2}
+  borderEdge:
+  - {fileID: 11400000, guid: 73cafe84c039cd570aa3949051885ed4, type: 2}
+  borderThickness: 5
+  background: {r: 0.02, g: 0.01, b: 0.03, a: 1}
+  lightColor: {r: 0.65, g: 0.6, b: 0.95, a: 1}
+  lightIntensity: 0.3
+  cameraSize: 6
+  music: {fileID: 11400000, guid: 3c817de3cfb05207d94e72fd96860d38, type: 2}

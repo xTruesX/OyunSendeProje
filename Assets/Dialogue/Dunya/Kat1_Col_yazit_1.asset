@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e525b435dff6f3df5bb509836d41dbde, type: 3}
+  m_Name: Kat1_Col_yazit_1
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Dialogue.DialogueAsset
+  lines:
+  - speaker: {fileID: 0}
+    text: "Ta\u015Fa kaz\u0131nm\u0131\u015F eski bir yaz\u0131:"
+    duration: 0
+    setFlag: 
+  - speaker: {fileID: 0}
+    text: "\"Yeralt\u0131 dokuz katt\u0131r. Her kat, yery\xFCz\xFCnde i\u015Flenen bir g\xFCnah\u0131n a\u011F\u0131rl\u0131\u011F\u0131yla kaz\u0131lm\u0131\u015Ft\u0131r. \u0130lki yalan\u0131nkidir.\""
+    duration: 0
+    setFlag: 
+  - speaker: {fileID: 0}
+    text: "Alt\u0131na sonradan biri eklemi\u015F: \"Baz\u0131 duvarlar yalan s\xF6yler. \u0130nanma, y\xFCr\xFC.\""
+    duration: 0
+    setFlag: 

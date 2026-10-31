@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e525b435dff6f3df5bb509836d41dbde, type: 3}
+  m_Name: son
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Dialogue.DialogueAsset
+  lines:
+  - speaker: {fileID: 0}
+    text: "\u0130kisi birlikte yery\xFCz\xFCne d\xF6nd\xFC."
+    duration: 0
+    setFlag: 
+  - speaker: {fileID: 0}
+    text: "Aradan uzun zaman ge\xE7ti."
+    duration: 0
+    setFlag: 
+  - speaker: {fileID: 0}
+    text: "\xDClgen Han iyile\u015Fti; eskisinden de g\xFC\xE7l\xFC, eskisinden de parlak."
+    duration: 0
+    setFlag: 
+  - speaker: {fileID: 0}
+    text: "\u0130yilik k\xF6t\xFCl\xFC\u011F\xFCn \xFCstesinden gelmi\u015F, mutlak denge yeniden sa\u011Flanm\u0131\u015Ft\u0131."
+    duration: 0
+    setFlag: oyun_bitti

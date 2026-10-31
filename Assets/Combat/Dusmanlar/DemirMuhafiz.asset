@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-4076631775889730474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3755ffe6a2330cc8b8b3f91ff4fbc481, type: 3}
+  m_Name: "M\u0131zrak Darbesi"
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Combat.MeleeStrikeAbility
+  displayName: "M\u0131zrak Darbesi"
+  cooldown: 2
+  minRange: 0
+  maxRange: 2
+  weight: 1
+  windup: 0.5
+  recovery: 0.4
+  telegraphColor: {r: 1, g: 0.25, b: 0.2, a: 0.35}
+  damage: 12
+  hits: 2
+  reach: 1
+  radius: 0.8
+  stepDistance: 0.5
+  timeBetweenHits: 0.35
+  knockback: 4
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bb9f4eb288c94bb7a974d6f903086f9, type: 3}
+  m_Name: DemirMuhafiz
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Combat.EnemyDefinition
+  displayName: "Demir Muhaf\u0131z"
+  description: "Erlik'in silahhanesini koruyan z\u0131rhl\u0131 asker. Kalkan\u0131n\u0131 a\u011F\u0131r sald\u0131r\u0131yla k\u0131r."
+  difficulty: 1
+  isBoss: 0
+  sprite: {fileID: 21300000, guid: 0ddb6dcd015f413029105156a396f5be, type: 3}
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  scale: 1
+  footSize: {x: 0.7, y: 0.35}
+  maxHealth: 95
+  moveSpeed: 2.2
+  contactDamage: 0
+  knockbackResistance: 0.5
+  poise: 30
+  staggerTime: 0.35
+  aggroRange: 6
+  preferredDistance: 1.5
+  strafe: 1
+  abilities:
+  - {fileID: -4076631775889730474}
+  - {fileID: 8496713742486819916}
+  - {fileID: 3055150852143433286}
+--- !u!114 &3055150852143433286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3400057d0363c63828b287cb7181af93, type: 3}
+  m_Name: Hamle
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Combat.LungeAbility
+  displayName: Hamle
+  cooldown: 4.5
+  minRange: 2.5
+  maxRange: 5.5
+  weight: 1
+  windup: 0.6
+  recovery: 0.4
+  telegraphColor: {r: 1, g: 0.25, b: 0.2, a: 0.35}
+  damage: 14
+  distance: 4
+  speed: 11
+  hitRadius: 0.6
+  knockback: 6
+--- !u!114 &8496713742486819916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8609addddcae0129beea58e9fbe8524, type: 3}
+  m_Name: Demir Kalkan
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Combat.GuardAbility
+  displayName: Demir Kalkan
+  cooldown: 6
+  minRange: 0
+  maxRange: 5
+  weight: 1
+  windup: 0.25
+  recovery: 0.4
+  telegraphColor: {r: 1, g: 0.25, b: 0.2, a: 0.35}
+  duration: 2.5
+  damageTaken: 0.2
+  moveSpeedMultiplier: 0.4

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e525b435dff6f3df5bb509836d41dbde, type: 3}
+  m_Name: Kat3_Bataklik_ruh_3
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Dialogue.DialogueAsset
+  lines:
+  - speaker: {fileID: 11400000, guid: 230add4ab1e11c222994fbfce38d7ded, type: 2}
+    text: "Ben bir \u015Famand\u0131m. \xC7al\u0131\u015F Han'a tapanlara kat\u0131ld\u0131m, salg\u0131n\u0131 kutsal sand\u0131m..."
+    duration: 0
+    setFlag: 
+  - speaker: {fileID: 11400000, guid: 230add4ab1e11c222994fbfce38d7ded, type: 2}
+    text: "Batakl\u0131\u011F\u0131n dibinden yeni yarat\u0131klar do\u011Fuyor. O onlar\u0131 \xE7a\u011F\u0131rd\u0131k\xE7a \xF6l\xFCler bile rahat edemiyor."
+    duration: 0
+    setFlag: 
+  - speaker: {fileID: 11400000, guid: 230add4ab1e11c222994fbfce38d7ded, type: 2}
+    text: "Onu yenersen, zehrin sana dokunamaz olur. Bu batakl\u0131\u011F\u0131n tek iyili\u011Fi budur."
+    duration: 0
+    setFlag: 

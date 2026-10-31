@@ -78,6 +78,20 @@ namespace Boruhan.Core
             return !string.IsNullOrEmpty(flag) && Data != null && Data.flags.Contains(flag);
         }
 
+        /// <summary>How many flags start with the prefix (e.g. collected "can_parcasi_" items).</summary>
+        public static int CountFlags(string prefix)
+        {
+            if (Data == null)
+                return 0;
+            int count = 0;
+            foreach (var flag in Data.flags)
+            {
+                if (flag.StartsWith(prefix))
+                    count++;
+            }
+            return count;
+        }
+
         public static void SetFlag(string flag)
         {
             if (string.IsNullOrEmpty(flag) || Data == null || Data.flags.Contains(flag))

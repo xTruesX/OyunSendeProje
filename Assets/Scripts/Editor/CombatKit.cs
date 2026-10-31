@@ -24,8 +24,7 @@ namespace Boruhan.EditorTools
     /// </summary>
     public static class CombatKit
     {
-        public const string TestRoom = "SavasOdasi";
-        public const string SwordFlag = "kilic_alindi";
+            public const string SwordFlag = "kilic_alindi";
 
         const string EnemyDir = "Assets/Combat/Dusmanlar";
         const string EnemyArtDir = "Assets/Art/Placeholder/Dusmanlar";
@@ -38,9 +37,7 @@ namespace Boruhan.EditorTools
             MapKit.EnsureAssets();
             EnsurePlayerCombat();
             EnsureHud();
-            var enemies = EnsureEnemies();
-            BuildTestRoom(enemies);
-            LinkCaveDoor();
+            EnsureEnemies();
             AssetDatabase.SaveAssets();
         }
 
@@ -179,17 +176,17 @@ namespace Boruhan.EditorTools
             return ability;
         }
 
-        static T Add<T>(EnemyDefinition definition, string name, Action<T> setup, bool inMoveset = true) where T : EnemyAbility
+        internal static T Add<T>(EnemyDefinition definition, string name, Action<T> setup, bool inMoveset = true) where T : EnemyAbility
         {
             var ability = (T)AddAbility(definition, typeof(T), name, inMoveset);
             setup(ability);
             return ability;
         }
 
-        static Sprite EnemyArt(string name, int w, int h, Color color, Shape shape) =>
+        internal static Sprite EnemyArt(string name, int w, int h, Color color, Shape shape) =>
             PrologueBuilder.Art(EnemyArtDir, name, w, h, color, shape, new Vector2(0.5f, 0f));
 
-        static EnemyDefinition Enemy(string file, Action<EnemyDefinition> stats, Action<EnemyDefinition> moveset)
+        internal static EnemyDefinition Enemy(string file, Action<EnemyDefinition> stats, Action<EnemyDefinition> moveset)
         {
             Directory.CreateDirectory(EnemyDir);
             var path = $"{EnemyDir}/{file}.asset";
@@ -205,7 +202,7 @@ namespace Boruhan.EditorTools
             return def;
         }
 
-        static Dictionary<string, EnemyDefinition> EnsureEnemies()
+        internal static Dictionary<string, EnemyDefinition> EnsureEnemies()
         {
             var all = new Dictionary<string, EnemyDefinition>();
 
@@ -402,130 +399,6 @@ namespace Boruhan.EditorTools
             go.AddComponent<WorldHealthBar>();
             enemy.ApplyDefinition();
             return go;
-        }
-
-        // ================= Test room =================
-
-        static DialogueAsset Dialogue(string file, string script)
-        {
-            const string dir = "Assets/Dialogue/Sinama";
-            Directory.CreateDirectory(dir);
-            var path = $"{dir}/{file}.asset";
-            var existing = AssetDatabase.LoadAssetAtPath<DialogueAsset>(path);
-            if (existing != null)
-                return existing;
-            var asset = ScriptableObject.CreateInstance<DialogueAsset>();
-            asset.lines = DialogueAssetEditor.Parse(script, out _);
-            AssetDatabase.CreateAsset(asset, path);
-            return asset;
-        }
-
-        static void BuildTestRoom(Dictionary<string, EnemyDefinition> e)
-        {
-            var path = $"{PrologueBuilder.SceneDir}/{TestRoom}.unity";
-            if (File.Exists(path))
-                return;
-
-            var intro = Dialogue("00_SinamaGiris",
-                "Anlatıcı: Mağaraya giren Börühan, kendini kristal kumlarla kaplı tuhaf bir yerde buldu.\n" +
-                "Anlatıcı: Burası, yeraltının ilk katının bir yansıması gibiydi.\n" +
-                "Fısıltılar: Gel... Gel ve kendini sına...\n" +
-                "Anlatıcı: (Bu bir sınama alanıdır. Düşmanlar her girişte yeniden belirir.)");
-            var sword = Dialogue("01_KilicSunagi",
-                "Anlatıcı: Kumların arasına saplanmış eski bir kılıç duruyordu.\n" +
-                "Börühan: Bu kılıç... Sanki beni bekliyordu.\n" +
-                $"Anlatıcı: Börühan kılıcı kavradı. [bayrak: {SwordFlag}]\n" +
-                "Anlatıcı: Hafif saldırı: J / Sol Tık — üç vuruşluk kombo.  Ağır saldırı: K / Sağ Tık.\n" +
-                "Anlatıcı: Kaçış: Shift — saldırıların içinden zarar görmeden geçersin.\n" +
-                "Anlatıcı: Savuşturma: Q — vuruştan hemen önce basarsan düşmanın dengesi bozulur.\n" +
-                "Anlatıcı: Dengesi bozulan düşmana ağır saldırı yaparsan Kut Yıkımı vurursun.");
-            var swordEmpty = Dialogue("02_SunakBos", "Anlatıcı: Sunak artık boş.");
-            var heal = Dialogue("03_SifaPinari", "Anlatıcı: Pınarın serin suyu yaralarını kapattı.");
-            var reset = Dialogue("04_SinamaTasi", "Anlatıcı: Sınama Taşı'na dokundun. Alan yeniden kuruluyor...");
-            var easy = Dialogue("10_TabelaKolay", "Anlatıcı: KOLAY — Fısıltılar üzerine atılır, Kırık Yalanlar uzaktan kristal fırlatır. Kristalleri kılıcınla kesebilirsin.");
-            var medium = Dialogue("11_TabelaOrta", "Anlatıcı: ORTA — Hain Gölge arkana ışınlanır. Serap kendi kopyalarını yaratır; gerçeğini bul.");
-            var hard = Dialogue("12_TabelaZor", "Anlatıcı: ZOR — Sır Bekçisi'nin kalkanını ağır saldırıyla kır. En sonda... kendi yansıman seni bekliyor. Parladığında ona vurma.");
-
-            MapKit.CreateRoomScene(TestRoom, "Sınama Alanı", 1, new Vector2Int(40, 32), MapKit.GetTheme("Col"));
-
-            var previous = SceneManager.GetActiveScene();
-            var scene = EditorSceneManager.OpenScene(path, OpenSceneMode.Additive);
-            SceneManager.SetActiveScene(scene);
-            var roots = scene.GetRootGameObjects();
-            var world = roots.First(r => r.name == "Dunya").transform;
-
-            PrologueBuilder.Door(world, "Cikis", new Vector2(0f, -15.6f), new Vector2(2.5f, 0.8f), SceneNames.Overworld, "magara_agzi");
-            PrologueBuilder.StartTrigger(world, "SinamaGirisi", intro, null, "sinama_giris_goruldu");
-
-            var utility = new GameObject("OdaAraclari").AddComponent<RoomUtility>();
-
-            var altar = PrologueBuilder.Prop(world, "KilicSunagi", PrologueBuilder.Art("KilicSunagi", 16, 14, new Color32(140, 120, 90, 255), Shape.Box), new Vector2(0f, -11f), 0.6f);
-            var altarSword = PrologueBuilder.SpriteObject(altar.transform, "Kilic", PrologueBuilder.Art("Kilic", 3, 12, new Color32(205, 210, 220, 255), Shape.Box), new Vector2(0f, 0.8f), 1);
-            PrologueBuilder.Interact(altar, "Bak", sword, completedFlag: SwordFlag, repeat: swordEmpty);
-            PrologueBuilder.Activator(world, "SunakKilici", SwordFlag, false, altarSword);
-
-            var spring = PrologueBuilder.Prop(world, "SifaPinari", PrologueBuilder.Art("SifaPinari", 20, 14, new Color32(80, 170, 200, 255), Shape.Circle), new Vector2(5f, -12.5f), 0.6f);
-            PrologueBuilder.Interact(spring, "Su İç", heal);
-            UnityEventTools.AddPersistentListener(spring.GetComponent<Interactable>().onFinished, utility.HealPlayer);
-
-            var stone = PrologueBuilder.Prop(world, "SinamaTasi", PrologueBuilder.Art("SinamaTasi", 14, 20, new Color32(120, 110, 140, 255), Shape.Box), new Vector2(-5f, -12.5f), 0.6f);
-            PrologueBuilder.Interact(stone, "Dokun", reset);
-            UnityEventTools.AddPersistentListener(stone.GetComponent<Interactable>().onFinished, utility.ReloadRoom);
-
-            var signArt = PrologueBuilder.Art("Tabela", 12, 14, new Color32(150, 110, 70, 255), Shape.Box);
-            PrologueBuilder.Interact(PrologueBuilder.Prop(world, "TabelaKolay", signArt, new Vector2(-2.5f, -8f), 0.4f), "Oku", easy);
-            PrologueBuilder.Interact(PrologueBuilder.Prop(world, "TabelaOrta", signArt, new Vector2(-2.5f, 0f), 0.4f), "Oku", medium);
-            PrologueBuilder.Interact(PrologueBuilder.Prop(world, "TabelaZor", signArt, new Vector2(-2.5f, 7.5f), 0.4f), "Oku", hard);
-
-            var enemies = new GameObject("Dusmanlar").transform;
-            PlaceEnemy(e["Fisilti"], new Vector2(-6f, -5f), enemies);
-            PlaceEnemy(e["Fisilti"], new Vector2(6f, -5f), enemies);
-            PlaceEnemy(e["KirikYalan"], new Vector2(-12f, -3f), enemies);
-            PlaceEnemy(e["KirikYalan"], new Vector2(12f, -3f), enemies);
-            PlaceEnemy(e["HainGolge"], new Vector2(-8f, 3f), enemies);
-            PlaceEnemy(e["Serap"], new Vector2(8f, 3f), enemies);
-            PlaceEnemy(e["SirBekcisi"], new Vector2(0f, 7f), enemies);
-            PlaceEnemy(e["AynaKopya"], new Vector2(0f, 13f), enemies);
-
-            // A few crystal pillars to fight around.
-            var solid = roots.First(r => r.name == "Harita").transform.Find(MapKit.LayerSolid).GetComponent<Tilemap>();
-            var pillar = MapKit.GetTile("Col", "KristalSutun");
-            foreach (var cell in new[] { new Vector3Int(-14, 8, 0), new Vector3Int(14, 8, 0), new Vector3Int(-4, -2, 0), new Vector3Int(4, -2, 0), new Vector3Int(-15, -9, 0), new Vector3Int(15, -9, 0) })
-                solid.SetTile(cell, pillar);
-            MapKit.RebuildCollision(solid);
-
-            EditorSceneManager.SaveScene(scene);
-            if (previous.IsValid())
-                SceneManager.SetActiveScene(previous);
-            EditorSceneManager.CloseScene(scene, true);
-        }
-
-        /// <summary>Before Kayra Han, walking into the overworld cave leads to the test room.</summary>
-        static void LinkCaveDoor()
-        {
-            var path = $"{PrologueBuilder.SceneDir}/{SceneNames.Overworld}.unity";
-            var open = SceneManager.GetSceneByPath(path);
-            if (open.IsValid() && open.isLoaded && open.isDirty)
-            {
-                Debug.LogWarning("[Börühan] Yeryuzu açık ve kaydedilmemiş; mağara kapısı bağlanmadı.");
-                return;
-            }
-
-            var previous = SceneManager.GetActiveScene();
-            bool wasOpen = open.IsValid() && open.isLoaded;
-            var scene = wasOpen ? open : EditorSceneManager.OpenScene(path, OpenSceneMode.Additive);
-            var door = scene.GetRootGameObjects().SelectMany(r => r.GetComponentsInChildren<SceneDoor>(true)).FirstOrDefault(d => d.name == "MagaraGirisi");
-            if (door != null)
-            {
-                PrologueBuilder.Set(door, "lockedTargetScene", TestRoom);
-                PrologueBuilder.Set(door, "lockedTargetSpawn", "giris");
-                EditorSceneManager.MarkSceneDirty(scene);
-                EditorSceneManager.SaveScene(scene);
-            }
-            if (previous.IsValid())
-                SceneManager.SetActiveScene(previous);
-            if (!wasOpen)
-                EditorSceneManager.CloseScene(scene, true);
         }
     }
 }

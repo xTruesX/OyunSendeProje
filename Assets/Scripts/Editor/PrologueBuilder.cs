@@ -700,10 +700,8 @@ namespace Boruhan.EditorTools
 
             // The cave
             Prop(ctx.world, "Magara", Art("Magara_Agzi", 48, 40, new Color32(15, 12, 14, 255), Shape.Box), new Vector2(-24f, 8f), 1.2f);
-            var caveDoor = Door(ctx.world, "MagaraGirisi", new Vector2(-24f, 7.8f), new Vector2(1.4f, 0.6f), SceneNames.Cave, "giris", StoryFlags.KutSpark, d.caveLocked);
-            // Before Kayra Han's spark the cave leads to the combat test room.
-            Set(caveDoor.GetComponent<SceneDoor>(), "lockedTargetScene", CombatKit.TestRoom);
-            Set(caveDoor.GetComponent<SceneDoor>(), "lockedTargetSpawn", "giris");
+            Door(ctx.world, "MagaraGirisi", new Vector2(-24f, 7.8f), new Vector2(1.4f, 0.6f), SceneNames.Cave, "giris", StoryFlags.KutSpark, d.caveLocked);
+
             Spawn(ctx.world, "magara_agzi", new Vector2(-24f, 6.2f));
 
             // Scenery
@@ -1030,7 +1028,7 @@ namespace Boruhan.EditorTools
 
         // ================= UI helpers =================
 
-        static Canvas CreateCanvas(string name, int order)
+        internal static Canvas CreateCanvas(string name, int order)
         {
             var go = new GameObject(name, typeof(RectTransform));
             var canvas = go.AddComponent<Canvas>();
@@ -1051,7 +1049,7 @@ namespace Boruhan.EditorTools
             return go;
         }
 
-        static void Stretch(GameObject go)
+        internal static void Stretch(GameObject go)
         {
             var rect = (RectTransform)go.transform;
             rect.anchorMin = Vector2.zero;
@@ -1059,7 +1057,7 @@ namespace Boruhan.EditorTools
             rect.offsetMin = rect.offsetMax = Vector2.zero;
         }
 
-        static Text Label(Transform parent, string name, string content, int size, Color color, Font font = null)
+        internal static Text Label(Transform parent, string name, string content, int size, Color color, Font font = null)
         {
             var text = UIObject(name, parent).AddComponent<Text>();
             text.font = font != null ? font : uiFont;
@@ -1079,7 +1077,7 @@ namespace Boruhan.EditorTools
             return text;
         }
 
-        static Image UIImage(Transform parent, string name, Sprite sprite, Vector2 size)
+        internal static Image UIImage(Transform parent, string name, Sprite sprite, Vector2 size)
         {
             var image = UIObject(name, parent).AddComponent<Image>();
             image.sprite = sprite;
@@ -1088,7 +1086,7 @@ namespace Boruhan.EditorTools
             return image;
         }
 
-        static Text CenterTitle(Transform parent)
+        internal static Text CenterTitle(Transform parent)
         {
             var title = Label(parent, "Baslik", "", 72, Gold, titleFont);
             Stretch(title.gameObject);
@@ -1096,7 +1094,7 @@ namespace Boruhan.EditorTools
             return title;
         }
 
-        static void SkipHint(Transform parent)
+        internal static void SkipHint(Transform parent)
         {
             var skip = Label(parent, "AtlaIpucu", SkipHintText, 22, new Color32(200, 190, 170, 140));
             skip.alignment = TextAnchor.UpperRight;

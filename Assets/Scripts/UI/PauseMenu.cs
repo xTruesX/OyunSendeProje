@@ -45,10 +45,20 @@ namespace Boruhan.UI
             panel.SetActive(value);
             Time.timeScale = value ? 0f : 1f;
             player.InputEnabled = !value;
-            statusText.text = "";
+            statusText.text = value ? Progress() : "";
 
             if (value && EventSystem.current != null)
                 EventSystem.current.SetSelectedGameObject(resumeButton.gameObject);
+        }
+
+        static string Progress()
+        {
+            var text = $"Can Parçası: {GameSession.CountFlags("can_parcasi_")}   ·   Kut Parçası: {GameSession.CountFlags("kut_parcasi_")}   ·   Yazıt: {GameSession.CountFlags("yazit_")}";
+            var gifts = new System.Collections.Generic.List<string>();
+            if (GameSession.HasFlag(StoryFlags.MirrorLeap)) gifts.Add("Ayna Sıçraması");
+            if (GameSession.HasFlag(StoryFlags.IronGauntlet)) gifts.Add("Demir Eldiven");
+            if (GameSession.HasFlag(StoryFlags.PoisonImmunity)) gifts.Add("Zehir Bağışıklığı");
+            return gifts.Count > 0 ? text + "\nKazanılan güçler: " + string.Join(", ", gifts) : text;
         }
 
         void OnSave()

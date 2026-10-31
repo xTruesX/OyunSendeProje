@@ -1,0 +1,276 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8815123354244332268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f52c8c802e085103ac2119090c5ad47, type: 3}
+  m_Name: "Karanl\u0131k K\xFCreler"
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Combat.ProjectileAbility
+  displayName: "Karanl\u0131k K\xFCreler"
+  cooldown: 4.5
+  minRange: 3
+  maxRange: 12
+  weight: 1
+  windup: 0.7
+  recovery: 0.4
+  telegraphColor: {r: 1, g: 0.25, b: 0.2, a: 0.35}
+  damage: 12
+  count: 6
+  spreadAngle: 90
+  bursts: 3
+  burstInterval: 0.35
+  speed: 6
+  size: 0.45
+  lifetime: 4
+  color: {r: 0.7, g: 0.2, b: 0.5, a: 1}
+  sprite: {fileID: 0}
+--- !u!114 &-6632559051895389181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12536a74f5e46ae689f554ed8b438cbb, type: 3}
+  m_Name: "Yeni Yarat\u0131klar"
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Combat.SummonMinionsAbility
+  displayName: "Yeni Yarat\u0131klar"
+  cooldown: 14
+  minRange: 0
+  maxRange: 12
+  weight: 1
+  windup: 0.9
+  recovery: 0.4
+  telegraphColor: {r: 1, g: 0.25, b: 0.2, a: 0.35}
+  minions:
+  - {fileID: 11400000, guid: 0593a18286e105778977a8b707d2fe50, type: 2}
+  - {fileID: 11400000, guid: 4f47dd20be2861e40a64182dc97ce605, type: 2}
+  - {fileID: 11400000, guid: 381f208b273d248839ce494e2e121d2f, type: 2}
+  count: 2
+  maxAlive: 3
+  radius: 2.5
+--- !u!114 &-2601966764963674370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f9e476156daf9e0aa2ac12d03ee9c61, type: 3}
+  m_Name: "G\xF6lge Ad\u0131m\u0131"
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Combat.TeleportAbility
+  displayName: "G\xF6lge Ad\u0131m\u0131"
+  cooldown: 7
+  minRange: 4
+  maxRange: 14
+  weight: 1
+  windup: 0.35
+  recovery: 0.4
+  telegraphColor: {r: 1, g: 0.25, b: 0.2, a: 0.35}
+  destination: 0
+  distance: 1.6
+  followUp: {fileID: -1566932141246184763}
+--- !u!114 &-2221613713261326765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d6a859ed028b40ae9b25c0eb786be1f, type: 3}
+  m_Name: "Deh\u015Fet"
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Combat.CurseAbility
+  displayName: "Deh\u015Fet"
+  cooldown: 12
+  minRange: 0
+  maxRange: 9
+  weight: 1
+  windup: 0.9
+  recovery: 0.4
+  telegraphColor: {r: 0.4, g: 0.1, b: 0.3, a: 0.25}
+  range: 9
+  slowMultiplier: 0.5
+  slowDuration: 3
+  damage: 10
+--- !u!114 &-1566932141246184763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3755ffe6a2330cc8b8b3f91ff4fbc481, type: 3}
+  m_Name: "G\xF6lgeden Kesik"
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Combat.MeleeStrikeAbility
+  displayName: "G\xF6lgeden Kesik"
+  cooldown: 2
+  minRange: 0
+  maxRange: 2
+  weight: 1
+  windup: 0.4
+  recovery: 0.6
+  telegraphColor: {r: 1, g: 0.25, b: 0.2, a: 0.35}
+  damage: 20
+  hits: 1
+  reach: 1.2
+  radius: 1.1
+  stepDistance: 0.5
+  timeBetweenHits: 0.35
+  knockback: 4
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bb9f4eb288c94bb7a974d6f903086f9, type: 3}
+  m_Name: ErlikHan
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Combat.EnemyDefinition
+  displayName: Erlik Han
+  description: "Yeralt\u0131n\u0131n, \xF6l\xFCm\xFCn ve karanl\u0131\u011F\u0131n efendisi. Salg\u0131n yayar, ill\xFCzyonlarla zihni bunalt\u0131r, yeni yarat\u0131klar yapar."
+  difficulty: 2
+  isBoss: 1
+  sprite: {fileID: 21300000, guid: a8a3234886213e285939d39620308b3a, type: 3}
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  scale: 1.7
+  footSize: {x: 1, y: 0.45}
+  maxHealth: 950
+  moveSpeed: 2.6
+  contactDamage: 0
+  knockbackResistance: 0.95
+  poise: 140
+  staggerTime: 0.35
+  aggroRange: 8
+  preferredDistance: 2.8
+  strafe: 1
+  abilities:
+  - {fileID: 3051157533025837360}
+  - {fileID: -8815123354244332268}
+  - {fileID: 1893111745844949124}
+  - {fileID: 7548687251112450139}
+  - {fileID: -6632559051895389181}
+  - {fileID: -2221613713261326765}
+  - {fileID: 6463773338997722213}
+  - {fileID: -2601966764963674370}
+--- !u!114 &1893111745844949124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9259e5e80dadff7dc9fa92df0781b2d3, type: 3}
+  m_Name: "Salg\u0131n"
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Combat.HazardCloudAbility
+  displayName: "Salg\u0131n"
+  cooldown: 8
+  minRange: 0
+  maxRange: 12
+  weight: 1
+  windup: 0.7
+  recovery: 0.4
+  telegraphColor: {r: 1, g: 0.25, b: 0.2, a: 0.35}
+  count: 3
+  radius: 1.8
+  spread: 4
+  lifetime: 7
+  damagePerSecond: 10
+  slowMultiplier: 0.8
+  immunityFlag: zehir_bagisikligi
+  cloudColor: {r: 0.55, g: 0.85, b: 0.3, a: 0.4}
+--- !u!114 &3051157533025837360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3755ffe6a2330cc8b8b3f91ff4fbc481, type: 3}
+  m_Name: "Karanl\u0131k K\u0131l\u0131\xE7"
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Combat.MeleeStrikeAbility
+  displayName: "Karanl\u0131k K\u0131l\u0131\xE7"
+  cooldown: 2.6
+  minRange: 0
+  maxRange: 2.6
+  weight: 1.5
+  windup: 0.55
+  recovery: 0.7
+  telegraphColor: {r: 1, g: 0.25, b: 0.2, a: 0.35}
+  damage: 18
+  hits: 3
+  reach: 1.3
+  radius: 1.2
+  stepDistance: 0.5
+  timeBetweenHits: 0.35
+  knockback: 4
+--- !u!114 &6463773338997722213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 578b0e10293f6ce79ab3519ed188f7de, type: 3}
+  m_Name: "Taht Sars\u0131nt\u0131s\u0131"
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Combat.AreaSlamAbility
+  displayName: "Taht Sars\u0131nt\u0131s\u0131"
+  cooldown: 6
+  minRange: 0
+  maxRange: 3
+  weight: 1
+  windup: 0.9
+  recovery: 0.4
+  telegraphColor: {r: 1, g: 0.25, b: 0.2, a: 0.35}
+  damage: 22
+  radius: 2.5
+  waves: 3
+  waveInterval: 0.45
+  waveGrowth: 1.4
+  knockback: 7
+--- !u!114 &7548687251112450139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62d0d174ee5ccdefd8937956ed7bfa9b, type: 3}
+  m_Name: "Yan\u0131lsama"
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Combat.SummonIllusionsAbility
+  displayName: "Yan\u0131lsama"
+  cooldown: 16
+  minRange: 0
+  maxRange: 12
+  weight: 1
+  windup: 0.8
+  recovery: 0.4
+  telegraphColor: {r: 1, g: 0.25, b: 0.2, a: 0.35}
+  count: 3
+  radius: 3.5
+  lifetime: 9
+  swapWithCopy: 1

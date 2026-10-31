@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e525b435dff6f3df5bb509836d41dbde, type: 3}
+  m_Name: otag_kilic
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Dialogue.DialogueAsset
+  lines:
+  - speaker: {fileID: 0}
+    text: "Ask\u0131da, \xDClgen Han'\u0131n ona arma\u011Fan etti\u011Fi k\u0131l\u0131\xE7 as\u0131l\u0131yd\u0131."
+    duration: 0
+    setFlag: 
+  - speaker: {fileID: 11400000, guid: 3e7b2198f83b50c2cba876a3a693f5ed, type: 2}
+    text: "Bu k\u0131l\u0131\xE7 y\u0131ld\u0131zlar\u0131n demirinden d\xF6v\xFCld\xFC. Onu yaln\u0131zca do\u011Fru olan i\xE7in \xE7ek."
+    duration: 0
+    setFlag: 
+  - speaker: {fileID: 0}
+    text: "B\xF6r\xFChan k\u0131l\u0131c\u0131 ku\u015Fand\u0131."
+    duration: 0
+    setFlag: kilic_alindi
+  - speaker: {fileID: 0}
+    text: "Hafif sald\u0131r\u0131: J / Sol T\u0131k \xB7 A\u011F\u0131r sald\u0131r\u0131: K / Sa\u011F T\u0131k \xB7 Ka\xE7\u0131\u015F: Shift \xB7 Savu\u015Fturma: Q"
+    duration: 0
+    setFlag: 

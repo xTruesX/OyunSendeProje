@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e525b435dff6f3df5bb509836d41dbde, type: 3}
+  m_Name: Kat1_Col_yazit_6
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Dialogue.DialogueAsset
+  lines:
+  - speaker: {fileID: 0}
+    text: "\"Kut, Kayra Han'\u0131n evrene \xFCfledi\u011Fi cand\u0131r.\""
+    duration: 0
+    setFlag: 
+  - speaker: {fileID: 0}
+    text: "\"Yenilen her deh\u015Fet \xF6z\xFCn\xFC geride b\u0131rak\u0131r. Onu s\xF6k\xFCp alan, kendi Kut'unu b\xFCy\xFCt\xFCr.\""
+    duration: 0
+    setFlag: 
+  - speaker: {fileID: 0}
+    text: "B\xF6r\xFChan, Kayra Han'\u0131n s\xF6zlerini hat\u0131rlad\u0131."
+    duration: 0
+    setFlag: 

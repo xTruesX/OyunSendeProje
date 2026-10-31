@@ -46903,7 +46903,7 @@ MonoBehaviour:
   targetSpawn: giris
   requiredFlag: kut_kivilcimi
   lockedDialogue: {fileID: 11400000, guid: f7ff3ccdd003044f395130131a749f84, type: 2}
-  lockedTargetScene: SavasOdasi
+  lockedTargetScene: 
   lockedTargetSpawn: giris
 --- !u!61 &1431720933
 BoxCollider2D:

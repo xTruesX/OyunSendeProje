@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e525b435dff6f3df5bb509836d41dbde, type: 3}
+  m_Name: kat1_ayna_zafer
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Dialogue.DialogueAsset
+  lines:
+  - speaker: {fileID: 0}
+    text: "B\xF6r\xFChan korkular\u0131n\u0131n \xFCstesinden geldi. Kopya bir ayna gibi parampar\xE7a oldu ve kristal tozlara d\xF6n\xFC\u015Ft\xFC."
+    duration: 0
+    setFlag: 
+  - speaker: {fileID: 0}
+    text: "B\xF6r\xFChan k\u0131l\u0131c\u0131n\u0131 tozlara saplayarak kal\u0131nt\u0131n\u0131n \xF6z\xFCn\xFC i\xE7ine ald\u0131."
+    duration: 0
+    setFlag: ayna_sicramasi
+  - speaker: {fileID: 0}
+    text: "AYNA SI\xC7RAMASI \u2014 Ka\xE7\u0131\u015F tu\u015Fu (Shift) art\u0131k seni k\u0131sa bir mesafe ileri \u0131\u015F\u0131nlar. Daha uza\u011Fa gitmez, ama \xE7ukurlar\u0131n \xFCzerinden ge\xE7ebilirsin."
+    duration: 0
+    setFlag: 
+  - speaker: {fileID: 0}
+    text: "Kumlar\u0131n ortas\u0131nda, a\u015Fa\u011F\u0131ya inen bir yar\u0131k a\xE7\u0131ld\u0131."
+    duration: 0
+    setFlag: 

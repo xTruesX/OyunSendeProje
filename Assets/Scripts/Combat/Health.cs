@@ -84,5 +84,19 @@ namespace Boruhan.Combat
         }
 
         public void HealFull() => Heal(maxHealth);
+
+        /// <summary>Changes the maximum (e.g. a Can Parçası); current health is kept, capped to the new max.</summary>
+        public void SetMax(float max)
+        {
+            maxHealth = max;
+            Current = Mathf.Min(Current, maxHealth);
+            Changed?.Invoke();
+        }
+
+        public void SetCurrent(float value)
+        {
+            Current = Mathf.Clamp(value, 0f, maxHealth);
+            Changed?.Invoke();
+        }
     }
 }

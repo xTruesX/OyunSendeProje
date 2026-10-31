@@ -86,7 +86,7 @@ namespace Boruhan.EditorTools
         }
 
         /// <summary>Creates each tile (PNG + Tile asset) if missing, then a Tile Palette containing them.</summary>
-        static void CreateSet(string set, params (string name, int w, int h, Color color, Shape shape, bool solid, bool tall)[] defs)
+        internal static void CreateSet(string set, params (string name, int w, int h, Color color, Shape shape, bool solid, bool tall)[] defs)
         {
             Directory.CreateDirectory($"{TileDir}/{set}");
             var tiles = new List<TileBase>();
@@ -149,7 +149,7 @@ namespace Boruhan.EditorTools
         public static MusicTrack GetTrack(string name) => AssetDatabase.LoadAssetAtPath<MusicTrack>($"{TrackDir}/{name}.asset");
 
         /// <summary>Placeholder: a quiet two-note drone that loops seamlessly. Replace the clip in the track asset.</summary>
-        static void Track(string name, int lowHz, int highHz)
+        internal static void Track(string name, int lowHz, int highHz)
         {
             Directory.CreateDirectory(MusicFileDir);
             Directory.CreateDirectory(TrackDir);
@@ -226,7 +226,7 @@ namespace Boruhan.EditorTools
 
         public static RoomTheme GetTheme(string name) => AssetDatabase.LoadAssetAtPath<RoomTheme>($"{ThemeDir}/{name}.asset");
 
-        static void Theme(string name, TileBase floor, TileBase fill, TileBase[] edge, int thickness,
+        internal static void Theme(string name, TileBase floor, TileBase fill, TileBase[] edge, int thickness,
             Color background, Color light, float intensity, float cameraSize, MusicTrack music)
         {
             Directory.CreateDirectory(ThemeDir);

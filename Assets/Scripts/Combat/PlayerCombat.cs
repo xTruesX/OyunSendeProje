@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Boruhan.Core;
 using Boruhan.Dialogue;
 using Boruhan.Gameplay;
+using Boruhan.Story;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -17,7 +18,14 @@ namespace Boruhan.Combat
     public class PlayerCombat : MonoBehaviour
     {
         [Tooltip("Combat is enabled once any of these story flags is set.")]
-        [SerializeField] string[] combatFlags = { "kilic_alindi", StoryFlags.KutSpark };
+        [SerializeField] string[] combatFlags = { StoryFlags.Sword, StoryFlags.KutSpark };
+
+        [Header("Can ve Güçlenme")]
+        [SerializeField] float baseMaxHealth = 100f;
+        [Tooltip("Extra max health per Can Parçası found.")]
+        [SerializeField] float healthPerShard = 20f;
+        [Tooltip("Extra damage per Kut Parçası found (0.1 = +10%).")]
+        [SerializeField] float damagePerKutShard = 0.1f;
 
         [Header("Hafif Saldırı (3'lü kombo)")]
         [SerializeField] float lightDamage = 12f;
@@ -52,6 +60,16 @@ namespace Boruhan.Combat
         [Tooltip("Damage bonus once Kayra Han's spark is received.")]
         [SerializeField] float kutDamageMultiplier = 1.25f;
 
+        [Header("Ayna Sıçraması (1. Kat ödülü)")]
+        [Tooltip("With this ability the dodge becomes a short teleport that crosses pits (not walls).")]
+        [SerializeField] float blinkDistance = 3.2f;
+
+        [Header("Demir Eldiven (2. Kat ödülü)")]
+        [Tooltip("A heavy attack with the gauntlet stuns enemies for this long and breaks cracked walls.")]
+        [SerializeField] float gauntletStun = 2.2f;
+        [Tooltip("The gauntlet is heavy: its stun can only be used this often.")]
+        [SerializeField] float gauntletCooldown = 4f;
+
         [Header("Görsel")]
         [SerializeField] SpriteRenderer slashRenderer;
         [SerializeField] SpriteRenderer bodyRenderer;
@@ -69,6 +87,7 @@ namespace Boruhan.Combat
         Color flashColor;
         float flashUntil;
         float bodyAlpha = 1f;
+        float gauntletReadyAt;
 
         static readonly Vector2 BodyOffset = new Vector2(0f, 0.5f);
 
@@ -95,6 +114,32 @@ namespace Boruhan.Combat
             if (slashRenderer != null)
                 slashRenderer.enabled = false;
         }
+
+        void Start()
+        {
+            // Health carries over between scenes and saves.
+            ApplyUpgrades(false);
+            var data = GameSession.Data;
+            health.SetCurrent(data != null && data.playerHealth > 0f ? data.playerHealth : health.Max);
+            health.Changed += () =>
+            {
+                if (GameSession.Data != null && !health.IsDead)
+                    GameSession.Data.playerHealth = health.Current;
+            };
+        }
+
+        /// <summary>Recomputes max health from collected Can Parçası. Call after picking one up.</summary>
+        public void ApplyUpgrades(bool healToFull)
+        {
+            float max = baseMaxHealth + GameSession.CountFlags("can_parcasi_") * healthPerShard;
+            health.SetMax(max);
+            if (healToFull)
+                health.HealFull();
+        }
+
+        float DamageMultiplier =>
+            (1f + GameSession.CountFlags("kut_parcasi_") * damagePerKutShard)
+            * (GameSession.HasFlag(StoryFlags.KutSpark) ? kutDamageMultiplier : 1f);
 
         void Update()
         {
@@ -173,7 +218,7 @@ namespace Boruhan.Combat
                 if (target == null || target.Team == Team.Player || !hitThisSwing.Add(target))
                     continue;
 
-                float amount = damage * (GameSession.HasFlag(StoryFlags.KutSpark) ? kutDamageMultiplier : 1f);
+                float amount = damage * DamageMultiplier;
                 var enemy = target.GetComponent<EnemyController>();
                 if (heavy && enemy != null && enemy.IsStaggered)
                 {
@@ -181,7 +226,16 @@ namespace Boruhan.Combat
                     CombatFx.Burst(CombatFx.Circle, enemy.BodyCenter, 0.6f, 3f, new Color(1f, 0.55f, 0.15f, 0.8f), 0.35f, 70);
                 }
 
-                landed |= target.Damage(new DamageInfo { amount = amount, source = transform.position, knockback = knockback, heavy = heavy });
+                bool hit = target.Damage(new DamageInfo { amount = amount, source = transform.position, knockback = knockback, heavy = heavy });
+                landed |= hit;
+
+                // Demir Eldiven: the heavy blow stuns, but the gauntlet needs a moment between uses.
+                if (hit && heavy && enemy != null && GameSession.HasFlag(StoryFlags.IronGauntlet) && Time.time >= gauntletReadyAt)
+                {
+                    gauntletReadyAt = Time.time + gauntletCooldown;
+                    enemy.Stagger(gauntletStun);
+                    CombatFx.Burst(CombatFx.Circle, enemy.BodyCenter, 0.4f, 2.4f, new Color(0.75f, 0.75f, 0.85f, 0.8f), 0.3f, 70);
+                }
             }
 
             if (landed)
@@ -214,6 +268,12 @@ namespace Boruhan.Combat
 
         IEnumerator Dodge()
         {
+            if (GameSession.HasFlag(StoryFlags.MirrorLeap))
+            {
+                yield return Blink();
+                yield break;
+            }
+
             busy = true;
             nextDodge = Time.time + dodgeDuration + dodgeCooldown;
             var dir = controller.MoveInput.sqrMagnitude > 0.01f ? controller.MoveInput.normalized : Aim;
@@ -223,6 +283,52 @@ namespace Boruhan.Combat
             yield return new WaitForSeconds(dodgeDuration);
             bodyAlpha = 1f;
             busy = false;
+        }
+
+        /// <summary>Ayna Sıçraması: vanish and reappear a short distance ahead, over pits but not through walls.</summary>
+        IEnumerator Blink()
+        {
+            busy = true;
+            nextDodge = Time.time + 0.15f + dodgeCooldown;
+            var dir = controller.MoveInput.sqrMagnitude > 0.01f ? controller.MoveInput.normalized : Aim;
+            Vector2 from = transform.position;
+            var mirror = new Color(0.65f, 0.95f, 1f, 0.8f);
+
+            for (float d = blinkDistance; d >= 0.8f; d -= 0.4f)
+            {
+                var to = from + dir * d;
+                if (BlinkBlocked(from, to) || !IsFree(to))
+                    continue;
+                CombatFx.Burst(CombatFx.Circle, from + BodyOffset, 0.4f, 1.6f, mirror, 0.25f, 70);
+                health.SetInvulnerable(0.2f);
+                controller.Teleport(to);
+                CombatFx.Burst(CombatFx.Circle, to + BodyOffset, 1.6f, 0.4f, mirror, 0.2f, 70);
+                break;
+            }
+            yield return new WaitForSeconds(0.15f);
+            busy = false;
+        }
+
+        bool BlinkBlocked(Vector2 from, Vector2 to)
+        {
+            foreach (var hit in Physics2D.LinecastAll(from + Vector2.up * 0.2f, to + Vector2.up * 0.2f))
+            {
+                if (hit.collider.isTrigger || hit.collider.attachedRigidbody == controller.GetComponent<Rigidbody2D>())
+                    continue;
+                if (hit.collider.GetComponentInParent<BlinkPassable>() == null && hit.collider.GetComponentInParent<Health>() == null)
+                    return true;
+            }
+            return false;
+        }
+
+        bool IsFree(Vector2 position)
+        {
+            foreach (var hit in Physics2D.OverlapCircleAll(position + Vector2.up * 0.18f, 0.3f))
+            {
+                if (!hit.isTrigger && hit.attachedRigidbody != controller.GetComponent<Rigidbody2D>())
+                    return false;
+            }
+            return true;
         }
 
         IEnumerator Parry()
@@ -260,7 +366,7 @@ namespace Boruhan.Combat
             if (push.sqrMagnitude > 0.0001f && info.knockback > 0f)
                 controller.ForceVelocity(push.normalized * info.knockback, 0.15f);
             var cam = FindAnyObjectByType<CameraFollow>();
-            if (cam != null)
+            if (cam != null && info.knockback > 0f)
                 cam.Shake(0.15f);
         }
 
@@ -278,6 +384,8 @@ namespace Boruhan.Combat
             Flash(new Color(0.3f, 0.1f, 0.1f), 10f);
             yield return new WaitForSecondsRealtime(1.2f);
             var spawn = GameSession.Data != null ? GameSession.Data.spawnId : null;
+            if (GameSession.Data != null)
+                GameSession.Data.playerHealth = -1f;
             GameSession.TravelTo(SceneManager.GetActiveScene().name, spawn);
         }
 

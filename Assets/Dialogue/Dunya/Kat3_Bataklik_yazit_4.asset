@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e525b435dff6f3df5bb509836d41dbde, type: 3}
+  m_Name: Kat3_Bataklik_yazit_4
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Dialogue.DialogueAsset
+  lines:
+  - speaker: {fileID: 0}
+    text: "\"D\xF6rd\xFCnc\xFC kattan sekizinciye uzanan derinliklerde Buz Devi uyur, Kam-Su'nun k\u0131zg\u0131n bak\u0131r nehirleri akar ve Kut \xC7e\u015Fmesi kadim s\u0131rlar\u0131n\u0131 saklar.\""
+    duration: 0
+    setFlag: 
+  - speaker: {fileID: 0}
+    text: "\"Ama Erlik'e giden en k\u0131sa yol, \xC7al\u0131\u015F Han'\u0131n \xE7ukurundan ge\xE7er.\""
+    duration: 0
+    setFlag: 

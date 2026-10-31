@@ -30,8 +30,38 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/Scenes/SavasOdasi.unity
-    guid: f782fd208beef54b6ba9ba4d65cdcb2c
+    path: Assets/Scenes/Kat1_Col.unity
+    guid: 56f4653d688006316b046cf4b9209b89
+  - enabled: 1
+    path: Assets/Scenes/Kat1_Ayna.unity
+    guid: 6a6ef926c40b106bdbceb57bc9aa99d2
+  - enabled: 1
+    path: Assets/Scenes/Kat2Giris.unity
+    guid: 8f837b4d415a493fd9a839d20a3d9f80
+  - enabled: 1
+    path: Assets/Scenes/Kat2_Demirhane.unity
+    guid: 56fce1f928a5ecfeb8182de7c2bb1808
+  - enabled: 1
+    path: Assets/Scenes/Kat2_Temir.unity
+    guid: 77a0cb019f72f885ea13575e8db1518c
+  - enabled: 1
+    path: Assets/Scenes/Kat3Giris.unity
+    guid: 9f99224c8ee7e1beda12a6dfefcf4e22
+  - enabled: 1
+    path: Assets/Scenes/Kat3_Bataklik.unity
+    guid: 4f9a2ddc1a9f2a2b3942de28bd9ad6aa
+  - enabled: 1
+    path: Assets/Scenes/Kat3_Calis.unity
+    guid: d8b381bf0cbdb8a6688923f715d0c9ac
+  - enabled: 1
+    path: Assets/Scenes/Kat9Giris.unity
+    guid: 275bc9507482f6fccbb6076efe82d2f3
+  - enabled: 1
+    path: Assets/Scenes/Kat9_Taht.unity
+    guid: e4f253e565c8c5d1d8366f66d521e2d4
+  - enabled: 1
+    path: Assets/Scenes/Son.unity
+    guid: 63cc8e5ed78b866839900c172de8a6cf
   m_configObjects:
     com.unity.dt.app-ui: {fileID: 11400000, guid: 1b1c20d82303e4b5781c3ef50ac1449f, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

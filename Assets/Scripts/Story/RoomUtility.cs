@@ -1,5 +1,6 @@
 using Boruhan.Combat;
 using Boruhan.Core;
+using Boruhan.Gameplay;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -13,6 +14,31 @@ namespace Boruhan.Story
         {
             var spawn = GameSession.Data != null ? GameSession.Data.spawnId : null;
             GameSession.TravelTo(SceneManager.GetActiveScene().name, spawn);
+        }
+
+        /// <summary>Kut Ocağı: heal, make the nearest spawn point the respawn point, and save.</summary>
+        public void RestAtShrine()
+        {
+            HealPlayer();
+            var player = GameObject.FindWithTag("Player");
+            if (player != null && GameSession.Data != null)
+            {
+                SpawnPoint nearest = null;
+                float best = float.MaxValue;
+                foreach (var spawn in FindObjectsByType<SpawnPoint>(FindObjectsInactive.Exclude))
+                {
+                    float d = Vector2.Distance(spawn.transform.position, player.transform.position);
+                    if (d < best)
+                    {
+                        best = d;
+                        nearest = spawn;
+                    }
+                }
+                if (nearest != null)
+                    GameSession.Data.spawnId = nearest.id;
+            }
+            if (RoomManager.Instance != null)
+                RoomManager.Instance.SaveGame();
         }
 
         public void HealPlayer()

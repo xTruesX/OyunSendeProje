@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e525b435dff6f3df5bb509836d41dbde, type: 3}
+  m_Name: Kat1_Col_yazit_4
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Dialogue.DialogueAsset
+  lines:
+  - speaker: {fileID: 0}
+    text: "Yar\u0131 g\xF6m\xFCl\xFC bir kervanc\u0131 g\xFCnl\xFC\u011F\xFC:"
+    duration: 0
+    setFlag: 
+  - speaker: {fileID: 0}
+    text: "\"Erlik'in el\xE7ileri yery\xFCz\xFCnde alt\u0131n da\u011F\u0131tt\u0131; kar\u015F\u0131l\u0131\u011F\u0131nda yaln\u0131zca k\xFC\xE7\xFCk bir yalan istediler.\""
+    duration: 0
+    setFlag: 
+  - speaker: {fileID: 0}
+    text: "\"Kimse bedelin kendi ruhlar\u0131 oldu\u011Funu bilmiyordu.\""
+    duration: 0
+    setFlag: 

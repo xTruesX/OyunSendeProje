@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Boruhan.Dialogue;
 using Boruhan.Gameplay;
 using Boruhan.UI;
 using UnityEngine;
@@ -43,6 +44,29 @@ namespace Boruhan.Combat
         /// <summary>Scales all damage this enemy deals (illusions hit softer).</summary>
         public float DamageMultiplier { get; private set; } = 1f;
         public bool IsStaggered => Time.time < staggerUntil;
+        /// <summary>Enemies this one has summoned (Çağırma).</summary>
+        public List<EnemyController> Minions { get; } = new List<EnemyController>();
+
+        /// <summary>Creates an enemy at runtime (used for summons).</summary>
+        public static EnemyController Spawn(EnemyDefinition definition, Vector2 position)
+        {
+            var go = new GameObject(definition.displayName);
+            go.SetActive(false);
+            go.transform.position = position;
+            var sr = go.AddComponent<SpriteRenderer>();
+            sr.spriteSortPoint = SpriteSortPoint.Pivot;
+            go.AddComponent<Rigidbody2D>();
+            go.AddComponent<BoxCollider2D>();
+            go.AddComponent<Health>();
+            var enemy = go.AddComponent<EnemyController>();
+            enemy.definition = definition;
+            enemy.bodyRenderer = sr;
+            go.AddComponent<WorldHealthBar>();
+            go.SetActive(true);
+            return enemy;
+        }
+
+        public void ForceAggro() => Aggro();
 
         // Set by abilities.
         public bool Guarding { get; set; }
@@ -140,7 +164,7 @@ namespace Boruhan.Combat
             if (Health == null || Health.IsDead)
                 return;
             UpdateVisuals();
-            if (Player == null || PlayerHealth == null || PlayerHealth.IsDead)
+            if (Player == null || PlayerHealth == null || PlayerHealth.IsDead || DialogueRunner.IsBusy)
             {
                 velocity = Vector2.zero;
                 return;
