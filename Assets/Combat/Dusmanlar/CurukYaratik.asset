@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bb9f4eb288c94bb7a974d6f903086f9, type: 3}
+  m_Name: CurukYaratik
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Combat.EnemyDefinition
+  displayName: "\xC7\xFCr\xFCk Yarat\u0131k"
+  description: "\xC7\xFCr\xFCm\xFC\u015F etten bir y\u0131\u011F\u0131n. Vurduk\xE7a etraf\u0131na zehirli sis b\u0131rak\u0131r."
+  difficulty: 1
+  isBoss: 0
+  sprite: {fileID: 21300000, guid: 88148d2f18f1ba8e385533117b21ff5f, type: 3}
+  animations: {fileID: 11400000, guid: ae623391845a10d1fb2b5a1d909d90ec, type: 2}
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  scale: 1.15
+  footSize: {x: 0.7, y: 0.35}
+  maxHealth: 100
+  moveSpeed: 1.8
+  contactDamage: 6
+  knockbackResistance: 0.4
+  poise: 25
+  staggerTime: 0.35
+  aggroRange: 6
+  preferredDistance: 1.6
+  strafe: 1
+  abilities:
+  - {fileID: 294726809321980589}
+  - {fileID: 776953074707089195}
+--- !u!114 &294726809321980589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3755ffe6a2330cc8b8b3f91ff4fbc481, type: 3}
+  m_Name: "\xC7\xFCr\xFCk Pen\xE7e"
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Combat.MeleeStrikeAbility
+  displayName: "\xC7\xFCr\xFCk Pen\xE7e"
+  cooldown: 2.2
+  minRange: 0
+  maxRange: 2
+  weight: 1
+  windup: 0.55
+  recovery: 0.4
+  telegraphColor: {r: 1, g: 0.25, b: 0.2, a: 0.35}
+  animationState: 2
+  customAnimation: 
+  damage: 13
+  hits: 2
+  reach: 0.9
+  radius: 0.9
+  stepDistance: 0.5
+  timeBetweenHits: 0.35
+  knockback: 4
+--- !u!114 &776953074707089195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9259e5e80dadff7dc9fa92df0781b2d3, type: 3}
+  m_Name: Zehirli Sis
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Combat.HazardCloudAbility
+  displayName: Zehirli Sis
+  cooldown: 6
+  minRange: 0
+  maxRange: 6
+  weight: 1
+  windup: 0.6
+  recovery: 0.4
+  telegraphColor: {r: 1, g: 0.25, b: 0.2, a: 0.35}
+  animationState: 2
+  customAnimation: 
+  count: 1
+  radius: 1.6
+  spread: 3
+  lifetime: 5
+  damagePerSecond: 8
+  slowMultiplier: 0.8
+  immunityFlag: zehir_bagisikligi
+  cloudColor: {r: 0.55, g: 0.85, b: 0.3, a: 0.4}

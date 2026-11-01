@@ -1,0 +1,118 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7461611813076144703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3755ffe6a2330cc8b8b3f91ff4fbc481, type: 3}
+  m_Name: "S\u0131rt Han\xE7eri"
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Combat.MeleeStrikeAbility
+  displayName: "S\u0131rt Han\xE7eri"
+  cooldown: 2
+  minRange: 0
+  maxRange: 2
+  weight: 1
+  windup: 0.35
+  recovery: 0.5
+  telegraphColor: {r: 1, g: 0.25, b: 0.2, a: 0.35}
+  animationState: 2
+  customAnimation: 
+  damage: 14
+  hits: 1
+  reach: 0.9
+  radius: 0.8
+  stepDistance: 0.5
+  timeBetweenHits: 0.35
+  knockback: 4
+--- !u!114 &-2539191106886252014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f9e476156daf9e0aa2ac12d03ee9c61, type: 3}
+  m_Name: "S\u0131rttan Vuru\u015F"
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Combat.TeleportAbility
+  displayName: "S\u0131rttan Vuru\u015F"
+  cooldown: 6
+  minRange: 2.5
+  maxRange: 9
+  weight: 1
+  windup: 0.35
+  recovery: 0.3
+  telegraphColor: {r: 1, g: 0.25, b: 0.2, a: 0.35}
+  animationState: 4
+  customAnimation: 
+  destination: 0
+  distance: 1.2
+  followUp: {fileID: -7461611813076144703}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bb9f4eb288c94bb7a974d6f903086f9, type: 3}
+  m_Name: HainGolge
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Combat.EnemyDefinition
+  displayName: "Hain G\xF6lge"
+  description: "Dostunu s\u0131rt\u0131ndan vuranlar\u0131n g\xF6lgesi. Arkana \u0131\u015F\u0131nlan\u0131p han\xE7erler."
+  difficulty: 1
+  isBoss: 0
+  sprite: {fileID: 21300000, guid: 8477c9b39cf3db47f86c1410d2f013ff, type: 3}
+  animations: {fileID: 11400000, guid: 0d74f31935d8b090c9ecc9ea0e728753, type: 2}
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  scale: 1
+  footSize: {x: 0.7, y: 0.35}
+  maxHealth: 70
+  moveSpeed: 3
+  contactDamage: 0
+  knockbackResistance: 0.3
+  poise: 18
+  staggerTime: 0.35
+  aggroRange: 6.5
+  preferredDistance: 1.6
+  strafe: 1
+  abilities:
+  - {fileID: 7810243660077819120}
+  - {fileID: -2539191106886252014}
+--- !u!114 &7810243660077819120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3755ffe6a2330cc8b8b3f91ff4fbc481, type: 3}
+  m_Name: "Han\xE7er"
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Combat.MeleeStrikeAbility
+  displayName: "Han\xE7er"
+  cooldown: 1.8
+  minRange: 0
+  maxRange: 1.8
+  weight: 1
+  windup: 0.45
+  recovery: 0.4
+  telegraphColor: {r: 1, g: 0.25, b: 0.2, a: 0.35}
+  animationState: 2
+  customAnimation: 
+  damage: 9
+  hits: 2
+  reach: 0.8
+  radius: 0.75
+  stepDistance: 0.5
+  timeBetweenHits: 0.3
+  knockback: 4

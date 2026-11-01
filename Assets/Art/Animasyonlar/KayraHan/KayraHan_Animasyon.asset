@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6401d5c821fc6f3b9b557cced08e1c0, type: 3}
+  m_Name: KayraHan_Animasyon
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Animations.AnimationSet
+  mirrorForLeft: 1
+  clips:
+  - state: 0
+    customName: 
+    direction: 0
+    frames:
+    - {fileID: -4062410980539048240, guid: 43b04c6dda6d72849b39ca102f3bc557, type: 3}
+    fps: 2
+    loop: 1
+  - state: 1
+    customName: 
+    direction: 0
+    frames:
+    - {fileID: -4062410980539048240, guid: 43b04c6dda6d72849b39ca102f3bc557, type: 3}
+    fps: 8
+    loop: 1

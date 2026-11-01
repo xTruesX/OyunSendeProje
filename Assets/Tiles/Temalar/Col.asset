@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6262ce72b34c8886ac3c4024be4c92c, type: 3}
+  m_Name: Col
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Map.RoomTheme
+  floor: {fileID: 11400000, guid: 23e9a40feb8c657058b44f7b2939cbb8, type: 2}
+  borderFill: {fileID: 11400000, guid: 150c6361158f705d9a4af6b1696bab5e, type: 2}
+  borderEdge:
+  - {fileID: 11400000, guid: 0b6680ce7dba7f0a29bcee7ddfb2ec3d, type: 2}
+  - {fileID: 11400000, guid: eb49e7dcad0affa1c83e3cb2fd0aabfe, type: 2}
+  borderThickness: 4
+  background: {r: 0.08, g: 0.06, b: 0.05, a: 1}
+  lightColor: {r: 1, g: 0.9, b: 0.75, a: 1}
+  lightIntensity: 0.85
+  cameraSize: 6
+  music: {fileID: 11400000, guid: a8419e7dda856d1afa21acfa626327a9, type: 2}

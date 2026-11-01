@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-2369261622013799686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f52c8c802e085103ac2119090c5ad47, type: 3}
+  m_Name: Yelpaze
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Combat.ProjectileAbility
+  displayName: Yelpaze
+  cooldown: 2.6
+  minRange: 2
+  maxRange: 8
+  weight: 1
+  windup: 0.6
+  recovery: 0.4
+  telegraphColor: {r: 1, g: 0.25, b: 0.2, a: 0.35}
+  animationState: 2
+  customAnimation: 
+  damage: 7
+  count: 3
+  spreadAngle: 40
+  bursts: 1
+  burstInterval: 0.3
+  speed: 6.5
+  size: 0.35
+  lifetime: 4
+  color: {r: 1, g: 0.85, b: 0.5, a: 1}
+  sprite: {fileID: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bb9f4eb288c94bb7a974d6f903086f9, type: 3}
+  m_Name: Serap
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Combat.EnemyDefinition
+  displayName: Serap
+  description: "Yan\u0131lsamalar\u0131n efendisi. Kendi kopyalar\u0131n\u0131 yarat\u0131r; ger\xE7e\u011Fini bulmal\u0131s\u0131n."
+  difficulty: 1
+  isBoss: 0
+  sprite: {fileID: 21300000, guid: e58315e81911428bab56f293a3b9eac1, type: 3}
+  animations: {fileID: 11400000, guid: faccd2f6fcb2bba36a0f5f1e1e25eef8, type: 2}
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  scale: 1
+  footSize: {x: 0.7, y: 0.35}
+  maxHealth: 55
+  moveSpeed: 2.4
+  contactDamage: 0
+  knockbackResistance: 0
+  poise: 10
+  staggerTime: 0.35
+  aggroRange: 7
+  preferredDistance: 4.5
+  strafe: 1
+  abilities:
+  - {fileID: 2241073097132375618}
+  - {fileID: -2369261622013799686}
+  - {fileID: 622189114810155355}
+--- !u!114 &622189114810155355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f9e476156daf9e0aa2ac12d03ee9c61, type: 3}
+  m_Name: Kaybolma
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Combat.TeleportAbility
+  displayName: Kaybolma
+  cooldown: 5
+  minRange: 0
+  maxRange: 2
+  weight: 1
+  windup: 0.3
+  recovery: 0.4
+  telegraphColor: {r: 1, g: 0.25, b: 0.2, a: 0.35}
+  animationState: 4
+  customAnimation: 
+  destination: 1
+  distance: 4
+  followUp: {fileID: 0}
+--- !u!114 &2241073097132375618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62d0d174ee5ccdefd8937956ed7bfa9b, type: 3}
+  m_Name: Serap
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Combat.SummonIllusionsAbility
+  displayName: Serap
+  cooldown: 9
+  minRange: 0
+  maxRange: 9
+  weight: 1
+  windup: 0.6
+  recovery: 0.4
+  telegraphColor: {r: 1, g: 0.25, b: 0.2, a: 0.35}
+  animationState: 2
+  customAnimation: 
+  count: 2
+  radius: 2.5
+  lifetime: 9
+  swapWithCopy: 1

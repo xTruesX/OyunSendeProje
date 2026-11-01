@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6262ce72b34c8886ac3c4024be4c92c, type: 3}
+  m_Name: Bozkir
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Map.RoomTheme
+  floor: {fileID: 11400000, guid: 8c81cc6f6cd4e7716ac31300e7daf66e, type: 2}
+  borderFill: {fileID: 11400000, guid: 49fa1f2b3058e4d05b5e198e87638fa3, type: 2}
+  borderEdge:
+  - {fileID: 11400000, guid: 7911d3160263d499481f24d36bf62508, type: 2}
+  - {fileID: 11400000, guid: 158f95f6dd08b3973a2a66d7fcbea8a9, type: 2}
+  borderThickness: 6
+  background: {r: 0.02, g: 0.03, b: 0.07, a: 1}
+  lightColor: {r: 0.7, g: 0.78, b: 1, a: 1}
+  lightIntensity: 0.5
+  cameraSize: 6
+  music: {fileID: 11400000, guid: 80c38c53f863d5f3db78f2189b394543, type: 2}

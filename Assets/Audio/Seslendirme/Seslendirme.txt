@@ -1,0 +1,272 @@
+Seslendirme listesi. Her dosyanın üzerine aynı adla (.wav) kaydedin.
+
+== 00_GirisSinematigi ==
+00_GirisSinematigi/01_Anlatici.wav  |  Anlatıcı: Evvel zaman içinde, kalbur saman içinde...
+00_GirisSinematigi/02_Anlatici.wav  |  Anlatıcı: Soğuk bir kış gecesinde Ülgen Han yeryüzünü seyrederken, yeni doğmuş ve donmak üzere olan bir insan bebeği gördü.
+00_GirisSinematigi/03_Anlatici.wav  |  Anlatıcı: Ona kıyamadı ve onu kendi himayesi altına aldı. O bebeğin adı Börühan'dı.
+00_GirisSinematigi/04_Anlatici.wav  |  Anlatıcı: Göklerin ocağında, yıldızların diliyle büyütüldü; demir tozuyla biledi bileklerini, rüzgârın fısıltısıyla kuşandı ruhunu.
+00_GirisSinematigi/05_Anlatici.wav  |  Anlatıcı: Fakat yeraltının efendisi Erlik Han, kıskançlığı ve nefretiyle bir tuzak kurarak Ülgen Han'ı gafil avladı.
+00_GirisSinematigi/06_Anlatici.wav  |  Anlatıcı: Göklerin nuru sönüp Ülgen Han yeraltının dokuzuncu katındaki paslı demir kazıklara mahkûm edildiğinde...
+00_GirisSinematigi/07_Anlatici.wav  |  Anlatıcı: ...Börühan için artık çocukluk çok geride kalmıştı.
+
+== 01_Otag_Giris ==
+01_Otag_Giris/01_Anlatici.wav  |  Anlatıcı: Börühan yaşadığı otağda, Ülgen Han'ın ona verdiği tılsımı düşünüyordu.
+01_Otag_Giris/02_Anlatici.wav  |  Anlatıcı: İçinde bir hüzün ve bir nefret vardı. İntikam almak istiyordu, ama yeterince güçlü değildi.
+01_Otag_Giris/03_Boruhan.wav  |  Börühan: Babam... Seni o karanlıkta nasıl bulacağım?
+
+== 02_Otag_TilsimiAl ==
+02_Otag_TilsimiAl/01_Anlatici.wav  |  Anlatıcı: Sandığın içinde, Ülgen Han'ın ona bıraktığı tılsım duruyordu.
+02_Otag_TilsimiAl/02_Anlatici.wav  |  Anlatıcı: Bir anda Ülgen Han'ın söylediği bir söz aklına geldi.
+02_Otag_TilsimiAl/03_UlgenHan.wav  |  Ülgen Han: Eğer bir gün çaresiz hissedersen, o tılsım sana yol gösterecek.
+02_Otag_TilsimiAl/04_Boruhan.wav  |  Börühan: Yol göster öyleyse...
+02_Otag_TilsimiAl/05_Anlatici.wav  |  Anlatıcı: Börühan tılsımı aldı ve yolculuğa hazırlandı.
+
+== 02b_Otag_SandikBos ==
+02b_Otag_SandikBos/01_Anlatici.wav  |  Anlatıcı: Sandık artık boş.
+
+== 03_Otag_Ocak ==
+03_Otag_Ocak/01_Anlatici.wav  |  Anlatıcı: Ocağın közleri hâlâ sıcaktı.
+03_Otag_Ocak/02_Boruhan.wav  |  Börühan: Ülgen Han'la bu ateşin başında geçen geceler... Hepsini geri alacağım.
+
+== 04_Otag_KapiKilitli ==
+04_Otag_KapiKilitli/01_Boruhan.wav  |  Börühan: Tılsımı almadan gidemem.
+
+== 10_Yeryuzu_TilsimParliyor ==
+10_Yeryuzu_TilsimParliyor/01_Anlatici.wav  |  Anlatıcı: Börühan otağdan çıktığında tılsım birden parlamaya başladı.
+10_Yeryuzu_TilsimParliyor/02_Anlatici.wav  |  Anlatıcı: Bir yöne döndüğünde parlıyor, başka yöne gittiğinde sönüyordu.
+10_Yeryuzu_TilsimParliyor/03_Boruhan.wav  |  Börühan: Bana yol gösteriyor... Işığını takip etmeliyim.
+
+== 11_Yeryuzu_Harabe ==
+11_Yeryuzu_Harabe/01_Anlatici.wav  |  Anlatıcı: Tılsımın ışığını takip eden Börühan, harabe bir yapıya ulaştı.
+11_Yeryuzu_Harabe/02_Anlatici.wav  |  Anlatıcı: Birden önünde, gökyüzüne uzanan bir merdiven belirdi.
+11_Yeryuzu_Harabe/03_Boruhan.wav  |  Börühan: Göklere uzanan bir merdiven... Ülgen Han, bu senin işin mi?
+
+== 12_Yeryuzu_MagaraKapali ==
+12_Yeryuzu_MagaraKapali/01_Boruhan.wav  |  Börühan: Zifiri karanlık bir mağara... İçeriden soğuk bir rüzgâr esiyor.
+12_Yeryuzu_MagaraKapali/02_Anlatici.wav  |  Anlatıcı: Şimdilik burada yapacak bir şeyi yoktu.
+
+== 13_Yeryuzu_Donus ==
+13_Yeryuzu_Donus/01_Anlatici.wav  |  Anlatıcı: Börühan merdivenden yeryüzüne indi ve yola koyuldu.
+13_Yeryuzu_Donus/02_Boruhan.wav  |  Börühan: Karanlıktan da karanlık bir mağara... Tılsım yine parlıyor. Yolu o gösterecek.
+
+== 20_Gok_Varis ==
+20_Gok_Varis/01_Anlatici.wav  |  Anlatıcı: Börühan merdivenden çıktı; bulutların da ötesinde bir yere...
+20_Gok_Varis/02_Anlatici.wav  |  Anlatıcı: Orada birisi oturuyordu...
+20_Gok_Varis/03_Anlatici.wav  |  Anlatıcı: Kayra Han. Evrenin yaratıcısı.
+
+== 21_Gok_KayraHan ==
+21_Gok_KayraHan/01_Anlatici.wav  |  Anlatıcı: Börühan ona her şeyi anlatmak istiyordu, ama Kayra Han zaten her şeyi biliyordu.
+21_Gok_KayraHan/02_KayraHan.wav  |  Kayra Han: Seni yukarıdan izledim, evlat. Çok zor zamanlar geçiriyorsun.
+21_Gok_KayraHan/03_KayraHan.wav  |  Kayra Han: Söyle bakalım, nedir benden istediğin?
+21_Gok_KayraHan/04_Boruhan.wav  |  Börühan: Ulu Kayra Han... Yeterince güçlü değilim. Elimde bir silahım bile yok. Ülgen Han'a nasıl ulaşacağımı da bilmiyorum.
+21_Gok_KayraHan/05_KayraHan.wav  |  Kayra Han: Önce bir kılıç. Yıldızların demirinden dövülmüş, yalnızca doğru olan için çekilecek bir kılıç.
+21_Gok_KayraHan/06_Anlatici.wav  |  Anlatıcı: Kayra Han elini kaldırdı. Börühan'ın önüne, ışıklar saçan bir kılıç düştü.
+21_Gok_KayraHan/07_KayraHan.wav  |  Kayra Han: Al onu, evlat.
+
+== 22_Gok_KayraHan_Tekrar ==
+22_Gok_KayraHan_Tekrar/01_KayraHan.wav  |  Kayra Han: Yolun açık olsun, evlat. Karanlıktan da karanlık mağara seni bekliyor.
+
+== 23_Gok_MerdivenKilitli ==
+23_Gok_MerdivenKilitli/01_Boruhan.wav  |  Börühan: Buraya kadar geldim. Önce onunla konuşmalıyım.
+
+== 30_Magara_YerYarildi ==
+30_Magara_YerYarildi/01_Anlatici.wav  |  Anlatıcı: Birden mağaranın içindeki yer yarıldı!
+30_Magara_YerYarildi/02_Anlatici.wav  |  Anlatıcı: Yarıktan kırmızı, turuncu ışıklar ve çığlıklar yükseliyordu.
+30_Magara_YerYarildi/03_Boruhan.wav  |  Börühan: Bu ses... Bu ışık...
+30_Magara_YerYarildi/04_Anlatici.wav  |  Anlatıcı: Börühan korkuyordu. Ama Ülgen Han'ı kurtarma isteği ona cesaret verdi.
+30_Magara_YerYarildi/05_Boruhan.wav  |  Börühan: Babam beni bekliyor. Geri dönmek yok.
+
+== 40_Kat1_Giris ==
+40_Kat1_Giris/01_Anlatici.wav  |  Anlatıcı: Yarık, Börühan'ın arkasından kapandı.
+40_Kat1_Giris/02_Anlatici.wav  |  Anlatıcı: Cehennemin ilk katındaydı: Yalanlar ve Sırlar Çölü.
+40_Kat1_Giris/03_Anlatici.wav  |  Anlatıcı: Burası, yeryüzündeyken birbirine ihanet etmiş, dostunu sırtından vurmuş ya da sır saklayıp güveni zedelemiş ruhların cezalandırıldığı yerdi.
+40_Kat1_Giris/04_Anlatici.wav  |  Anlatıcı: Çölün rüzgârı, insanın kulağına en güvendiği kişilerin sesleriyle fısıldar; yalanları, iftiraları ve şüpheyi büyüterek kalbi kurutur.
+40_Kat1_Giris/05_Fisiltilar.wav  |  Fısıltılar: Ülgen Han seni gerçekten evladı olarak mı sevdi... yoksa seni kendi büyük planı için bir araç mı yaptı?
+40_Kat1_Giris/06_Fisiltilar.wav  |  Fısıltılar: Ya bir gün seni yüzüstü bırakırsa?
+40_Kat1_Giris/07_Boruhan.wav  |  Börühan: Susun... Onu tanıyorum. Sizi dinlemeyeceğim.
+
+== gok_kayra_kilicini_al ==
+gok_kayra_kilicini_al/01_KayraHan.wav  |  Kayra Han: Kılıcını al, evlat. Önünde duruyor.
+
+== gok_kilic ==
+gok_kilic/01_Anlatici.wav  |  Anlatıcı: Börühan kılıcı yerden aldı. Kılıç, elinde yıldızlar gibi parladı.
+gok_kilic/02_Anlatici.wav  |  Anlatıcı: Saldırı: J / Sol Tık · Kaçış: Shift · Savuşturma: Q
+gok_kilic/03_KayraHan.wav  |  Kayra Han: Ama yalnız demir yetmez. Sana gücümden bir parça vereyim. Bir kıvılcım...
+gok_kilic/04_Anlatici.wav  |  Anlatıcı: Börühan'ın kılıcı alev aldı, gözleri kızıla döndü. İçinde bir güç kabardığını hissetti.
+gok_kilic/05_KayraHan.wav  |  Kayra Han: Bu kıvılcım seni yalnızca korur. Erlik'i yenmek istiyorsan, yeraltının katlarında yendiğin her dehşetin özünü kendi ellerinle söküp almalısın.
+gok_kilic/06_KayraHan.wav  |  Kayra Han: Karanlıktan da karanlık bir mağarada, aradığın yeri bulacaksın.
+gok_kilic/07_Boruhan.wav  |  Börühan: Sağ ol, Ulu Han. Babamı geri getireceğim.
+
+== kat1_ayna_giris ==
+kat1_ayna_giris/01_Anlatici.wav  |  Anlatıcı: Çölün sonunda aşırı tanıdık bir yüz vardı.
+kat1_ayna_giris/02_Anlatici.wav  |  Anlatıcı: Kendisi.
+kat1_ayna_giris/03_AynaKopya.wav  |  Ayna Kopya: Ülgen Han seni hiç sevmedi. Ben biliyorum... çünkü ben senim.
+kat1_ayna_giris/04_Anlatici.wav  |  Anlatıcı: Bu sahte kopya kendini çoğaltabiliyor, Börühan'ın korkularına bürünüp onu yavaşlatabiliyor ve vuruşlarını daha güçlü yansıtabiliyordu.
+
+== kat1_ayna_odul ==
+kat1_ayna_odul/01_Anlatici.wav  |  Anlatıcı: Börühan kılıcını tozlara saplayarak kalıntının özünü içine aldı.
+kat1_ayna_odul/02_Anlatici.wav  |  Anlatıcı: AYNA SIÇRAMASI — Kaçış tuşu (Shift) artık seni kısa bir mesafe ileri ışınlar. Daha uzağa gitmez, ama çukurların üzerinden geçebilirsin.
+kat1_ayna_odul/03_Anlatici.wav  |  Anlatıcı: Kumların ortasında, aşağıya inen bir yarık açıldı.
+
+== kat1_ayna_zafer ==
+kat1_ayna_zafer/01_Anlatici.wav  |  Anlatıcı: Börühan korkularının üstesinden geldi. Kopya bir ayna gibi paramparça oldu ve kristal tozlara dönüştü.
+kat1_ayna_zafer/02_Anlatici.wav  |  Anlatıcı: Tozların arasında parlayan bir şey kaldı.
+
+== Kat1_Col_fisiltilar ==
+Kat1_Col_fisiltilar/01_Fisiltilar.wav  |  Fısıltılar: Ülgen Han seni gerçekten evladı olarak mı sevdi... yoksa seni kendi büyük planı için bir araç mı yaptı?
+Kat1_Col_fisiltilar/02_Anlatici.wav  |  Anlatıcı: Fısıltılar Börühan'ın güvenini içeriden kemirmeye, zehirli bir sarmaşık gibi ruhunu sarmaya çalıştı.
+Kat1_Col_fisiltilar/03_Anlatici.wav  |  Anlatıcı: Ama Börühan'ın Ülgen Han'a sevgisi ve onunla edindiği anılar, bu fısıltıların üstesinden geldi.
+Kat1_Col_fisiltilar/04_Boruhan.wav  |  Börühan: Yalan söylüyorsunuz. Onu tanıyorum.
+
+== Kat1_Col_ruh_3 ==
+Kat1_Col_ruh_3/01_PismanRuh.wav  |  Pişman Ruh: Ben kardeşimi bir avuç altın için sattım...
+Kat1_Col_ruh_3/02_PismanRuh.wav  |  Pişman Ruh: Şimdi rüzgâr onun sesiyle bana fısıldıyor. Her gün, her gece.
+Kat1_Col_ruh_3/03_PismanRuh.wav  |  Pişman Ruh: Sen kimseyi satma, yiğit. Kuzeydeki kervan yolunda, ihanetin gölgeleri pusuya yatar.
+
+== Kat1_Col_yazit_1 ==
+Kat1_Col_yazit_1/01_Anlatici.wav  |  Anlatıcı: Taşa kazınmış eski bir yazı:
+Kat1_Col_yazit_1/02_Anlatici.wav  |  Anlatıcı: "Yeraltı dokuz kattır. Her kat, yeryüzünde işlenen bir günahın ağırlığıyla kazılmıştır. İlki yalanınkidir."
+Kat1_Col_yazit_1/03_Anlatici.wav  |  Anlatıcı: Altına sonradan biri eklemiş: "Bazı duvarlar yalan söyler. İnanma, yürü."
+
+== Kat1_Col_yazit_2 ==
+Kat1_Col_yazit_2/01_Anlatici.wav  |  Anlatıcı: "Fısıltılara kulak veren kendi sesini unutur. Fısıltıları susturan tek şey, gerçek bir anıdır."
+
+== Kat1_Col_yazit_4 ==
+Kat1_Col_yazit_4/01_Anlatici.wav  |  Anlatıcı: Yarı gömülü bir kervancı günlüğü:
+Kat1_Col_yazit_4/02_Anlatici.wav  |  Anlatıcı: "Erlik'in elçileri yeryüzünde altın dağıttı; karşılığında yalnızca küçük bir yalan istediler."
+Kat1_Col_yazit_4/03_Anlatici.wav  |  Anlatıcı: "Kimse bedelin kendi ruhları olduğunu bilmiyordu."
+
+== Kat1_Col_yazit_5 ==
+Kat1_Col_yazit_5/01_Anlatici.wav  |  Anlatıcı: "Ayna her şeyi gösterir, ama hiçbir şeyi bilmez."
+Kat1_Col_yazit_5/02_Anlatici.wav  |  Anlatıcı: "Kendi yansımanla karşılaştığında korkularını değil, sevdiklerini hatırla. Ve o parladığında ona vurma."
+
+== Kat1_Col_yazit_6 ==
+Kat1_Col_yazit_6/01_Anlatici.wav  |  Anlatıcı: "Kut, Kayra Han'ın evrene üflediği candır."
+Kat1_Col_yazit_6/02_Anlatici.wav  |  Anlatıcı: "Yenilen her dehşet özünü geride bırakır. Onu söküp alan, kendi Kut'unu büyütür."
+Kat1_Col_yazit_6/03_Anlatici.wav  |  Anlatıcı: Börühan, Kayra Han'ın sözlerini hatırladı.
+
+== Kat1_Col_yazit_7 ==
+Kat1_Col_yazit_7/01_Anlatici.wav  |  Anlatıcı: "Ülgen'in ışığını çalan dokuzuncu katta oturur."
+Kat1_Col_yazit_7/02_Anlatici.wav  |  Anlatıcı: "Tahtı paslı demir kazıklardan, kazıkları ise tanrıların zincirlerinden dövülmüştür."
+
+== Kat2_Demirhane_ruh_3 ==
+Kat2_Demirhane_ruh_3/01_YorgunKole.wav  |  Yorgun Köle: Temir Han'ın damarlarında kan değil, lav akar.
+Kat2_Demirhane_ruh_3/02_YorgunKole.wav  |  Yorgun Köle: Bir darbesi dağları yarar... Ama yavaştır, çok yavaş. Vuruşunu bekle, sonra yanına kaç.
+Kat2_Demirhane_ruh_3/03_YorgunKole.wav  |  Yorgun Köle: Dengesini bozarsan, Kut'unla yık onu.
+
+== Kat2_Demirhane_yazit_1 ==
+Kat2_Demirhane_yazit_1/01_Anlatici.wav  |  Anlatıcı: "Erlik'in silahhanesi hiç soğumaz. Burada dövülen her kılıç, yeryüzünde bir savaşı başlatmak içindir."
+Kat2_Demirhane_yazit_1/02_Anlatici.wav  |  Anlatıcı: Altında kömürle yazılmış bir not: "Çukurların üzerinden ancak ayna gibi geçilir."
+
+== Kat2_Demirhane_yazit_2 ==
+Kat2_Demirhane_yazit_2/01_Anlatici.wav  |  Anlatıcı: "Tunç Ordu da bu örslerde dövüldü."
+Kat2_Demirhane_yazit_2/02_Anlatici.wav  |  Anlatıcı: "Yeraltının başka bir katında, atlarıyla birlikte uyandırılmayı bekliyorlar."
+
+== Kat2_Demirhane_yazit_4 ==
+Kat2_Demirhane_yazit_4/01_Anlatici.wav  |  Anlatıcı: "Gök Dalı, Yer Dalı ve Ulu Öz... Ata Ağacı'nın üç dalı, bir kahramanın yolunu anlatır."
+Kat2_Demirhane_yazit_4/02_Anlatici.wav  |  Anlatıcı: "Ülgen'in mirası hız ve yıldırımdır; yeraltının özü dayanıklılık; Kayra'nın kıvılcımı ise hepsini büyütür."
+
+== kat2_giris ==
+kat2_giris/01_Anlatici.wav  |  Anlatıcı: Börühan çölü geçti ve cehennemin ikinci katına indi: Zırhlılar Geçidi.
+kat2_giris/02_Anlatici.wav  |  Anlatıcı: Burası Erlik Han'ın yeraltındaki silahhanesi ve devasa demir atölyesiydi.
+kat2_giris/03_Anlatici.wav  |  Anlatıcı: Havada kömür karası tozlar, dev körüklerin sesi ve kızgın demir kokusu vardı.
+kat2_giris/04_Anlatici.wav  |  Anlatıcı: Zeminde yer yer dipsiz çukurlar açılıyordu. Ayna Sıçraması burada işine yarayacaktı.
+
+== kat2_temir_giris ==
+kat2_temir_giris/01_Anlatici.wav  |  Anlatıcı: Sona geldiğinde, önünde kanlarında lav akan, taştan bir dev belirdi. Elinde devasa bir metal balyoz vardı.
+kat2_temir_giris/02_TemirHan.wav  |  Temir Han: Erlik'in örsüne bir demir daha... Gel, seni de döveyim!
+kat2_temir_giris/03_Anlatici.wav  |  Anlatıcı: Temir Han yavaştı ama sert vuruyordu. Tek bir darbesi bile neredeyse ölümcüldü.
+
+== kat2_temir_odul ==
+kat2_temir_odul/01_Anlatici.wav  |  Anlatıcı: Börühan eldiveni aldı.
+kat2_temir_odul/02_Anlatici.wav  |  Anlatıcı: DEMİR ELDİVEN — Artık ağır saldırı yapabilirsin: K / Sağ Tık.
+kat2_temir_odul/03_Anlatici.wav  |  Anlatıcı: Ağır saldırı kalkanları ve çatlak duvarları kırar, düşmanı sersemletir. Dengesi bozulan düşmana vurursan Kut Yıkımı olur. Eldiven ağırdır; sersemletme her an kullanılamaz.
+kat2_temir_odul/04_Anlatici.wav  |  Anlatıcı: Börühan daha da güçlendiğini hissetti, ama hâlâ hazır değildi. Aşağıya inen bir yarık açıldı.
+
+== kat2_temir_zafer ==
+kat2_temir_zafer/01_Anlatici.wav  |  Anlatıcı: Dev parçalandı; içindeki lavlar etrafa aktı.
+kat2_temir_zafer/02_Anlatici.wav  |  Anlatıcı: Devin ellerinden biri metal bir eldivene dönüştü ve yere düştü.
+
+== Kat3_Bataklik_ruh_3 ==
+Kat3_Bataklik_ruh_3/01_PismanRuh.wav  |  Pişman Ruh: Ben bir şamandım. Çalış Han'a tapanlara katıldım, salgını kutsal sandım...
+Kat3_Bataklik_ruh_3/02_PismanRuh.wav  |  Pişman Ruh: Bataklığın dibinden yeni yaratıklar doğuyor. O onları çağırdıkça ölüler bile rahat edemiyor.
+Kat3_Bataklik_ruh_3/03_PismanRuh.wav  |  Pişman Ruh: Onu yenersen, zehrin sana dokunamaz olur. Bu bataklığın tek iyiliği budur.
+
+== Kat3_Bataklik_yazit_1 ==
+Kat3_Bataklik_yazit_1/01_Anlatici.wav  |  Anlatıcı: "Çalış Han, yeryüzüne salgın ve acı gönderen hastalığın efendisidir. Burada nefesin bile ona aittir."
+Kat3_Bataklik_yazit_1/02_Anlatici.wav  |  Anlatıcı: Altına kazınmış: "Çatlak duvarlar demirden bir yumruğu bekler."
+
+== Kat3_Bataklik_yazit_2 ==
+Kat3_Bataklik_yazit_2/01_Anlatici.wav  |  Anlatıcı: "Ülgen Han bir kış gecesi yeryüzüne baktığında yalnızca donmak üzere bir bebek görmedi."
+Kat3_Bataklik_yazit_2/02_Anlatici.wav  |  Anlatıcı: "Erlik'i yenecek olanı gördü."
+
+== Kat3_Bataklik_yazit_4 ==
+Kat3_Bataklik_yazit_4/01_Anlatici.wav  |  Anlatıcı: "Dördüncü kattan sekizinciye uzanan derinliklerde Buz Devi uyur, Kam-Su'nun kızgın bakır nehirleri akar ve Kut Çeşmesi kadim sırlarını saklar."
+Kat3_Bataklik_yazit_4/02_Anlatici.wav  |  Anlatıcı: "Ama Erlik'e giden en kısa yol, Çalış Han'ın çukurundan geçer."
+
+== kat3_calis_giris ==
+kat3_calis_giris/01_Anlatici.wav  |  Anlatıcı: Börühan bataklığın sonunda Çalış Han ile yüzleşti.
+kat3_calis_giris/02_CalisHan.wav  |  Çalış Han: Nefes al, yiğit... Her nefes seni bana biraz daha yaklaştırır.
+kat3_calis_giris/03_Anlatici.wav  |  Anlatıcı: Etrafa zehirli gaz bulutları yayıyor, bataklığın derinliklerinden yeni yaratıklar çağırıyordu.
+
+== kat3_calis_odul ==
+kat3_calis_odul/01_Anlatici.wav  |  Anlatıcı: Börühan Çalış Han'ın özünü içine aldı ve zehir ve veba bağışıklığı elde etti. Artık zehirler onu etkileyemezdi.
+kat3_calis_odul/02_Anlatici.wav  |  Anlatıcı: Ve yerin en dibine, son kata inen yol açıldı.
+
+== kat3_calis_zafer ==
+kat3_calis_zafer/01_Anlatici.wav  |  Anlatıcı: Ağır darbeler ve uzun bir savaşın sonunda Çalış Han yenildi.
+kat3_calis_zafer/02_Anlatici.wav  |  Anlatıcı: Etraftaki zehirli gaz dağıldı. Geride yeşil bir ışıkla parlayan bir öz kaldı.
+
+== kat3_giris ==
+kat3_giris/01_Anlatici.wav  |  Anlatıcı: Börühan yoluna devam etti ve üçüncü kata ulaştı: Hastalık ve Çürüme Diyarı.
+kat3_giris/02_Anlatici.wav  |  Anlatıcı: Zemininde zehirli yeşil sisler, bataklıklar ve havada uçuşan salgın tozları vardı. Nefes almak bile can yakıyordu.
+kat3_giris/03_Anlatici.wav  |  Anlatıcı: Burası, yeryüzüne salgınları ve acıyı yayan Çalış Han'ın diyarıydı.
+kat3_giris/04_Anlatici.wav  |  Anlatıcı: Bataklıklar insanı içine çeker, hava zehirler. Yeşil sislerden uzak dur.
+
+== kat9_giris ==
+kat9_giris/01_Anlatici.wav  |  Anlatıcı: Ve sonunda Börühan son kata ulaştı.
+kat9_giris/02_Anlatici.wav  |  Anlatıcı: Erlik Han'ın tahtı ve Ülgen Han'ın tutulduğu yer.
+kat9_giris/03_Anlatici.wav  |  Anlatıcı: Yerler simsiyah, soğuk obsidyen taşlarıyla kaplıydı. Çevrede göğü ve yeri tuttuğu söylenen, ama artık paslanmış devasa demir sütunlar uzanıyordu.
+
+== Kat9_Taht_ruh_ulgen ==
+Kat9_Taht_ruh_ulgen/01_UlgenHan.wav  |  Ülgen Han: Evlat... Buraya kadar geldin.
+Kat9_Taht_ruh_ulgen/02_UlgenHan.wav  |  Ülgen Han: Sesimi duyuyor musun? Korkma. Ben buradayım. Seni hep izledim.
+Kat9_Taht_ruh_ulgen/03_UlgenHan.wav  |  Ülgen Han: Erlik illüzyonlarla zihnini bunaltmaya çalışacak. Gerçeği hatırla: sen benim oğlumsun.
+
+== Kat9_Taht_taht ==
+Kat9_Taht_taht/01_Anlatici.wav  |  Anlatıcı: Burası sıradan bir taht odası değildi.
+Kat9_Taht_taht/02_Anlatici.wav  |  Anlatıcı: Tahtın arkasında, Börühan'ın bütün bu yolu gelmesinin sebebi vardı: Ülgen Han.
+Kat9_Taht_taht/03_UlgenHan.wav  |  Ülgen Han: Börühan... Evlat...
+Kat9_Taht_taht/04_Anlatici.wav  |  Anlatıcı: Tahtta oturan kişi Erlik Han'dı. Ayağa kalktı ve konuşmaya başladı.
+Kat9_Taht_taht/05_ErlikHan.wav  |  Erlik Han: Demek bütün katları aşıp buraya kadar geldin ha?
+Kat9_Taht_taht/06_ErlikHan.wav  |  Erlik Han: Üzgünüm ama burası senin ulaşacağın son yer.
+
+== Kat9_Taht_yazit_1 ==
+Kat9_Taht_yazit_1/01_Anlatici.wav  |  Anlatıcı: "Göğü ve yeri tuttuğu söylenen sütunlar şimdi paslanıyor."
+Kat9_Taht_yazit_1/02_Anlatici.wav  |  Anlatıcı: "Denge bozuldukça yeryüzünde kışlar uzar, geceler kararır."
+
+== kat9_zafer ==
+kat9_zafer/01_Anlatici.wav  |  Anlatıcı: Zorlu savaşın sonunda Erlik Han yere yığıldı.
+kat9_zafer/02_Anlatici.wav  |  Anlatıcı: Börühan paslı zincirleri kılıcıyla parçaladı.
+kat9_zafer/03_UlgenHan.wav  |  Ülgen Han: Evlat... Geleceğini... biliyordum.
+kat9_zafer/04_Anlatici.wav  |  Anlatıcı: Ülgen Han'ın hali bitmişti; üzeri yaralıydı ve ışığı sönmek üzereydi.
+kat9_zafer/05_Boruhan.wav  |  Börühan: Seni eve götürüyorum, baba.
+
+== kut_ocagi ==
+kut_ocagi/01_Anlatici.wav  |  Anlatıcı: Kut Ocağı'nın ateşi Börühan'ı sardı. Yaraları kapandı ve yolu kaydedildi.
+
+== otag_kilic ==
+otag_kilic/01_Anlatici.wav  |  Anlatıcı: Yerde, Ülgen Han'ın ona armağan ettiği kılıç duruyordu.
+otag_kilic/02_UlgenHan.wav  |  Ülgen Han: Bu kılıç yıldızların demirinden dövüldü. Onu yalnızca doğru olan için çek.
+otag_kilic/03_Anlatici.wav  |  Anlatıcı: Börühan kılıcı kuşandı.
+otag_kilic/04_Anlatici.wav  |  Anlatıcı: Saldırı: J / Sol Tık · Kaçış: Shift · Savuşturma: Q
+
+== otag_kilic_bos ==
+otag_kilic_bos/01_Anlatici.wav  |  Anlatıcı: Askı artık boş. Kılıç Börühan'ın belinde.
+
+== son ==
+son/01_Anlatici.wav  |  Anlatıcı: İkisi birlikte yeryüzüne döndü.
+son/02_Anlatici.wav  |  Anlatıcı: Aradan uzun zaman geçti.
+son/03_Anlatici.wav  |  Anlatıcı: Ülgen Han iyileşti; eskisinden de güçlü, eskisinden de parlak.
+son/04_Anlatici.wav  |  Anlatıcı: İyilik kötülüğün üstesinden gelmiş, mutlak denge yeniden sağlanmıştı.
+

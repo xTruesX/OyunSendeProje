@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e525b435dff6f3df5bb509836d41dbde, type: 3}
+  m_Name: Kat2_Demirhane_yazit_2
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Dialogue.DialogueAsset
+  lines:
+  - speaker: {fileID: 0}
+    text: "\"Tun\xE7 Ordu da bu \xF6rslerde d\xF6v\xFCld\xFC.\""
+    voice: {fileID: 8300000, guid: 4fa5164fe1783f6e6822c84da6616de6, type: 3}
+    duration: 0
+    setFlag: 
+  - speaker: {fileID: 0}
+    text: "\"Yeralt\u0131n\u0131n ba\u015Fka bir kat\u0131nda, atlar\u0131yla birlikte uyand\u0131r\u0131lmay\u0131 bekliyorlar.\""
+    voice: {fileID: 8300000, guid: c5c58c47b6ee61272acc1d184acd23e4, type: 3}
+    duration: 0
+    setFlag: 

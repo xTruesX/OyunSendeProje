@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e525b435dff6f3df5bb509836d41dbde, type: 3}
+  m_Name: otag_kilic
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Dialogue.DialogueAsset
+  lines:
+  - speaker: {fileID: 0}
+    text: "Yerde, \xDClgen Han'\u0131n ona arma\u011Fan etti\u011Fi k\u0131l\u0131\xE7 duruyordu."
+    voice: {fileID: 8300000, guid: 661363159cfcbbf7bae69a0cba71765a, type: 3}
+    duration: 0
+    setFlag: 
+  - speaker: {fileID: 11400000, guid: 3e7b2198f83b50c2cba876a3a693f5ed, type: 2}
+    text: "Bu k\u0131l\u0131\xE7 y\u0131ld\u0131zlar\u0131n demirinden d\xF6v\xFCld\xFC. Onu yaln\u0131zca do\u011Fru olan i\xE7in \xE7ek."
+    voice: {fileID: 8300000, guid: c00add274c244f165ade7e8e5fe63f80, type: 3}
+    duration: 0
+    setFlag: 
+  - speaker: {fileID: 0}
+    text: "B\xF6r\xFChan k\u0131l\u0131c\u0131 ku\u015Fand\u0131."
+    voice: {fileID: 8300000, guid: e6565831a91345cdab892935ad1f3d99, type: 3}
+    duration: 0
+    setFlag: 
+  - speaker: {fileID: 0}
+    text: "Sald\u0131r\u0131: J / Sol T\u0131k \xB7 Ka\xE7\u0131\u015F: Shift \xB7 Savu\u015Fturma: Q"
+    voice: {fileID: 8300000, guid: f1de64c86226b322d91cc2fd49f25e0a, type: 3}
+    duration: 0
+    setFlag: 

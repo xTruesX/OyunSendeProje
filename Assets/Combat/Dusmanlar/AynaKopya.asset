@@ -1,0 +1,227 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7576599638178830678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62d0d174ee5ccdefd8937956ed7bfa9b, type: 3}
+  m_Name: Kopyalar
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Combat.SummonIllusionsAbility
+  displayName: Kopyalar
+  cooldown: 14
+  minRange: 0
+  maxRange: 10
+  weight: 1
+  windup: 0.7
+  recovery: 0.4
+  telegraphColor: {r: 1, g: 0.25, b: 0.2, a: 0.35}
+  animationState: 2
+  customAnimation: 
+  count: 3
+  radius: 3
+  lifetime: 10
+  swapWithCopy: 1
+  healthOrbChance: 0.3
+  healthOrb: {fileID: 4724099925237942507, guid: d200e39a116ab569bbd45037bc43c0dd, type: 3}
+--- !u!114 &-5799230168224501802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3400057d0363c63828b287cb7181af93, type: 3}
+  m_Name: "Kristal At\u0131l\u0131\u015F"
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Combat.LungeAbility
+  displayName: "Kristal At\u0131l\u0131\u015F"
+  cooldown: 4
+  minRange: 2.5
+  maxRange: 6
+  weight: 1
+  windup: 0.5
+  recovery: 0.4
+  telegraphColor: {r: 1, g: 0.25, b: 0.2, a: 0.35}
+  animationState: 2
+  customAnimation: 
+  damage: 15
+  distance: 4.5
+  speed: 13
+  hitRadius: 0.6
+  knockback: 6
+--- !u!114 &-5719831081276647436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d6a859ed028b40ae9b25c0eb786be1f, type: 3}
+  m_Name: "Korkular\u0131n"
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Combat.CurseAbility
+  displayName: "Korkular\u0131n"
+  cooldown: 11
+  minRange: 0
+  maxRange: 7
+  weight: 1
+  windup: 0.8
+  recovery: 0.4
+  telegraphColor: {r: 0.5, g: 0.2, b: 0.7, a: 0.25}
+  animationState: 2
+  customAnimation: 
+  range: 7
+  slowMultiplier: 0.5
+  slowDuration: 3
+  damage: 0
+--- !u!114 &-4683739783502729953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3755ffe6a2330cc8b8b3f91ff4fbc481, type: 3}
+  m_Name: Arkadan Kesik
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Combat.MeleeStrikeAbility
+  displayName: Arkadan Kesik
+  cooldown: 2
+  minRange: 0
+  maxRange: 2
+  weight: 1
+  windup: 0.35
+  recovery: 0.5
+  telegraphColor: {r: 1, g: 0.25, b: 0.2, a: 0.35}
+  animationState: 2
+  customAnimation: 
+  damage: 14
+  hits: 1
+  reach: 0.9
+  radius: 0.8
+  stepDistance: 0.5
+  timeBetweenHits: 0.35
+  knockback: 4
+--- !u!114 &-1122646013502625070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3755ffe6a2330cc8b8b3f91ff4fbc481, type: 3}
+  m_Name: Ayna Kombosu
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Combat.MeleeStrikeAbility
+  displayName: Ayna Kombosu
+  cooldown: 2.4
+  minRange: 0
+  maxRange: 2
+  weight: 1.5
+  windup: 0.45
+  recovery: 0.6
+  telegraphColor: {r: 1, g: 0.25, b: 0.2, a: 0.35}
+  animationState: 2
+  customAnimation: 
+  damage: 10
+  hits: 3
+  reach: 0.9
+  radius: 0.85
+  stepDistance: 0.5
+  timeBetweenHits: 0.3
+  knockback: 4
+--- !u!114 &-427814338595285085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f9e476156daf9e0aa2ac12d03ee9c61, type: 3}
+  m_Name: "Yans\u0131ma Ad\u0131m\u0131"
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Combat.TeleportAbility
+  displayName: "Yans\u0131ma Ad\u0131m\u0131"
+  cooldown: 7
+  minRange: 3
+  maxRange: 10
+  weight: 1
+  windup: 0.3
+  recovery: 0.4
+  telegraphColor: {r: 1, g: 0.25, b: 0.2, a: 0.35}
+  animationState: 4
+  customAnimation: 
+  destination: 0
+  distance: 1.3
+  followUp: {fileID: -4683739783502729953}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bb9f4eb288c94bb7a974d6f903086f9, type: 3}
+  m_Name: AynaKopya
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Combat.EnemyDefinition
+  displayName: Ayna Kopya
+  description: "\xC7\xF6l\xFCn sonunda bekleyen sahte B\xF6r\xFChan. Kendini kopyalar, korkular\u0131nla seni yava\u015Flat\u0131r ve vuru\u015Flar\u0131n\u0131 sana geri yans\u0131t\u0131r."
+  difficulty: 2
+  isBoss: 1
+  sprite: {fileID: 21300000, guid: 4da3d4bea684a056598091aea2b09ea4, type: 3}
+  animations: {fileID: 11400000, guid: 34ad694341f6c81c9918c44c4fa3e6fe, type: 2}
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  scale: 1.1
+  footSize: {x: 0.7, y: 0.35}
+  maxHealth: 320
+  moveSpeed: 3.1
+  contactDamage: 0
+  knockbackResistance: 0.85
+  poise: 60
+  staggerTime: 0.35
+  aggroRange: 6
+  preferredDistance: 2
+  strafe: 1
+  abilities:
+  - {fileID: -1122646013502625070}
+  - {fileID: -5799230168224501802}
+  - {fileID: -7576599638178830678}
+  - {fileID: -5719831081276647436}
+  - {fileID: 4211315980646649934}
+  - {fileID: -427814338595285085}
+--- !u!114 &4211315980646649934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f84149993902c785b8b6888d70e541e7, type: 3}
+  m_Name: Ayna
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Combat.ReflectAbility
+  displayName: Ayna
+  cooldown: 9
+  minRange: 0
+  maxRange: 3
+  weight: 0.8
+  windup: 0.3
+  recovery: 0.4
+  telegraphColor: {r: 1, g: 0.25, b: 0.2, a: 0.35}
+  animationState: 5
+  customAnimation: 
+  duration: 1.6
+  reflectMultiplier: 1.5

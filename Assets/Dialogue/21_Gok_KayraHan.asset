@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e525b435dff6f3df5bb509836d41dbde, type: 3}
+  m_Name: 21_Gok_KayraHan
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Dialogue.DialogueAsset
+  lines:
+  - speaker: {fileID: 0}
+    text: "B\xF6r\xFChan ona her \u015Feyi anlatmak istiyordu, ama Kayra Han zaten her \u015Feyi biliyordu."
+    voice: {fileID: 8300000, guid: 6fad732635b2163c09b3984492073bc9, type: 3}
+    duration: 0
+    setFlag: 
+  - speaker: {fileID: 11400000, guid: 215f383d1c9ec4cb4ae02aae97f6954d, type: 2}
+    text: "Seni yukar\u0131dan izledim, evlat. \xC7ok zor zamanlar ge\xE7iriyorsun."
+    voice: {fileID: 8300000, guid: 31b7536bacc8f10e29f0f2e52afd86ba, type: 3}
+    duration: 0
+    setFlag: 
+  - speaker: {fileID: 11400000, guid: 215f383d1c9ec4cb4ae02aae97f6954d, type: 2}
+    text: "S\xF6yle bakal\u0131m, nedir benden istedi\u011Fin?"
+    voice: {fileID: 8300000, guid: 25f45559f7e0efbb3a1e1ad55c1880ae, type: 3}
+    duration: 0
+    setFlag: 
+  - speaker: {fileID: 11400000, guid: 1b85c12ef309323b2bffc83efae91dcb, type: 2}
+    text: "Ulu Kayra Han... Yeterince g\xFC\xE7l\xFC de\u011Filim. Elimde bir silah\u0131m bile yok. \xDClgen Han'a nas\u0131l ula\u015Faca\u011F\u0131m\u0131 da bilmiyorum."
+    voice: {fileID: 8300000, guid: 332339cbefa89b65c91c7ca9984681c5, type: 3}
+    duration: 0
+    setFlag: 
+  - speaker: {fileID: 11400000, guid: 215f383d1c9ec4cb4ae02aae97f6954d, type: 2}
+    text: "\xD6nce bir k\u0131l\u0131\xE7. Y\u0131ld\u0131zlar\u0131n demirinden d\xF6v\xFClm\xFC\u015F, yaln\u0131zca do\u011Fru olan i\xE7in \xE7ekilecek bir k\u0131l\u0131\xE7."
+    voice: {fileID: 8300000, guid: 4246225dae743be3a8ad70dbd35f3539, type: 3}
+    duration: 0
+    setFlag: 
+  - speaker: {fileID: 0}
+    text: "Kayra Han elini kald\u0131rd\u0131. B\xF6r\xFChan'\u0131n \xF6n\xFCne, \u0131\u015F\u0131klar sa\xE7an bir k\u0131l\u0131\xE7 d\xFC\u015Ft\xFC."
+    voice: {fileID: 8300000, guid: 5fdd0198b4b66de01b70f691381424c2, type: 3}
+    duration: 0
+    setFlag: kayra_kilic_birakti
+  - speaker: {fileID: 11400000, guid: 215f383d1c9ec4cb4ae02aae97f6954d, type: 2}
+    text: Al onu, evlat.
+    voice: {fileID: 8300000, guid: 5dac1c43cd98a11c282b824f7084cf3a, type: 3}
+    duration: 0
+    setFlag: 

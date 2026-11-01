@@ -1,0 +1,444 @@
+fileFormatVersion: 2
+guid: 080692ca7929af44eb59fabb5de89f03
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2286189279651428964
+    second: "Mete Han \u2014 Bekleme \u2022 4 y\xF6n \xD7 3 kare \u2022 240 ms_0"
+  - first:
+      213: 7559045178530308979
+    second: "Mete Han \u2014 Bekleme \u2022 4 y\xF6n \xD7 3 kare \u2022 240 ms_1"
+  - first:
+      213: -2206225465783236377
+    second: "Mete Han \u2014 Bekleme \u2022 4 y\xF6n \xD7 3 kare \u2022 240 ms_2"
+  - first:
+      213: 7340511507421536384
+    second: "Mete Han \u2014 Bekleme \u2022 4 y\xF6n \xD7 3 kare \u2022 240 ms_3"
+  - first:
+      213: 2266405854529676586
+    second: "Mete Han \u2014 Bekleme \u2022 4 y\xF6n \xD7 3 kare \u2022 240 ms_4"
+  - first:
+      213: 7211256907751454994
+    second: "Mete Han \u2014 Bekleme \u2022 4 y\xF6n \xD7 3 kare \u2022 240 ms_5"
+  - first:
+      213: -5302572329995876901
+    second: "Mete Han \u2014 Bekleme \u2022 4 y\xF6n \xD7 3 kare \u2022 240 ms_6"
+  - first:
+      213: 8213124743973739778
+    second: "Mete Han \u2014 Bekleme \u2022 4 y\xF6n \xD7 3 kare \u2022 240 ms_7"
+  - first:
+      213: 9053678019550122901
+    second: "Mete Han \u2014 Bekleme \u2022 4 y\xF6n \xD7 3 kare \u2022 240 ms_8"
+  - first:
+      213: 1330315711837302444
+    second: "Mete Han \u2014 Bekleme \u2022 4 y\xF6n \xD7 3 kare \u2022 240 ms_9"
+  - first:
+      213: 2738937099188296085
+    second: "Mete Han \u2014 Bekleme \u2022 4 y\xF6n \xD7 3 kare \u2022 240 ms_10"
+  - first:
+      213: 1076711736075841424
+    second: "Mete Han \u2014 Bekleme \u2022 4 y\xF6n \xD7 3 kare \u2022 240 ms_11"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Bekle_4yon_3kare_240ms_0_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 48
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b06db748ed4b3d03fa03ee916da7c193
+      internalID: 2102427718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bekle_4yon_3kare_240ms_0_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 192
+        width: 48
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0783d836b95055ec6bf3656a06b264c7
+      internalID: -473559358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bekle_4yon_3kare_240ms_0_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 48
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 022d20676a87d101c9e51a7032861fa4
+      internalID: -1926063366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bekle_4yon_3kare_240ms_1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 48
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f80220a2125b121d7a4497cdbff980d1
+      internalID: -404535755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bekle_4yon_3kare_240ms_1_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 128
+        width: 48
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d82c53627d3f16af088cf2ce9f56185b
+      internalID: 1870789218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bekle_4yon_3kare_240ms_1_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 128
+        width: 48
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e68f82d375b4228cb93f9da545bf9c4e
+      internalID: 395984548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bekle_4yon_3kare_240ms_2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 48
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b24885e944c1af44bac7c21d18e249a7
+      internalID: 1917649174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bekle_4yon_3kare_240ms_2_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 64
+        width: 48
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42487b02a44ab34b28f50460d299b7dd
+      internalID: -1357900860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bekle_4yon_3kare_240ms_2_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 48
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 200b171429551082f95afbc24d3ec0d2
+      internalID: 2065242806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bekle_4yon_3kare_240ms_3_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 48
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d7b131e6a3ceb3c3951cf21bd644a85
+      internalID: 55121530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bekle_4yon_3kare_240ms_3_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 48
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71dc7443acb91d10ea24773f5405f998
+      internalID: 2030727331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bekle_4yon_3kare_240ms_3_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 48
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41b1ab3826fc83e09b895174625fb743
+      internalID: -1291351955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: d90713cf7e4ea053990832bc3b5f283e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Bekle_4yon_3kare_240ms_0_0: 2102427718
+      Bekle_4yon_3kare_240ms_0_1: -473559358
+      Bekle_4yon_3kare_240ms_0_2: -1926063366
+      Bekle_4yon_3kare_240ms_1_0: -404535755
+      Bekle_4yon_3kare_240ms_1_1: 1870789218
+      Bekle_4yon_3kare_240ms_1_2: 395984548
+      Bekle_4yon_3kare_240ms_2_0: 1917649174
+      Bekle_4yon_3kare_240ms_2_1: -1357900860
+      Bekle_4yon_3kare_240ms_2_2: 2065242806
+      Bekle_4yon_3kare_240ms_3_0: 55121530
+      Bekle_4yon_3kare_240ms_3_1: 2030727331
+      Bekle_4yon_3kare_240ms_3_2: -1291351955
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

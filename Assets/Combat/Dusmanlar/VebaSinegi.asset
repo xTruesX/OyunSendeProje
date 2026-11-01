@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5281171271521886431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3400057d0363c63828b287cb7181af93, type: 3}
+  m_Name: "V\u0131z\u0131lt\u0131"
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Combat.LungeAbility
+  displayName: "V\u0131z\u0131lt\u0131"
+  cooldown: 1.4
+  minRange: 1
+  maxRange: 4
+  weight: 1
+  windup: 0.4
+  recovery: 0.4
+  telegraphColor: {r: 1, g: 0.25, b: 0.2, a: 0.35}
+  animationState: 2
+  customAnimation: 
+  damage: 7
+  distance: 3
+  speed: 13
+  hitRadius: 0.6
+  knockback: 6
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bb9f4eb288c94bb7a974d6f903086f9, type: 3}
+  m_Name: VebaSinegi
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Combat.EnemyDefinition
+  displayName: "Veba Sine\u011Fi"
+  description: "Salg\u0131n ta\u015F\u0131yan iri bir sinek. H\u0131zl\u0131d\u0131r, s\u0131k s\u0131k \xFCzerine at\u0131l\u0131r."
+  difficulty: 0
+  isBoss: 0
+  sprite: {fileID: 21300000, guid: 43714053f8788e015a5945ec7e658524, type: 3}
+  animations: {fileID: 11400000, guid: afbccf0a32c3a75d998f795c5028df72, type: 2}
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  scale: 1
+  footSize: {x: 0.7, y: 0.35}
+  maxHealth: 22
+  moveSpeed: 3.6
+  contactDamage: 4
+  knockbackResistance: 0
+  poise: 0
+  staggerTime: 0.35
+  aggroRange: 7
+  preferredDistance: 2.2
+  strafe: 1
+  abilities:
+  - {fileID: -5281171271521886431}

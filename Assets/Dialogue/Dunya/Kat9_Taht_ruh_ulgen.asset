@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e525b435dff6f3df5bb509836d41dbde, type: 3}
+  m_Name: Kat9_Taht_ruh_ulgen
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Dialogue.DialogueAsset
+  lines:
+  - speaker: {fileID: 11400000, guid: 3e7b2198f83b50c2cba876a3a693f5ed, type: 2}
+    text: Evlat... Buraya kadar geldin.
+    voice: {fileID: 8300000, guid: b1e0c560529cd2bddb4e697db9fce065, type: 3}
+    duration: 0
+    setFlag: 
+  - speaker: {fileID: 11400000, guid: 3e7b2198f83b50c2cba876a3a693f5ed, type: 2}
+    text: "Sesimi duyuyor musun? Korkma. Ben buraday\u0131m. Seni hep izledim."
+    voice: {fileID: 8300000, guid: 48d32ff346e4b893fa6bb12c5cba8ddb, type: 3}
+    duration: 0
+    setFlag: 
+  - speaker: {fileID: 11400000, guid: 3e7b2198f83b50c2cba876a3a693f5ed, type: 2}
+    text: "Erlik ill\xFCzyonlarla zihnini bunaltmaya \xE7al\u0131\u015Facak. Ger\xE7e\u011Fi hat\u0131rla: sen benim o\u011Flumsun."
+    voice: {fileID: 8300000, guid: cb47aed8022ab8bdeae8352ea83d2eca, type: 3}
+    duration: 0
+    setFlag: 
