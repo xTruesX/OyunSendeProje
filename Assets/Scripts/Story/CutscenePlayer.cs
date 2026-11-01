@@ -13,6 +13,7 @@ namespace Boruhan.Story
     /// Plays a video (if there is one) with timed subtitles, optional big title cards, then moves on.
     /// Video comes from Video Clip if assigned, otherwise from StreamingAssets/Videolar/&lt;Video File Name&gt;.
     /// If the file is missing, empty or can't be played, the subtitles still run over a placeholder.
+    /// The video's own sound is never played (music and voice lines are separate).
     /// </summary>
     public class CutscenePlayer : MonoBehaviour
     {
@@ -91,6 +92,7 @@ namespace Boruhan.Story
         {
             if (videoPlayer == null)
                 yield break;
+            videoPlayer.audioOutputMode = VideoAudioOutputMode.None;
 
             if (videoClip != null)
             {

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Boruhan.Animations;
 using UnityEngine;
 
 namespace Boruhan.Combat
@@ -20,6 +21,8 @@ namespace Boruhan.Combat
 
         [Header("Görünüm")]
         public Sprite sprite;
+        [Tooltip("Optional. Walk, attack, hit, death… frames. Empty = the sprite above, still.")]
+        public AnimationSet animations;
         public Color tint = Color.white;
         [Min(0.1f)] public float scale = 1f;
         [Tooltip("Collision box at the feet, in sprite units (before scale).")]

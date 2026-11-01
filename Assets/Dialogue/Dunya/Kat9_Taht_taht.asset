@@ -15,25 +15,31 @@ MonoBehaviour:
   lines:
   - speaker: {fileID: 0}
     text: "Buras\u0131 s\u0131radan bir taht odas\u0131 de\u011Fildi."
+    voice: {fileID: 8300000, guid: 635035767c919555da0f562ce8280afa, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 0}
     text: "Taht\u0131n arkas\u0131nda, B\xF6r\xFChan'\u0131n b\xFCt\xFCn bu yolu gelmesinin sebebi vard\u0131: \xDClgen Han."
+    voice: {fileID: 8300000, guid: d645e11c7b2dc36ad993ac85698b3eea, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 11400000, guid: 3e7b2198f83b50c2cba876a3a693f5ed, type: 2}
     text: "B\xF6r\xFChan... Evlat..."
+    voice: {fileID: 8300000, guid: 8c72dacec32502a4286273a78a945eb1, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 0}
     text: "Tahtta oturan ki\u015Fi Erlik Han'd\u0131. Aya\u011Fa kalkt\u0131 ve konu\u015Fmaya ba\u015Flad\u0131."
+    voice: {fileID: 8300000, guid: 7fb505a85ef9a79f28f6a65d72d73084, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 11400000, guid: ff8fb38869ed719d09620ced3e22bf5f, type: 2}
     text: "Demek b\xFCt\xFCn katlar\u0131 a\u015F\u0131p buraya kadar geldin ha?"
+    voice: {fileID: 8300000, guid: 57572b8a95f50532e9e6653f5ea624c9, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 11400000, guid: ff8fb38869ed719d09620ced3e22bf5f, type: 2}
     text: "\xDCzg\xFCn\xFCm ama buras\u0131 senin ula\u015Faca\u011F\u0131n son yer."
+    voice: {fileID: 8300000, guid: a23ec5885f3e5b460a499d73f914f833, type: 3}
     duration: 0
     setFlag: 

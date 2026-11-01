@@ -15,13 +15,16 @@ MonoBehaviour:
   lines:
   - speaker: {fileID: 0}
     text: "\"Kut, Kayra Han'\u0131n evrene \xFCfledi\u011Fi cand\u0131r.\""
+    voice: {fileID: 8300000, guid: 69e4404c17998ac92892f9856bdcac47, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 0}
     text: "\"Yenilen her deh\u015Fet \xF6z\xFCn\xFC geride b\u0131rak\u0131r. Onu s\xF6k\xFCp alan, kendi Kut'unu b\xFCy\xFCt\xFCr.\""
+    voice: {fileID: 8300000, guid: 49c02dd8a9ad60afc8eb5bb7a8cc6972, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 0}
     text: "B\xF6r\xFChan, Kayra Han'\u0131n s\xF6zlerini hat\u0131rlad\u0131."
+    voice: {fileID: 8300000, guid: 7c7ad2492af3eb56ea4cd3bb275220de, type: 3}
     duration: 0
     setFlag: 

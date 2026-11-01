@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6401d5c821fc6f3b9b557cced08e1c0, type: 3}
+  m_Name: OrsBekcisi_Animasyon
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Animations.AnimationSet
+  mirrorForLeft: 1
+  clips:
+  - state: 0
+    customName: 
+    direction: 0
+    frames:
+    - {fileID: -3199645566920279688, guid: 1fb4d299ed6f3fbe3a5275e974f74ca6, type: 3}
+    - {fileID: -2408643991405049749, guid: 1fb4d299ed6f3fbe3a5275e974f74ca6, type: 3}
+    fps: 2
+    loop: 1
+  - state: 1
+    customName: 
+    direction: 0
+    frames:
+    - {fileID: -8810817265843838765, guid: c4964b331b7c0bb69808ac1f56053396, type: 3}
+    - {fileID: -3880369900394634087, guid: c4964b331b7c0bb69808ac1f56053396, type: 3}
+    - {fileID: 3323387338144732508, guid: c4964b331b7c0bb69808ac1f56053396, type: 3}
+    - {fileID: 6059866367566009406, guid: c4964b331b7c0bb69808ac1f56053396, type: 3}
+    fps: 8
+    loop: 1
+  - state: 2
+    customName: 
+    direction: 0
+    frames:
+    - {fileID: 3257400482541764291, guid: 80952e26d06052c6ab5893741f0d82b0, type: 3}
+    - {fileID: 5336333513033948736, guid: 80952e26d06052c6ab5893741f0d82b0, type: 3}
+    - {fileID: -189199061447834973, guid: 80952e26d06052c6ab5893741f0d82b0, type: 3}
+    fps: 14
+    loop: 0
+  - state: 5
+    customName: 
+    direction: 0
+    frames:
+    - {fileID: -1021904955809862589, guid: 18d1a2306f9aeaa77b33c48459764036, type: 3}
+    - {fileID: 1947165720339636743, guid: 18d1a2306f9aeaa77b33c48459764036, type: 3}
+    fps: 10
+    loop: 0
+  - state: 4
+    customName: 
+    direction: 0
+    frames:
+    - {fileID: 4479594328799468984, guid: 39e1e36b5e268ef2ca30f1948f30cf76, type: 3}
+    - {fileID: 7992267714939262625, guid: 39e1e36b5e268ef2ca30f1948f30cf76, type: 3}
+    - {fileID: -8388431373770252023, guid: 39e1e36b5e268ef2ca30f1948f30cf76, type: 3}
+    fps: 12
+    loop: 0
+  - state: 6
+    customName: 
+    direction: 0
+    frames:
+    - {fileID: 683689511450684753, guid: ad188b2877b3a1aac89aa270cc7b9852, type: 3}
+    - {fileID: 6258262025617945609, guid: ad188b2877b3a1aac89aa270cc7b9852, type: 3}
+    fps: 12
+    loop: 0
+  - state: 7
+    customName: 
+    direction: 0
+    frames:
+    - {fileID: 3755540160729488199, guid: 99849bb19ed3f2c459868cb868298abf, type: 3}
+    - {fileID: 7100302179958099188, guid: 99849bb19ed3f2c459868cb868298abf, type: 3}
+    - {fileID: -8163179303338285058, guid: 99849bb19ed3f2c459868cb868298abf, type: 3}
+    - {fileID: -1904475337493974354, guid: 99849bb19ed3f2c459868cb868298abf, type: 3}
+    fps: 7
+    loop: 1
+  - state: 8
+    customName: 
+    direction: 0
+    frames:
+    - {fileID: -7580624243253463842, guid: acd4eb3dd17299349857c3370f860aed, type: 3}
+    - {fileID: 8167008022199533734, guid: acd4eb3dd17299349857c3370f860aed, type: 3}
+    - {fileID: -7694304640582428420, guid: acd4eb3dd17299349857c3370f860aed, type: 3}
+    - {fileID: -1040456969261105256, guid: acd4eb3dd17299349857c3370f860aed, type: 3}
+    - {fileID: -6498141994004071236, guid: acd4eb3dd17299349857c3370f860aed, type: 3}
+    fps: 10
+    loop: 0

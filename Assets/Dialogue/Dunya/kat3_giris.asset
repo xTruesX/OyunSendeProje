@@ -15,17 +15,21 @@ MonoBehaviour:
   lines:
   - speaker: {fileID: 0}
     text: "B\xF6r\xFChan yoluna devam etti ve \xFC\xE7\xFCnc\xFC kata ula\u015Ft\u0131: Hastal\u0131k ve \xC7\xFCr\xFCme Diyar\u0131."
+    voice: {fileID: 8300000, guid: cab1998958a7fe7d48b15bce4c511e8d, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 0}
     text: "Zemininde zehirli ye\u015Fil sisler, batakl\u0131klar ve havada u\xE7u\u015Fan salg\u0131n tozlar\u0131 vard\u0131. Nefes almak bile can yak\u0131yordu."
+    voice: {fileID: 8300000, guid: a27908085c539a0c4a29d9f44077d57e, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 0}
     text: "Buras\u0131, yery\xFCz\xFCne salg\u0131nlar\u0131 ve ac\u0131y\u0131 yayan \xC7al\u0131\u015F Han'\u0131n diyar\u0131yd\u0131."
+    voice: {fileID: 8300000, guid: 2872babb3a87bf6f795a81c1db118a6e, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 0}
     text: "Batakl\u0131klar insan\u0131 i\xE7ine \xE7eker, hava zehirler. Ye\u015Fil sislerden uzak dur."
+    voice: {fileID: 8300000, guid: 5a9368998b29f7071829bc71614cfce6, type: 3}
     duration: 0
     setFlag: 

@@ -13,6 +13,9 @@ namespace Boruhan.Dialogue
         [TextArea(2, 6)]
         public string text;
 
+        [Tooltip("Voice recording for this line. Plays when the line appears.")]
+        public AudioClip voice;
+
         [Tooltip("Only used in cutscenes (timed subtitles): seconds this line stays on screen. 0 = automatic, based on length.")]
         [Min(0f)]
         public float duration;

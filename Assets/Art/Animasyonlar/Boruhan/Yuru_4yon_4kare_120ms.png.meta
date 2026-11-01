@@ -1,0 +1,566 @@
+fileFormatVersion: 2
+guid: 1773d9e495814e09aa39c5d934a7269f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7829539750565900053
+    second: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_0"
+  - first:
+      213: -3297291515549137360
+    second: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_1"
+  - first:
+      213: -7453728519298457349
+    second: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_2"
+  - first:
+      213: 8091385012036925874
+    second: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_3"
+  - first:
+      213: -1672960958881878996
+    second: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_4"
+  - first:
+      213: 7708472578602692772
+    second: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_5"
+  - first:
+      213: 3645826147429650587
+    second: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_6"
+  - first:
+      213: 2730380702919695660
+    second: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_7"
+  - first:
+      213: -1672340427770693758
+    second: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_8"
+  - first:
+      213: 7550651333337359506
+    second: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_9"
+  - first:
+      213: -893071697126469272
+    second: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_10"
+  - first:
+      213: -7671590531679655195
+    second: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_11"
+  - first:
+      213: 6243463305895976439
+    second: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_12"
+  - first:
+      213: 2660795957972106596
+    second: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_13"
+  - first:
+      213: -6236591437524463226
+    second: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_14"
+  - first:
+      213: 7204443646019954278
+    second: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_15"
+  - first:
+      213: -257074493304702254
+    second: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_16"
+  - first:
+      213: 8694649791228522346
+    second: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_17"
+  - first:
+      213: 4764994618464116873
+    second: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_18"
+  - first:
+      213: -1049642989490789145
+    second: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_19"
+  - first:
+      213: 4189014282295176355
+    second: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_20"
+  - first:
+      213: -892727749625329298
+    second: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_21"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Yuru_4yon_4kare_120ms_0_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 48
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ebeefeb27d17db93828824b507b98b5
+      internalID: 153743739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yuru_4yon_4kare_120ms_0_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 192
+        width: 48
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3eb1621d8d0e713bb9a6b1c79f1197d
+      internalID: -1846279987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yuru_4yon_4kare_120ms_0_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 48
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51bde18cef5bdc90d8a364d751ff4722
+      internalID: -1120608996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yuru_4yon_4kare_120ms_0_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 192
+        width: 48
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3e4c8c171a6a887995a45431187d51b
+      internalID: -577918758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yuru_4yon_4kare_120ms_1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 48
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a53edfcf942f24eeaf24c577fc430f2
+      internalID: 452671227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yuru_4yon_4kare_120ms_1_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 128
+        width: 48
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b870e4111e2d8dc8b852538de8ea46de
+      internalID: -108709639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yuru_4yon_4kare_120ms_1_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 128
+        width: 48
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fe977c834a1276cbb66a17b8ceb2cf7
+      internalID: 815716876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yuru_4yon_4kare_120ms_1_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 128
+        width: 48
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ef127f4744b48912b029cd7d35e7971
+      internalID: 377032417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yuru_4yon_4kare_120ms_2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 48
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87535c8cba68fd4f2b4e720c60f41386
+      internalID: -1394182367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yuru_4yon_4kare_120ms_2_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 64
+        width: 48
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d89deb98fccfc5182ae95ae7f07ae0c9
+      internalID: -645122175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yuru_4yon_4kare_120ms_2_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 48
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b77303e9955fd58e8b9dd7d528620e3
+      internalID: -1776270879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yuru_4yon_4kare_120ms_2_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 64
+        width: 48
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b63446cc70c849b0b936728b9a281fa
+      internalID: -426159809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yuru_4yon_4kare_120ms_3_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 48
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e787e08432a1ab7bd9e02348230a01ae
+      internalID: 880171735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yuru_4yon_4kare_120ms_3_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 48
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 688f6e1db9b8ae6bdbf3ab2a82a04cdc
+      internalID: -1930518082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yuru_4yon_4kare_120ms_3_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 48
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed9f00b26791459c6b6966ab8de5e175
+      internalID: -544192482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yuru_4yon_4kare_120ms_3_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 48
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce39cfb7c4aaa021d9f555c911a38193
+      internalID: -202408672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 3e888c377af5db168817e8c89ea6b33a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Yuru_4yon_4kare_120ms_0_0: 153743739
+      Yuru_4yon_4kare_120ms_0_1: -1846279987
+      Yuru_4yon_4kare_120ms_0_2: -1120608996
+      Yuru_4yon_4kare_120ms_0_3: -577918758
+      Yuru_4yon_4kare_120ms_1_0: 452671227
+      Yuru_4yon_4kare_120ms_1_1: -108709639
+      Yuru_4yon_4kare_120ms_1_2: 815716876
+      Yuru_4yon_4kare_120ms_1_3: 377032417
+      Yuru_4yon_4kare_120ms_2_0: -1394182367
+      Yuru_4yon_4kare_120ms_2_1: -645122175
+      Yuru_4yon_4kare_120ms_2_2: -1776270879
+      Yuru_4yon_4kare_120ms_2_3: -426159809
+      Yuru_4yon_4kare_120ms_3_0: 880171735
+      Yuru_4yon_4kare_120ms_3_1: -1930518082
+      Yuru_4yon_4kare_120ms_3_2: -544192482
+      Yuru_4yon_4kare_120ms_3_3: -202408672
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

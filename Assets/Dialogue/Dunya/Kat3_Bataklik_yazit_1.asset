@@ -15,9 +15,11 @@ MonoBehaviour:
   lines:
   - speaker: {fileID: 0}
     text: "\"\xC7al\u0131\u015F Han, yery\xFCz\xFCne salg\u0131n ve ac\u0131 g\xF6nderen hastal\u0131\u011F\u0131n efendisidir. Burada nefesin bile ona aittir.\""
+    voice: {fileID: 8300000, guid: 6e76beba8a1788035abc917b66b22028, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 0}
     text: "Alt\u0131na kaz\u0131nm\u0131\u015F: \"\xC7atlak duvarlar demirden bir yumru\u011Fu bekler.\""
+    voice: {fileID: 8300000, guid: e322df22d1bedcc428c3a65517936ebf, type: 3}
     duration: 0
     setFlag: 

@@ -15,37 +15,36 @@ MonoBehaviour:
   lines:
   - speaker: {fileID: 0}
     text: "B\xF6r\xFChan ona her \u015Feyi anlatmak istiyordu, ama Kayra Han zaten her \u015Feyi biliyordu."
+    voice: {fileID: 8300000, guid: 6fad732635b2163c09b3984492073bc9, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 11400000, guid: 215f383d1c9ec4cb4ae02aae97f6954d, type: 2}
     text: "Seni yukar\u0131dan izledim, evlat. \xC7ok zor zamanlar ge\xE7iriyorsun."
+    voice: {fileID: 8300000, guid: 31b7536bacc8f10e29f0f2e52afd86ba, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 11400000, guid: 215f383d1c9ec4cb4ae02aae97f6954d, type: 2}
     text: "S\xF6yle bakal\u0131m, nedir benden istedi\u011Fin?"
+    voice: {fileID: 8300000, guid: 25f45559f7e0efbb3a1e1ad55c1880ae, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 11400000, guid: 1b85c12ef309323b2bffc83efae91dcb, type: 2}
-    text: "Ulu Kayra Han... Yeterince g\xFC\xE7l\xFC de\u011Filim. \xDClgen Han'a nas\u0131l ula\u015Faca\u011F\u0131m\u0131 da bilmiyorum."
+    text: "Ulu Kayra Han... Yeterince g\xFC\xE7l\xFC de\u011Filim. Elimde bir silah\u0131m bile yok. \xDClgen Han'a nas\u0131l ula\u015Faca\u011F\u0131m\u0131 da bilmiyorum."
+    voice: {fileID: 8300000, guid: 332339cbefa89b65c91c7ca9984681c5, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 11400000, guid: 215f383d1c9ec4cb4ae02aae97f6954d, type: 2}
-    text: "\xD6yleyse sana g\xFCc\xFCmden bir par\xE7a vereyim. Bir k\u0131v\u0131lc\u0131m..."
+    text: "\xD6nce bir k\u0131l\u0131\xE7. Y\u0131ld\u0131zlar\u0131n demirinden d\xF6v\xFClm\xFC\u015F, yaln\u0131zca do\u011Fru olan i\xE7in \xE7ekilecek bir k\u0131l\u0131\xE7."
+    voice: {fileID: 8300000, guid: 4246225dae743be3a8ad70dbd35f3539, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 0}
-    text: "B\xF6r\xFChan'\u0131n k\u0131l\u0131c\u0131 alev ald\u0131, g\xF6zleri k\u0131z\u0131la d\xF6nd\xFC. \u0130\xE7inde bir g\xFC\xE7 kabard\u0131\u011F\u0131n\u0131 hissetti."
+    text: "Kayra Han elini kald\u0131rd\u0131. B\xF6r\xFChan'\u0131n \xF6n\xFCne, \u0131\u015F\u0131klar sa\xE7an bir k\u0131l\u0131\xE7 d\xFC\u015Ft\xFC."
+    voice: {fileID: 8300000, guid: 5fdd0198b4b66de01b70f691381424c2, type: 3}
     duration: 0
-    setFlag: kut_kivilcimi
+    setFlag: kayra_kilic_birakti
   - speaker: {fileID: 11400000, guid: 215f383d1c9ec4cb4ae02aae97f6954d, type: 2}
-    text: "Bu k\u0131v\u0131lc\u0131m seni yaln\u0131zca korur. Erlik'i yenmek istiyorsan, yeralt\u0131n\u0131n katlar\u0131nda yendi\u011Fin her deh\u015Fetin \xF6z\xFCn\xFC kendi ellerinle s\xF6k\xFCp almal\u0131s\u0131n."
-    duration: 0
-    setFlag: 
-  - speaker: {fileID: 11400000, guid: 215f383d1c9ec4cb4ae02aae97f6954d, type: 2}
-    text: "Karanl\u0131ktan da karanl\u0131k bir ma\u011Farada, arad\u0131\u011F\u0131n yeri bulacaks\u0131n."
-    duration: 0
-    setFlag: 
-  - speaker: {fileID: 11400000, guid: 1b85c12ef309323b2bffc83efae91dcb, type: 2}
-    text: "Sa\u011F ol, Ulu Han. Babam\u0131 geri getirece\u011Fim."
+    text: Al onu, evlat.
+    voice: {fileID: 8300000, guid: 5dac1c43cd98a11c282b824f7084cf3a, type: 3}
     duration: 0
     setFlag: 

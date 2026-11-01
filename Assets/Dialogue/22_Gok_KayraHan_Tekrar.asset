@@ -15,5 +15,6 @@ MonoBehaviour:
   lines:
   - speaker: {fileID: 11400000, guid: 215f383d1c9ec4cb4ae02aae97f6954d, type: 2}
     text: "Yolun a\xE7\u0131k olsun, evlat. Karanl\u0131ktan da karanl\u0131k ma\u011Fara seni bekliyor."
+    voice: {fileID: 8300000, guid: ae5c0181077a50c09990c8c68d000e03, type: 3}
     duration: 0
     setFlag: 

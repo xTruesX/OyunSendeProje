@@ -35,7 +35,7 @@ namespace Boruhan.UI
         {
             bool pressed = (Keyboard.current != null && Keyboard.current.escapeKey.wasPressedThisFrame)
                            || (Gamepad.current != null && Gamepad.current.startButton.wasPressedThisFrame);
-            if (pressed)
+            if (pressed && !DeathScreen.IsOpen)
                 SetPaused(!paused);
         }
 
@@ -65,6 +65,8 @@ namespace Boruhan.UI
         {
             if (!GameSession.CanSave)
                 statusText.text = "Test modunda kayıt yapılmaz.";
+            else if (Combat.BossFight.InProgress)
+                statusText.text = "Boss savaşı sürerken kayıt yapılamaz.";
             else
                 statusText.text = RoomManager.Instance.SaveGame() ? "Oyun kaydedildi." : "Kayıt başarısız!";
         }

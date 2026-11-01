@@ -15,13 +15,16 @@ MonoBehaviour:
   lines:
   - speaker: {fileID: 0}
     text: "B\xF6r\xFChan merdivenden \xE7\u0131kt\u0131; bulutlar\u0131n da \xF6tesinde bir yere..."
+    voice: {fileID: 8300000, guid: 73d03c6c10d7263f096e6e86624b9b50, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 0}
     text: Orada birisi oturuyordu...
+    voice: {fileID: 8300000, guid: a1af4629195788d8e926f1064a09dd0b, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 0}
     text: "Kayra Han. Evrenin yarat\u0131c\u0131s\u0131."
+    voice: {fileID: 8300000, guid: 7ed67d6e8e16cf67b812dd1c1b87d23f, type: 3}
     duration: 0
     setFlag: 

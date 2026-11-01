@@ -20,6 +20,8 @@ MonoBehaviour:
   windup: 1.1
   recovery: 1.1
   telegraphColor: {r: 1, g: 0.25, b: 0.2, a: 0.35}
+  animationState: 2
+  customAnimation: 
   damage: 26
   distance: 6
   speed: 9
@@ -45,6 +47,8 @@ MonoBehaviour:
   windup: 1.05
   recovery: 1
   telegraphColor: {r: 1, g: 0.25, b: 0.2, a: 0.35}
+  animationState: 2
+  customAnimation: 
   damage: 32
   hits: 1
   reach: 1.6
@@ -72,6 +76,8 @@ MonoBehaviour:
   windup: 1
   recovery: 1
   telegraphColor: {r: 1, g: 0.45, b: 0.1, a: 0.35}
+  animationState: 2
+  customAnimation: 
   damage: 22
   radius: 2.2
   waves: 3
@@ -98,6 +104,8 @@ MonoBehaviour:
   windup: 0.8
   recovery: 0.4
   telegraphColor: {r: 1, g: 0.25, b: 0.2, a: 0.35}
+  animationState: 2
+  customAnimation: 
   damage: 10
   count: 7
   spreadAngle: 120
@@ -125,6 +133,7 @@ MonoBehaviour:
   difficulty: 2
   isBoss: 1
   sprite: {fileID: 21300000, guid: 352bcef8c5101d40db8706bb23bd2ba7, type: 3}
+  animations: {fileID: 11400000, guid: 27d945aeac2672ad2a928db0b48cfdae, type: 2}
   tint: {r: 1, g: 1, b: 1, a: 1}
   scale: 1.8
   footSize: {x: 1.1, y: 0.45}
@@ -164,11 +173,15 @@ MonoBehaviour:
   windup: 0.8
   recovery: 0.4
   telegraphColor: {r: 1, g: 0.25, b: 0.2, a: 0.35}
+  animationState: 2
+  customAnimation: 
   minions:
   - {fileID: 11400000, guid: 4f47dd20be2861e40a64182dc97ce605, type: 2}
   count: 2
   maxAlive: 3
   radius: 2.5
+  healthOrbChance: 0.4
+  healthOrb: {fileID: 4724099925237942507, guid: d200e39a116ab569bbd45037bc43c0dd, type: 3}
 --- !u!114 &5897784001876645059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,6 +202,8 @@ MonoBehaviour:
   windup: 0.9
   recovery: 1
   telegraphColor: {r: 1, g: 0.25, b: 0.2, a: 0.35}
+  animationState: 2
+  customAnimation: 
   damage: 22
   hits: 2
   reach: 1.5

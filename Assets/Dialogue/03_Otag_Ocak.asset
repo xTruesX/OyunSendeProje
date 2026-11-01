@@ -15,9 +15,11 @@ MonoBehaviour:
   lines:
   - speaker: {fileID: 0}
     text: "Oca\u011F\u0131n k\xF6zleri h\xE2l\xE2 s\u0131cakt\u0131."
+    voice: {fileID: 8300000, guid: e583716bc5cf4718086523ab2e9d2d63, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 11400000, guid: 1b85c12ef309323b2bffc83efae91dcb, type: 2}
     text: "\xDClgen Han'la bu ate\u015Fin ba\u015F\u0131nda ge\xE7en geceler... Hepsini geri alaca\u011F\u0131m."
+    voice: {fileID: 8300000, guid: d74961cca6f454ef98ab13c80ab730f3, type: 3}
     duration: 0
     setFlag: 

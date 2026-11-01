@@ -18,6 +18,8 @@ namespace Boruhan.Core
 
         public static event Action<string> FlagChanged;
 
+        public const string TestFlagsKey = "Boruhan.TestBayraklari";
+
         // Play Mode starts without a domain reload in this project, so clear the previous session.
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         static void ResetStatics()
@@ -25,6 +27,7 @@ namespace Boruhan.Core
             Slot = -1;
             Data = null;
             FlagChanged = null;
+            VariableChanged = null;
         }
 
         /// <summary>Continues the slot if it has a save, otherwise starts a new game in it.</summary>
@@ -40,6 +43,7 @@ namespace Boruhan.Core
             else
             {
                 data = SaveData.CreateNew();
+                GameSettings.Instance.ApplyToNewGame(data);
                 SaveSystem.Save(slot, data);
             }
 
@@ -51,6 +55,7 @@ namespace Boruhan.Core
             }
 
             data.flags ??= new System.Collections.Generic.List<string>();
+            data.variables ??= new System.Collections.Generic.List<Save.VariableEntry>();
             Slot = slot;
             Data = data;
             SceneManager.LoadScene(data.sceneName);
@@ -62,6 +67,14 @@ namespace Boruhan.Core
             Slot = -1;
             Data = SaveData.CreateNew();
             Data.sceneName = sceneName;
+#if UNITY_EDITOR
+            // Test flags set in Börühan Stüdyo, so a scene can be played directly in the right story state.
+            foreach (var flag in UnityEditor.EditorPrefs.GetString(TestFlagsKey, "").Split(','))
+            {
+                if (!string.IsNullOrWhiteSpace(flag))
+                    Data.flags.Add(flag.Trim());
+            }
+#endif
             Debug.Log("[Kayıt] Sahne doğrudan açıldı; test modunda kayıt yapılmaz. Ana menüden başlatın.");
         }
 
@@ -92,6 +105,33 @@ namespace Boruhan.Core
             return count;
         }
 
+        public static event Action<string> VariableChanged;
+
+        public static void ClearFlag(string flag)
+        {
+            if (Data != null && Data.flags.Remove(flag))
+                FlagChanged?.Invoke(flag);
+        }
+
+        public static int GetVariable(string key)
+        {
+            if (Data == null || string.IsNullOrEmpty(key))
+                return 0;
+            var entry = Data.variables.Find(v => v.key == key);
+            return entry != null ? entry.value : 0;
+        }
+
+        public static void SetVariable(string key, int value)
+        {
+            if (Data == null || string.IsNullOrEmpty(key))
+                return;
+            var entry = Data.variables.Find(v => v.key == key);
+            if (entry == null)
+                Data.variables.Add(entry = new Save.VariableEntry { key = key });
+            entry.value = value;
+            VariableChanged?.Invoke(key);
+        }
+
         public static void SetFlag(string flag)
         {
             if (string.IsNullOrEmpty(flag) || Data == null || Data.flags.Contains(flag))
@@ -99,6 +139,33 @@ namespace Boruhan.Core
 
             Data.flags.Add(flag);
             FlagChanged?.Invoke(flag);
+        }
+
+        /// <summary>
+        /// After dying: reloads the slot's last save (save point, pause-menu save or room change) with full
+        /// health, dropping everything since. In test mode (no save) the current room restarts instead.
+        /// </summary>
+        public static void RetryFromLastSave()
+        {
+            if (CanSave && SaveSystem.Exists(Slot))
+            {
+                var data = SaveSystem.Load(Slot);
+                if (data != null)
+                {
+                    data.flags ??= new System.Collections.Generic.List<string>();
+                    data.variables ??= new System.Collections.Generic.List<Save.VariableEntry>();
+                    Data = data;
+                }
+            }
+            if (Data == null)
+                return;
+            if (!CanSave)
+            {
+                Data.sceneName = SceneManager.GetActiveScene().name;
+                Data.hasPosition = false;
+            }
+            Data.playerHealth = -1f;
+            ScreenFader.FadeToScene(Data.sceneName);
         }
 
         /// <summary>Moves to another scene, arriving at the given SpawnPoint. Saves on the way (checkpoint).</summary>

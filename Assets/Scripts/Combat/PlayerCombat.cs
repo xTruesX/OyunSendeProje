@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using Boruhan.Animations;
 using Boruhan.Core;
 using Boruhan.Dialogue;
 using Boruhan.Gameplay;
 using Boruhan.Story;
+using Boruhan.UI;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 namespace Boruhan.Combat
 {
@@ -37,6 +38,8 @@ namespace Boruhan.Combat
         [SerializeField] float comboWindow = 0.45f;
 
         [Header("Ağır Saldırı")]
+        [Tooltip("The heavy attack is only available once this flag is set (default: Demir Eldiven, from the 2nd boss). Empty = always.")]
+        [SerializeField] string heavyAttackFlag = StoryFlags.IronGauntlet;
         [SerializeField] float heavyDamage = 32f;
         [SerializeField] float heavyWindup = 0.35f;
         [SerializeField] float heavyReach = 1f;
@@ -63,6 +66,8 @@ namespace Boruhan.Combat
         [Header("Ayna Sıçraması (1. Kat ödülü)")]
         [Tooltip("With this ability the dodge becomes a short teleport that crosses pits (not walls).")]
         [SerializeField] float blinkDistance = 3.2f;
+        [Tooltip("Time between teleports. Pressing Kaçış before it is over does a normal dash instead.")]
+        [SerializeField] float blinkCooldown = 3f;
 
         [Header("Demir Eldiven (2. Kat ödülü)")]
         [Tooltip("A heavy attack with the gauntlet stuns enemies for this long and breaks cracked walls.")]
@@ -74,14 +79,36 @@ namespace Boruhan.Combat
         [SerializeField] SpriteRenderer slashRenderer;
         [SerializeField] SpriteRenderer bodyRenderer;
 
+        [Header("Ses Efektleri")]
+        [Tooltip("A light attack that hits something.")]
+        [SerializeField] AudioClip lightAttackSound;
+        [Tooltip("A heavy attack that hits something.")]
+        [SerializeField] AudioClip heavyAttackSound;
+        [Tooltip("Any swing that hits nothing.")]
+        [SerializeField] AudioClip missSound;
+        [Tooltip("A normal dash.")]
+        [SerializeField] AudioClip dodgeSound;
+        [Tooltip("An Ayna Sıçraması teleport.")]
+        [SerializeField] AudioClip blinkSound;
+        [Tooltip("Kaçış pressed while the dash is not ready.")]
+        [SerializeField] AudioClip dodgeUnavailableSound;
+        [Tooltip("The teleport is ready again (only with Ayna Sıçraması).")]
+        [SerializeField] AudioClip blinkReadySound;
+        [Range(0f, 1f)] [SerializeField] float sfxVolume = 0.8f;
+
+        AudioSource sfxSource;
+
         PlayerController controller;
         Health health;
+        CharacterAnimator animator;
         readonly List<Collider2D> hits = new List<Collider2D>();
         readonly HashSet<Health> hitThisSwing = new HashSet<Health>();
         bool busy;
         int comboStep;
         float comboUntil;
         float nextDodge;
+        float nextBlink;
+        bool blinkCharging;
         float nextParry;
         float parryUntil;
         Color flashColor;
@@ -108,6 +135,7 @@ namespace Boruhan.Combat
         {
             controller = GetComponent<PlayerController>();
             health = GetComponent<Health>();
+            animator = GetComponentInChildren<CharacterAnimator>();
             health.AddFilter(ParryFilter);
             health.Damaged += OnHurt;
             health.Died += OnDied;
@@ -144,21 +172,33 @@ namespace Boruhan.Combat
         void Update()
         {
             UpdateBodyColor();
+            if (blinkCharging && Time.time >= nextBlink)
+            {
+                blinkCharging = false;
+                PlaySound(blinkReadySound);
+            }
             if (health.IsDead || busy || !CanFight || !controller.InputEnabled
                 || DialogueRunner.IsBusy || ScreenFader.IsBusy || Time.timeScale == 0f)
                 return;
 
-            if (GameInput.DodgePressed && Time.time >= nextDodge)
-                StartCoroutine(Dodge());
+            if (GameInput.DodgePressed)
+            {
+                if (Time.time >= nextDodge)
+                    StartCoroutine(Dodge());
+                else
+                    PlaySound(dodgeUnavailableSound, false);
+            }
             else if (GameInput.ParryPressed && Time.time >= nextParry)
                 StartCoroutine(Parry());
             else if (GameInput.LightAttackPressed)
                 StartCoroutine(LightAttack());
-            else if (GameInput.HeavyAttackPressed)
+            else if (GameInput.HeavyAttackPressed && HeavyAttackUnlocked)
                 StartCoroutine(HeavyAttack());
         }
 
-        Vector2 Aim => controller.LastMoveDirection;
+        Vector2 Aim => controller.AimDirection;
+
+        public bool HeavyAttackUnlocked => string.IsNullOrEmpty(heavyAttackFlag) || GameSession.HasFlag(heavyAttackFlag);
 
         IEnumerator LightAttack()
         {
@@ -169,8 +209,10 @@ namespace Boruhan.Combat
             bool finisher = comboStep == 3;
 
             var aim = Aim;
+            controller.FaceTowards(aim, lightDuration);
             controller.SpeedMultiplier = 0.3f;
             controller.ForceVelocity(aim * 3f, 0.07f);
+            Animate(AnimState.Attack, lightDuration);
             Swing(aim, lightReach, lightRadius, finisher ? comboFinisherDamage : lightDamage, finisher ? 5f : 2.5f, false, finisher ? 1.25f : 1f);
 
             yield return new WaitForSeconds(lightDuration);
@@ -184,11 +226,14 @@ namespace Boruhan.Combat
             busy = true;
             comboStep = 0;
             var aim = Aim;
+            controller.FaceTowards(aim, heavyWindup + heavyRecovery);
             controller.SpeedMultiplier = 0.15f;
+            Animate(AnimState.HeavyAttack, heavyWindup + heavyRecovery);
             Flash(new Color(1f, 0.85f, 0.4f), heavyWindup);
             yield return new WaitForSeconds(heavyWindup);
 
             aim = Aim;
+            controller.FaceTowards(aim, heavyRecovery);
             controller.ForceVelocity(aim * 6f, 0.1f);
             Swing(aim, heavyReach, heavyRadius, heavyDamage, heavyKnockback, true, 1.6f);
             yield return new WaitForSeconds(heavyRecovery);
@@ -240,6 +285,22 @@ namespace Boruhan.Combat
 
             if (landed)
                 CombatFx.HitStop(heavy ? 0.08f : 0.04f);
+            PlaySound(!landed ? missSound : heavy ? heavyAttackSound : lightAttackSound);
+        }
+
+        void PlaySound(AudioClip clip, bool varyPitch = true)
+        {
+            if (clip == null)
+                return;
+            if (sfxSource == null)
+            {
+                sfxSource = gameObject.AddComponent<AudioSource>();
+                sfxSource.playOnAwake = false;
+                sfxSource.spatialBlend = 0f;
+            }
+            // A little pitch variation so repeated swings don't sound identical.
+            sfxSource.pitch = varyPitch ? Random.Range(0.94f, 1.06f) : 1f;
+            sfxSource.PlayOneShot(clip, sfxVolume);
         }
 
         void ShowSlash(Vector2 center, Vector2 aim, float size)
@@ -268,45 +329,53 @@ namespace Boruhan.Combat
 
         IEnumerator Dodge()
         {
-            if (GameSession.HasFlag(StoryFlags.MirrorLeap))
+            var dir = controller.MoveInput.sqrMagnitude > 0.01f ? controller.MoveInput.normalized : controller.LastMoveDirection;
+            // Ayna Sıçraması has its own, longer cooldown; until it's back the dodge is a normal dash.
+            if (GameSession.HasFlag(StoryFlags.MirrorLeap) && Time.time >= nextBlink && TryBlink(dir))
             {
-                yield return Blink();
+                busy = true;
+                yield return new WaitForSeconds(0.15f);
+                busy = false;
                 yield break;
             }
 
             busy = true;
             nextDodge = Time.time + dodgeDuration + dodgeCooldown;
-            var dir = controller.MoveInput.sqrMagnitude > 0.01f ? controller.MoveInput.normalized : Aim;
+            PlaySound(dodgeSound);
             health.SetInvulnerable(dodgeDuration + 0.05f);
             controller.ForceVelocity(dir * dodgeSpeed, dodgeDuration);
+            Animate(AnimState.Dodge, dodgeDuration);
             bodyAlpha = 0.45f;
             yield return new WaitForSeconds(dodgeDuration);
             bodyAlpha = 1f;
             busy = false;
         }
 
-        /// <summary>Ayna Sıçraması: vanish and reappear a short distance ahead, over pits but not through walls.</summary>
-        IEnumerator Blink()
+        /// <summary>
+        /// Ayna Sıçraması: vanish and reappear a short distance ahead, over pits but not through walls.
+        /// False if there is nowhere to land (the dodge is then a normal dash and the teleport isn't used up).
+        /// </summary>
+        bool TryBlink(Vector2 dir)
         {
-            busy = true;
-            nextDodge = Time.time + 0.15f + dodgeCooldown;
-            var dir = controller.MoveInput.sqrMagnitude > 0.01f ? controller.MoveInput.normalized : Aim;
             Vector2 from = transform.position;
             var mirror = new Color(0.65f, 0.95f, 1f, 0.8f);
-
             for (float d = blinkDistance; d >= 0.8f; d -= 0.4f)
             {
                 var to = from + dir * d;
                 if (BlinkBlocked(from, to) || !IsFree(to))
                     continue;
+                nextDodge = Time.time + 0.15f + dodgeCooldown;
+                nextBlink = Time.time + 0.15f + blinkCooldown;
+                blinkCharging = true;
+                Animate(AnimState.Dodge, 0.15f);
+                PlaySound(blinkSound);
                 CombatFx.Burst(CombatFx.Circle, from + BodyOffset, 0.4f, 1.6f, mirror, 0.25f, 70);
                 health.SetInvulnerable(0.2f);
                 controller.Teleport(to);
                 CombatFx.Burst(CombatFx.Circle, to + BodyOffset, 1.6f, 0.4f, mirror, 0.2f, 70);
-                break;
+                return true;
             }
-            yield return new WaitForSeconds(0.15f);
-            busy = false;
+            return false;
         }
 
         bool BlinkBlocked(Vector2 from, Vector2 to)
@@ -337,6 +406,7 @@ namespace Boruhan.Combat
             nextParry = Time.time + parryCooldown;
             parryUntil = Time.time + parryWindow;
             controller.SpeedMultiplier = 0f;
+            Animate(AnimState.Parry, parryWindow);
             Flash(new Color(0.6f, 0.9f, 1f), parryWindow);
             yield return new WaitForSeconds(parryWindow);
             controller.SpeedMultiplier = 1f;
@@ -362,6 +432,8 @@ namespace Boruhan.Combat
         {
             health.SetInvulnerable(0.6f);
             Flash(new Color(1f, 0.3f, 0.3f), 0.2f);
+            if (animator != null)
+                animator.PlayHurt();
             var push = (Vector2)transform.position - info.source;
             if (push.sqrMagnitude > 0.0001f && info.knockback > 0f)
                 controller.ForceVelocity(push.normalized * info.knockback, 0.15f);
@@ -375,18 +447,26 @@ namespace Boruhan.Combat
             StopAllCoroutines();
             controller.InputEnabled = false;
             controller.SpeedMultiplier = 1f;
-            StartCoroutine(Respawn());
+            if (animator != null)
+                animator.PlayDeath();
+            Flash(new Color(0.3f, 0.1f, 0.1f), 10f);
+            if (DeathScreen.Instance != null)
+                DeathScreen.Instance.Show();
+            else
+                StartCoroutine(RetryWithoutScreen());
         }
 
-        IEnumerator Respawn()
+        // A scene without the HUD has no death screen: go straight back to the last save.
+        IEnumerator RetryWithoutScreen()
         {
-            // Fall, then restart the room from where Börühan entered it (enemies come back too).
-            Flash(new Color(0.3f, 0.1f, 0.1f), 10f);
             yield return new WaitForSecondsRealtime(1.2f);
-            var spawn = GameSession.Data != null ? GameSession.Data.spawnId : null;
-            if (GameSession.Data != null)
-                GameSession.Data.playerHealth = -1f;
-            GameSession.TravelTo(SceneManager.GetActiveScene().name, spawn);
+            GameSession.RetryFromLastSave();
+        }
+
+        void Animate(AnimState state, float seconds)
+        {
+            if (animator != null)
+                animator.PlayAction(state, seconds);
         }
 
         void Flash(Color color, float seconds)

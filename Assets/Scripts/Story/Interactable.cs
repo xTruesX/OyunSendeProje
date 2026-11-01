@@ -6,7 +6,7 @@ using UnityEngine.Events;
 namespace Boruhan.Story
 {
     /// <summary>Something the player can face and press E on: a character, an item, a sign.</summary>
-    public class Interactable : MonoBehaviour
+    public class Interactable : MonoBehaviour, IInteractable
     {
         [Tooltip("Shown in the prompt, e.g. [E] Konuş")]
         [SerializeField] string prompt = "Bak";
@@ -26,9 +26,13 @@ namespace Boruhan.Story
         public UnityEvent onFinished;
 
         public string Prompt => prompt;
+        public bool CanInteract => isActiveAndEnabled;
 
         public void Interact()
         {
+            if (TryGetComponent<SavePoint>(out var savePoint) && savePoint.TryBlock())
+                return;
+
             if (!string.IsNullOrEmpty(requiredFlag) && !GameSession.HasFlag(requiredFlag))
             {
                 DialogueRunner.Play(lockedDialogue);

@@ -20,6 +20,8 @@ MonoBehaviour:
   windup: 0.25
   recovery: 0.2
   telegraphColor: {r: 1, g: 0.25, b: 0.2, a: 0.35}
+  animationState: 4
+  customAnimation: 
   destination: 2
   distance: 3.5
   followUp: {fileID: 0}
@@ -40,6 +42,7 @@ MonoBehaviour:
   difficulty: 0
   isBoss: 0
   sprite: {fileID: 21300000, guid: e1348daead3d609428e510a7b92c9af6, type: 3}
+  animations: {fileID: 11400000, guid: 1fb6f06f1cbe1652db040366f0ba844e, type: 2}
   tint: {r: 1, g: 1, b: 1, a: 1}
   scale: 1
   footSize: {x: 0.7, y: 0.35}
@@ -75,6 +78,8 @@ MonoBehaviour:
   windup: 0.5
   recovery: 0.4
   telegraphColor: {r: 1, g: 0.25, b: 0.2, a: 0.35}
+  animationState: 2
+  customAnimation: 
   damage: 8
   count: 1
   spreadAngle: 0

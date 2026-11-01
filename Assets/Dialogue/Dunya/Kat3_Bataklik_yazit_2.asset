@@ -15,9 +15,11 @@ MonoBehaviour:
   lines:
   - speaker: {fileID: 0}
     text: "\"\xDClgen Han bir k\u0131\u015F gecesi yery\xFCz\xFCne bakt\u0131\u011F\u0131nda yaln\u0131zca donmak \xFCzere bir bebek g\xF6rmedi.\""
+    voice: {fileID: 8300000, guid: 0182ccf23f03bd6e4be48fbc71b4b006, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 0}
     text: "\"Erlik'i yenecek olan\u0131 g\xF6rd\xFC.\""
+    voice: {fileID: 8300000, guid: cbe2aaf445ad64db190fb5294a9bf59c, type: 3}
     duration: 0
     setFlag: 

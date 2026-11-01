@@ -15,9 +15,11 @@ MonoBehaviour:
   lines:
   - speaker: {fileID: 0}
     text: "B\xF6r\xFChan merdivenden yery\xFCz\xFCne indi ve yola koyuldu."
+    voice: {fileID: 8300000, guid: 51d0b8592e0f57a5a8c5731fe7ab572a, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 11400000, guid: 1b85c12ef309323b2bffc83efae91dcb, type: 2}
     text: "Karanl\u0131ktan da karanl\u0131k bir ma\u011Fara... T\u0131ls\u0131m yine parl\u0131yor. Yolu o g\xF6sterecek."
+    voice: {fileID: 8300000, guid: e359c6545d36c8db9ab29cac15b0027b, type: 3}
     duration: 0
     setFlag: 

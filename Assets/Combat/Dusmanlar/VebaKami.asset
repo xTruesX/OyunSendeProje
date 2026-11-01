@@ -20,6 +20,8 @@ MonoBehaviour:
   windup: 0.6
   recovery: 0.4
   telegraphColor: {r: 1, g: 0.25, b: 0.2, a: 0.35}
+  animationState: 2
+  customAnimation: 
   damage: 9
   count: 4
   spreadAngle: 50
@@ -50,6 +52,8 @@ MonoBehaviour:
   windup: 0.7
   recovery: 0.4
   telegraphColor: {r: 1, g: 0.25, b: 0.2, a: 0.35}
+  animationState: 2
+  customAnimation: 
   count: 2
   radius: 1.6
   spread: 3
@@ -78,6 +82,8 @@ MonoBehaviour:
   windup: 0.8
   recovery: 0.4
   telegraphColor: {r: 1, g: 0.25, b: 0.2, a: 0.35}
+  animationState: 2
+  customAnimation: 
   minions:
   - {fileID: 11400000, guid: 381f208b273d248839ce494e2e121d2f, type: 2}
   count: 3
@@ -100,6 +106,7 @@ MonoBehaviour:
   difficulty: 2
   isBoss: 0
   sprite: {fileID: 21300000, guid: 9c7c0ae5889c830b9a8fd8b72ceaa33a, type: 3}
+  animations: {fileID: 11400000, guid: ea8fad4f49ef2576c96861f62ab1ddbf, type: 2}
   tint: {r: 1, g: 1, b: 1, a: 1}
   scale: 1
   footSize: {x: 0.7, y: 0.35}
@@ -137,6 +144,8 @@ MonoBehaviour:
   windup: 0.8
   recovery: 0.4
   telegraphColor: {r: 0.5, g: 0.8, b: 0.2, a: 0.2}
+  animationState: 2
+  customAnimation: 
   range: 6
   slowMultiplier: 0.55
   slowDuration: 2.5

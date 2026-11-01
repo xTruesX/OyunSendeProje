@@ -15,13 +15,16 @@ MonoBehaviour:
   lines:
   - speaker: {fileID: 0}
     text: "Yar\u0131 g\xF6m\xFCl\xFC bir kervanc\u0131 g\xFCnl\xFC\u011F\xFC:"
+    voice: {fileID: 8300000, guid: fddd8438ecf4860ac8c350fcc796fc6a, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 0}
     text: "\"Erlik'in el\xE7ileri yery\xFCz\xFCnde alt\u0131n da\u011F\u0131tt\u0131; kar\u015F\u0131l\u0131\u011F\u0131nda yaln\u0131zca k\xFC\xE7\xFCk bir yalan istediler.\""
+    voice: {fileID: 8300000, guid: 4ff3a746a87f2fa778705def6cb85ea6, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 0}
     text: "\"Kimse bedelin kendi ruhlar\u0131 oldu\u011Funu bilmiyordu.\""
+    voice: {fileID: 8300000, guid: 3e86b3b9b2ae8ba579b8e2a8d8794242, type: 3}
     duration: 0
     setFlag: 

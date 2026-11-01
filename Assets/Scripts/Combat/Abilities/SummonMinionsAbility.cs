@@ -14,6 +14,10 @@ namespace Boruhan.Combat
         [Tooltip("Never more than this many of its summons alive at once.")]
         [Min(1)] public int maxAlive = 4;
         public float radius = 2.5f;
+        [Header("Şifa Küresi")]
+        [Tooltip("Chance (0-1) that each summon drops a health orb when killed.")]
+        [Range(0f, 1f)] public float healthOrbChance;
+        public HealthOrb healthOrb;
 
         public override IEnumerator Perform(EnemyController enemy)
         {
@@ -36,6 +40,8 @@ namespace Boruhan.Combat
             {
                 var minion = EnemyController.Spawn(minions[Random.Range(0, minions.Count)], spot);
                 minion.ForceAggro();
+                minion.DropOnDeath = healthOrb;
+                minion.DropChance = healthOrbChance;
                 enemy.Minions.Add(minion);
                 CombatFx.Burst(CombatFx.Circle, spot + Vector2.up * 0.4f, 0.3f, 1.4f, new Color(0.7f, 0.4f, 0.9f, 0.6f), 0.3f);
             }

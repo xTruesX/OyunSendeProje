@@ -15,9 +15,11 @@ MonoBehaviour:
   lines:
   - speaker: {fileID: 0}
     text: "\"G\xF6\u011F\xFC ve yeri tuttu\u011Fu s\xF6ylenen s\xFCtunlar \u015Fimdi paslan\u0131yor.\""
+    voice: {fileID: 8300000, guid: 607095c66050cd522b1f969581597086, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 0}
     text: "\"Denge bozulduk\xE7a yery\xFCz\xFCnde k\u0131\u015Flar uzar, geceler karar\u0131r.\""
+    voice: {fileID: 8300000, guid: b7c4c0a0578515c35a5ed7149382683b, type: 3}
     duration: 0
     setFlag: 

@@ -7,6 +7,13 @@ namespace Boruhan.Save
 {
     /// <summary>Everything that gets written to a save slot. Serialized with JsonUtility.</summary>
     [Serializable]
+    public class VariableEntry
+    {
+        public string key;
+        public int value;
+    }
+
+    [Serializable]
     public class SaveData
     {
         public int version = 2;
@@ -25,6 +32,9 @@ namespace Boruhan.Save
 
         /// <summary>Story progress. See Core.StoryFlags for the names used.</summary>
         public List<string> flags = new List<string>();
+
+        /// <summary>Whole-number variables set by events (Değişken komutları).</summary>
+        public List<VariableEntry> variables = new List<VariableEntry>();
 
         public float playTimeSeconds;
         public string lastSavedUtc;

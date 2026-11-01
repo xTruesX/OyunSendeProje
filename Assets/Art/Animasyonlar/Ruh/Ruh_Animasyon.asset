@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6401d5c821fc6f3b9b557cced08e1c0, type: 3}
+  m_Name: Ruh_Animasyon
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Animations.AnimationSet
+  mirrorForLeft: 1
+  clips:
+  - state: 0
+    customName: 
+    direction: 0
+    frames:
+    - {fileID: -3199645566920279688, guid: 0d46af81cf6c40269a02ad4eeddbe317, type: 3}
+    - {fileID: -2408643991405049749, guid: 0d46af81cf6c40269a02ad4eeddbe317, type: 3}
+    fps: 2
+    loop: 1
+  - state: 1
+    customName: 
+    direction: 0
+    frames:
+    - {fileID: -8810817265843838765, guid: 7f92b153a7eb68344b2b3f7e66944851, type: 3}
+    - {fileID: -3880369900394634087, guid: 7f92b153a7eb68344b2b3f7e66944851, type: 3}
+    - {fileID: 3323387338144732508, guid: 7f92b153a7eb68344b2b3f7e66944851, type: 3}
+    - {fileID: 6059866367566009406, guid: 7f92b153a7eb68344b2b3f7e66944851, type: 3}
+    fps: 8
+    loop: 1

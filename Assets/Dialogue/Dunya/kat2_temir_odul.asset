@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e525b435dff6f3df5bb509836d41dbde, type: 3}
+  m_Name: kat2_temir_odul
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Dialogue.DialogueAsset
+  lines:
+  - speaker: {fileID: 0}
+    text: "B\xF6r\xFChan eldiveni ald\u0131."
+    voice: {fileID: 8300000, guid: 234c3289135a7ba30b77573aae8011ae, type: 3}
+    duration: 0
+    setFlag: 
+  - speaker: {fileID: 0}
+    text: "DEM\u0130R ELD\u0130VEN \u2014 Art\u0131k a\u011F\u0131r sald\u0131r\u0131 yapabilirsin: K / Sa\u011F T\u0131k."
+    voice: {fileID: 8300000, guid: 264f21b39e4d5bd3b9accdd449664c28, type: 3}
+    duration: 0
+    setFlag: 
+  - speaker: {fileID: 0}
+    text: "A\u011F\u0131r sald\u0131r\u0131 kalkanlar\u0131 ve \xE7atlak duvarlar\u0131 k\u0131rar, d\xFC\u015Fman\u0131 sersemletir. Dengesi bozulan d\xFC\u015Fmana vurursan Kut Y\u0131k\u0131m\u0131 olur. Eldiven a\u011F\u0131rd\u0131r; sersemletme her an kullan\u0131lamaz."
+    voice: {fileID: 8300000, guid: b83c7dfc4431255bfa26df468b7030f7, type: 3}
+    duration: 0
+    setFlag: 
+  - speaker: {fileID: 0}
+    text: "B\xF6r\xFChan daha da g\xFC\xE7lendi\u011Fini hissetti, ama h\xE2l\xE2 haz\u0131r de\u011Fildi. A\u015Fa\u011F\u0131ya inen bir yar\u0131k a\xE7\u0131ld\u0131."
+    voice: {fileID: 8300000, guid: 389ecd6da13bde66c85431ac49aeacdd, type: 3}
+    duration: 0
+    setFlag: 

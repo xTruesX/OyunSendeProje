@@ -15,13 +15,16 @@ MonoBehaviour:
   lines:
   - speaker: {fileID: 0}
     text: "T\u0131ls\u0131m\u0131n \u0131\u015F\u0131\u011F\u0131n\u0131 takip eden B\xF6r\xFChan, harabe bir yap\u0131ya ula\u015Ft\u0131."
+    voice: {fileID: 8300000, guid: 4ff68489d606fdb7e91985e4d33d0f3d, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 0}
     text: "Birden \xF6n\xFCnde, g\xF6ky\xFCz\xFCne uzanan bir merdiven belirdi."
+    voice: {fileID: 8300000, guid: 620d92c59af0e7ae9b083cb481ce5d13, type: 3}
     duration: 0
     setFlag: merdiven_belirdi
   - speaker: {fileID: 11400000, guid: 1b85c12ef309323b2bffc83efae91dcb, type: 2}
     text: "G\xF6klere uzanan bir merdiven... \xDClgen Han, bu senin i\u015Fin mi?"
+    voice: {fileID: 8300000, guid: 4f4a9a06385d2fc7d8cf52ef1083f18b, type: 3}
     duration: 0
     setFlag: 

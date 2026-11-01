@@ -38,7 +38,202 @@ namespace Boruhan.EditorTools
             EnsurePlayerCombat();
             EnsureHud();
             EnsureEnemies();
+            EnsureSoundEffects();
+            EnsureHealthOrbs();
+            EnsureDeathScreen();
             AssetDatabase.SaveAssets();
+        }
+
+        // ================= Sound effects =================
+
+        const string SfxDir = "Assets/Audio/Efektler";
+
+        /// <summary>Creates placeholder attack and dash sounds (if missing) and hooks them up to the player.</summary>
+        [MenuItem("Börühan/Bakım/Ses Efektlerini Oluştur")]
+        public static void EnsureSoundEffects()
+        {
+            var light = Sfx("HafifSaldiri", 0.14f, (t, k) => Noise() * 0.5f * Env(k, 0.02f) + Mathf.Sin(2f * Mathf.PI * Mathf.Lerp(900f, 500f, k) * t) * 0.35f * Env(k, 0.01f));
+            var heavy = Sfx("AgirSaldiri", 0.28f, (t, k) => Mathf.Sin(2f * Mathf.PI * Mathf.Lerp(140f, 55f, k) * t) * 0.8f * Env(k, 0.01f) + Noise() * 0.35f * Env(Mathf.Min(1f, k * 2.5f), 0.01f));
+            var miss = Sfx("IskaSaldiri", 0.16f, (t, k) => Noise() * 0.3f * Mathf.Sin(Mathf.PI * k));
+            var dodge = Sfx("Kacis", 0.2f, (t, k) => Noise() * 0.4f * Mathf.Sin(Mathf.PI * Mathf.Sqrt(k)) * (1f - k));
+            var blink = Sfx("AynaSicramasi", 0.3f, (t, k) => (Mathf.Sin(2f * Mathf.PI * Mathf.Lerp(500f, 1600f, k) * t) * 0.4f + Mathf.Sin(2f * Mathf.PI * 2400f * t) * 0.15f) * Env(k, 0.05f));
+            var unavailable = Sfx("KacisHazirDegil", 0.12f, (t, k) => Mathf.Sign(Mathf.Sin(2f * Mathf.PI * 160f * t)) * 0.25f * Env(k, 0.02f));
+            var ready = Sfx("AynaSicramasiHazir", 0.35f, (t, k) => Mathf.Sin(2f * Mathf.PI * (k < 0.4f ? 880f : 1320f) * t) * 0.35f * Env(k < 0.4f ? k / 0.4f : (k - 0.4f) / 0.6f, 0.05f));
+
+            var root = PrefabUtility.LoadPrefabContents(PlayerPrefab);
+            try
+            {
+                var combat = root.GetComponent<PlayerCombat>();
+                var so = new SerializedObject(combat);
+                void Assign(string field, AudioClip clip)
+                {
+                    var prop = so.FindProperty(field);
+                    if (prop.objectReferenceValue == null)
+                        prop.objectReferenceValue = clip;
+                }
+                Assign("lightAttackSound", light);
+                Assign("heavyAttackSound", heavy);
+                Assign("missSound", miss);
+                Assign("dodgeSound", dodge);
+                Assign("blinkSound", blink);
+                Assign("dodgeUnavailableSound", unavailable);
+                Assign("blinkReadySound", ready);
+                so.ApplyModifiedPropertiesWithoutUndo();
+                PrefabUtility.SaveAsPrefabAsset(root, PlayerPrefab);
+            }
+            finally
+            {
+                PrefabUtility.UnloadPrefabContents(root);
+            }
+        }
+
+        // ================= Death screen =================
+
+        /// <summary>Adds the death screen (Yenildin / Tekrar Dene / Ana Menü) and its sounds to the HUD prefab, if missing.</summary>
+        [MenuItem("Börühan/Bakım/Ölüm Ekranını Kur")]
+        public static void EnsureDeathScreen()
+        {
+            var fall = Sfx("Olum", 0.9f, (t, k) => (Mathf.Sin(2f * Mathf.PI * Mathf.Lerp(220f, 60f, k) * t) * 0.6f + Noise() * 0.25f * (1f - k)) * Env(k, 0.02f));
+            // A low minor chord that swells and fades.
+            var sting = Sfx("OlumEkrani", 2.4f, (t, k) =>
+                (Mathf.Sin(2f * Mathf.PI * 110f * t) + Mathf.Sin(2f * Mathf.PI * 130.8f * t) * 0.8f + Mathf.Sin(2f * Mathf.PI * 164.8f * t) * 0.6f)
+                * 0.25f * Mathf.Sin(Mathf.PI * Mathf.Sqrt(k)));
+            var retry = Sfx("TekrarDene", 0.5f, (t, k) => Mathf.Sin(2f * Mathf.PI * (k < 0.3f ? 440f : k < 0.6f ? 554f : 659f) * t) * 0.35f * (1f - k));
+
+            var root = PrefabUtility.LoadPrefabContents(HudPrefab);
+            try
+            {
+                if (root.GetComponent<DeathScreen>() != null)
+                    return;
+                PrologueBuilder.EnsureFonts();
+
+                var panel = PrologueBuilder.UIObject("OlumEkrani", root.transform);
+                PrologueBuilder.Stretch(panel);
+                panel.transform.SetAsLastSibling();
+                panel.AddComponent<Image>().color = new Color(0.06f, 0.01f, 0.02f, 0.88f);
+                var group = panel.AddComponent<CanvasGroup>();
+                var layout = panel.AddComponent<VerticalLayoutGroup>();
+                layout.spacing = 24;
+                layout.childAlignment = TextAnchor.MiddleCenter;
+                layout.childControlWidth = layout.childControlHeight = true;
+                layout.childForceExpandWidth = layout.childForceExpandHeight = false;
+
+                PrologueBuilder.Sized(PrologueBuilder.Label(panel.transform, "Baslik", "YENİLDİN", 110, new Color32(170, 30, 35, 255), PrologueBuilder.titleFont), 1400, 150);
+                var message = PrologueBuilder.Sized(PrologueBuilder.Label(panel.transform, "Mesaj", "", 34, PrologueBuilder.TextLight), 1400, 60);
+                message.fontStyle = FontStyle.Italic;
+                PrologueBuilder.Sized(PrologueBuilder.Label(panel.transform, "Bosluk", "", 10, Color.clear), 10, 40);
+                var retryButton = PrologueBuilder.MakeButton(panel.transform, "TekrarDeneButonu", "Tekrar Dene");
+                var menuButton = PrologueBuilder.MakeButton(panel.transform, "AnaMenuButonu", "Ana Menüye Dön");
+                PrologueBuilder.Sized(PrologueBuilder.Label(panel.transform, "Ipucu", "Son kayıttan devam edersin.", 24, new Color32(200, 190, 170, 160)), 1400, 40);
+
+                var screen = root.AddComponent<DeathScreen>();
+                PrologueBuilder.Set(screen, "root", panel);
+                PrologueBuilder.Set(screen, "group", group);
+                PrologueBuilder.Set(screen, "messageText", message);
+                PrologueBuilder.Set(screen, "retryButton", retryButton);
+                PrologueBuilder.Set(screen, "mainMenuButton", menuButton);
+                PrologueBuilder.Set(screen, "deathSound", fall);
+                PrologueBuilder.Set(screen, "screenSound", sting);
+                PrologueBuilder.Set(screen, "retrySound", retry);
+                PrefabUtility.SaveAsPrefabAsset(root, HudPrefab);
+            }
+            finally
+            {
+                PrefabUtility.UnloadPrefabContents(root);
+            }
+        }
+
+        // ================= Health orbs =================
+
+        const string HealthOrbPrefab = "Assets/Prefabs/SifaKuresi.prefab";
+
+        // Summons that may drop a health orb: (enemy, ability, chance).
+        static readonly (string enemy, string ability, float chance)[] OrbDrops =
+        {
+            ("AynaKopya", "Kopyalar", 0.3f),
+            ("TemirHan", "Körük Çağrısı", 0.4f),
+        };
+
+        /// <summary>
+        /// Creates the Şifa Küresi prefab (if missing) and lets the bosses' summons drop it. Only fills
+        /// abilities that have no orb yet, so chances changed in the Inspector are kept.
+        /// </summary>
+        [MenuItem("Börühan/Bakım/Şifa Kürelerini Kur")]
+        public static void EnsureHealthOrbs()
+        {
+            var orb = AssetDatabase.LoadAssetAtPath<HealthOrb>(HealthOrbPrefab);
+            if (orb == null)
+            {
+                var sprite = PrologueBuilder.Art(PrologueBuilder.ArtDir, "SifaKuresi", 8, 8, new Color32(90, 230, 110, 255), Shape.Circle, new Vector2(0.5f, 0.5f));
+                var sound = Sfx("SifaKuresi", 0.3f, (t, k) => (Mathf.Sin(2f * Mathf.PI * Mathf.Lerp(600f, 1200f, k) * t) * 0.35f + Mathf.Sin(2f * Mathf.PI * Mathf.Lerp(900f, 1800f, k) * t) * 0.15f) * Env(k, 0.03f));
+                var go = new GameObject("SifaKuresi");
+                try
+                {
+                    var sr = go.AddComponent<SpriteRenderer>();
+                    sr.sprite = sprite;
+                    sr.sortingOrder = 5;
+                    go.AddComponent<CircleCollider2D>().isTrigger = true;
+                    ((CircleCollider2D)go.GetComponent<Collider2D>()).radius = 0.35f;
+                    var component = go.AddComponent<HealthOrb>();
+                    PrologueBuilder.Set(component, "pickupSound", sound);
+                    orb = PrefabUtility.SaveAsPrefabAsset(go, HealthOrbPrefab).GetComponent<HealthOrb>();
+                }
+                finally
+                {
+                    UnityEngine.Object.DestroyImmediate(go);
+                }
+            }
+
+            foreach (var (enemy, abilityName, chance) in OrbDrops)
+            {
+                var def = AssetDatabase.LoadAssetAtPath<EnemyDefinition>($"{EnemyDir}/{enemy}.asset");
+                if (def == null)
+                    continue;
+                foreach (var ability in def.abilities)
+                {
+                    if (ability == null || ability.displayName != abilityName)
+                        continue;
+                    if (ability is SummonIllusionsAbility illusions && illusions.healthOrb == null)
+                    {
+                        illusions.healthOrb = orb;
+                        illusions.healthOrbChance = chance;
+                    }
+                    else if (ability is SummonMinionsAbility minions && minions.healthOrb == null)
+                    {
+                        minions.healthOrb = orb;
+                        minions.healthOrbChance = chance;
+                    }
+                    EditorUtility.SetDirty(ability);
+                }
+            }
+            AssetDatabase.SaveAssets();
+        }
+
+        static readonly System.Random sfxRandom = new System.Random(7);
+        static float Noise() => (float)(sfxRandom.NextDouble() * 2.0 - 1.0);
+        // Quick attack, then decay over the rest of the sound (k = 0..1 through the sound).
+        static float Env(float k, float attack) => k < attack ? k / attack : Mathf.Pow(1f - (k - attack) / (1f - attack), 2f);
+
+        /// <summary>Writes a short placeholder WAV if the file doesn't exist yet. Replace the file with your own sound.</summary>
+        static AudioClip Sfx(string name, float seconds, System.Func<float, float, float> sample)
+        {
+            Directory.CreateDirectory(SfxDir);
+            var path = $"{SfxDir}/{name}.wav";
+            if (!File.Exists(path))
+            {
+                const int rate = 22050;
+                int count = Mathf.RoundToInt(rate * seconds);
+                using (var w = new BinaryWriter(File.Create(path)))
+                {
+                    w.Write("RIFF".ToCharArray()); w.Write(36 + count * 2); w.Write("WAVEfmt ".ToCharArray());
+                    w.Write(16); w.Write((short)1); w.Write((short)1); w.Write(rate); w.Write(rate * 2); w.Write((short)2); w.Write((short)16);
+                    w.Write("data".ToCharArray()); w.Write(count * 2);
+                    for (int i = 0; i < count; i++)
+                        w.Write((short)(Mathf.Clamp(sample((float)i / rate, (float)i / count), -1f, 1f) * short.MaxValue * 0.8f));
+                }
+                AssetDatabase.ImportAsset(path);
+            }
+            return AssetDatabase.LoadAssetAtPath<AudioClip>(path);
         }
 
         // ================= Player =================
@@ -57,12 +252,7 @@ namespace Boruhan.EditorTools
                 PrologueBuilder.Set(health, "team", (int)Team.Player);
                 PrologueBuilder.Set(health, "maxHealth", 100f);
 
-                var sword = PrologueBuilder.SpriteObject(root.transform, "Kilic",
-                    PrologueBuilder.Art("Kilic", 3, 12, new Color32(205, 210, 220, 255), Shape.Box), new Vector2(0.45f, 0.2f), 1);
-                var swordActivator = root.AddComponent<FlagActivator>();
-                PrologueBuilder.Set(swordActivator, "flag", SwordFlag);
-                PrologueBuilder.SetArray(swordActivator, "targets", sword);
-
+                // No sword sprite on him: his sword animations (Boruhan_Kilic) already draw it in his hand.
                 var slash = PrologueBuilder.SpriteObject(root.transform, "Savurma",
                     PrologueBuilder.Art(PrologueBuilder.ArtDir, "Kilic_Savurma", 32, 32, Color.white, Shape.Crescent, new Vector2(0.5f, 0.5f)), Vector2.zero, 10);
 

@@ -15,13 +15,16 @@ MonoBehaviour:
   lines:
   - speaker: {fileID: 0}
     text: "B\xF6r\xFChan batakl\u0131\u011F\u0131n sonunda \xC7al\u0131\u015F Han ile y\xFCzle\u015Fti."
+    voice: {fileID: 8300000, guid: 17a8af78f1c045a0699e04ea556333bb, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 11400000, guid: 5f4d2cf17d0cbcc67b1ca3b6f19969b0, type: 2}
     text: "Nefes al, yi\u011Fit... Her nefes seni bana biraz daha yakla\u015Ft\u0131r\u0131r."
+    voice: {fileID: 8300000, guid: 99defeeb076225d68a5e7364a33970c6, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 0}
     text: "Etrafa zehirli gaz bulutlar\u0131 yay\u0131yor, batakl\u0131\u011F\u0131n derinliklerinden yeni yarat\u0131klar \xE7a\u011F\u0131r\u0131yordu."
+    voice: {fileID: 8300000, guid: 1525394cb0968c025bc1085a4130a919, type: 3}
     duration: 0
     setFlag: 

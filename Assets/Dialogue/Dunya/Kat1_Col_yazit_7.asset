@@ -15,9 +15,11 @@ MonoBehaviour:
   lines:
   - speaker: {fileID: 0}
     text: "\"\xDClgen'in \u0131\u015F\u0131\u011F\u0131n\u0131 \xE7alan dokuzuncu katta oturur.\""
+    voice: {fileID: 8300000, guid: e72c6ecebf0e5f56688c86c66f4cd018, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 0}
     text: "\"Taht\u0131 pasl\u0131 demir kaz\u0131klardan, kaz\u0131klar\u0131 ise tanr\u0131lar\u0131n zincirlerinden d\xF6v\xFClm\xFC\u015Ft\xFCr.\""
+    voice: {fileID: 8300000, guid: b04df887922f4c0e6b159f0b8ac9af98, type: 3}
     duration: 0
     setFlag: 

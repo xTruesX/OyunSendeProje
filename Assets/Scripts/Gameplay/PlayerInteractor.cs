@@ -39,17 +39,17 @@ namespace Boruhan.Gameplay
                 target.Interact();
         }
 
-        Interactable FindTarget()
+        IInteractable FindTarget()
         {
             Vector2 center = (Vector2)transform.position + bodyOffset + player.Facing * reach;
             int count = Physics2D.OverlapCircle(center, radius, ContactFilter2D.noFilter, hits);
 
-            Interactable best = null;
+            IInteractable best = null;
             float bestDistance = float.MaxValue;
             for (int i = 0; i < count; i++)
             {
-                var interactable = hits[i].GetComponentInParent<Interactable>();
-                if (interactable == null || !interactable.isActiveAndEnabled)
+                var interactable = hits[i].GetComponentInParent<IInteractable>();
+                if (interactable == null || !interactable.CanInteract)
                     continue;
 
                 float distance = ((Vector2)hits[i].bounds.center - center).sqrMagnitude;

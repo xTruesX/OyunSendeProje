@@ -15,17 +15,11 @@ MonoBehaviour:
   lines:
   - speaker: {fileID: 0}
     text: "Dev par\xE7aland\u0131; i\xE7indeki lavlar etrafa akt\u0131."
+    voice: {fileID: 8300000, guid: fcf2ba78c8f764c90a6b033a94d303fd, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 0}
-    text: "Devin ellerinden biri metal bir eldivene d\xF6n\xFC\u015Ft\xFC. B\xF6r\xFChan eldiveni ald\u0131."
-    duration: 0
-    setFlag: demir_eldiven
-  - speaker: {fileID: 0}
-    text: "DEM\u0130R ELD\u0130VEN \u2014 A\u011F\u0131r sald\u0131r\u0131n art\u0131k d\xFC\u015Fman\u0131 sersemletir ve \xE7atlak duvarlar\u0131 k\u0131rar. Eldiven a\u011F\u0131rd\u0131r; sersemletme her an kullan\u0131lamaz."
-    duration: 0
-    setFlag: 
-  - speaker: {fileID: 0}
-    text: "B\xF6r\xFChan daha da g\xFC\xE7lendi\u011Fini hissetti, ama h\xE2l\xE2 haz\u0131r de\u011Fildi."
+    text: "Devin ellerinden biri metal bir eldivene d\xF6n\xFC\u015Ft\xFC ve yere d\xFC\u015Ft\xFC."
+    voice: {fileID: 8300000, guid: 7c8482cbe01dc1a65a61acdadd483641, type: 3}
     duration: 0
     setFlag: 

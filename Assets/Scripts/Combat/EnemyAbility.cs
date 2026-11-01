@@ -1,4 +1,5 @@
 using System.Collections;
+using Boruhan.Animations;
 using UnityEngine;
 
 namespace Boruhan.Combat
@@ -27,6 +28,12 @@ namespace Boruhan.Combat
         [Tooltip("Pause after it's done. The player's chance to hit back.")]
         [Min(0f)] public float recovery = 0.4f;
         public Color telegraphColor = new Color(1f, 0.25f, 0.2f, 0.35f);
+
+        [Header("Animasyon")]
+        [Tooltip("Played while this move runs. Özel = a clip of its own, named below.")]
+        public AnimState animationState = AnimState.Attack;
+        [Tooltip("Only for Özel: the clip's name in the enemy's Animasyon Seti.")]
+        public string customAnimation = "";
 
         public abstract IEnumerator Perform(EnemyController enemy);
 

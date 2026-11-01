@@ -15,17 +15,11 @@ MonoBehaviour:
   lines:
   - speaker: {fileID: 0}
     text: "A\u011F\u0131r darbeler ve uzun bir sava\u015F\u0131n sonunda \xC7al\u0131\u015F Han yenildi."
+    voice: {fileID: 8300000, guid: d5cc7b4fbce7ce6b7b420cb93cb974fa, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 0}
-    text: "Etraftaki zehirli gaz da\u011F\u0131ld\u0131."
-    duration: 0
-    setFlag: 
-  - speaker: {fileID: 0}
-    text: "B\xF6r\xFChan \xC7al\u0131\u015F Han'\u0131n \xF6z\xFCnden zehir ve veba ba\u011F\u0131\u015F\u0131kl\u0131\u011F\u0131 elde etti. Art\u0131k zehirler onu etkileyemezdi."
-    duration: 0
-    setFlag: zehir_bagisikligi
-  - speaker: {fileID: 0}
-    text: "Ve yerin en dibine, son kata inen yol a\xE7\u0131ld\u0131."
+    text: "Etraftaki zehirli gaz da\u011F\u0131ld\u0131. Geride ye\u015Fil bir \u0131\u015F\u0131kla parlayan bir \xF6z kald\u0131."
+    voice: {fileID: 8300000, guid: a2ea5c2f10d3407c6a95ec2206e06243, type: 3}
     duration: 0
     setFlag: 

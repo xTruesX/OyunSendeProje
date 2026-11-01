@@ -15,13 +15,16 @@ MonoBehaviour:
   lines:
   - speaker: {fileID: 0}
     text: "Ta\u015Fa kaz\u0131nm\u0131\u015F eski bir yaz\u0131:"
+    voice: {fileID: 8300000, guid: 3ddbeb8b960e4023aa6e95db423b3b85, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 0}
     text: "\"Yeralt\u0131 dokuz katt\u0131r. Her kat, yery\xFCz\xFCnde i\u015Flenen bir g\xFCnah\u0131n a\u011F\u0131rl\u0131\u011F\u0131yla kaz\u0131lm\u0131\u015Ft\u0131r. \u0130lki yalan\u0131nkidir.\""
+    voice: {fileID: 8300000, guid: 49ce5edf7a04645e4864987907bafda7, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 0}
     text: "Alt\u0131na sonradan biri eklemi\u015F: \"Baz\u0131 duvarlar yalan s\xF6yler. \u0130nanma, y\xFCr\xFC.\""
+    voice: {fileID: 8300000, guid: 10e9a902b9b52c6baad6cd496e07b04e, type: 3}
     duration: 0
     setFlag: 

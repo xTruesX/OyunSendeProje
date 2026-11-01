@@ -15,5 +15,6 @@ MonoBehaviour:
   lines:
   - speaker: {fileID: 0}
     text: "Kut Oca\u011F\u0131'n\u0131n ate\u015Fi B\xF6r\xFChan'\u0131 sard\u0131. Yaralar\u0131 kapand\u0131 ve yolu kaydedildi."
+    voice: {fileID: 8300000, guid: ac0bf71a292e53c3589ed15d867c1290, type: 3}
     duration: 0
     setFlag: 

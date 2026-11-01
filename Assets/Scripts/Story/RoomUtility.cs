@@ -19,6 +19,8 @@ namespace Boruhan.Story
         /// <summary>Kut Ocağı: heal, make the nearest spawn point the respawn point, and save.</summary>
         public void RestAtShrine()
         {
+            if (BossFight.InProgress)
+                return;
             HealPlayer();
             var player = GameObject.FindWithTag("Player");
             if (player != null && GameSession.Data != null)

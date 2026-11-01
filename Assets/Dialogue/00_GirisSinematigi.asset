@@ -15,29 +15,36 @@ MonoBehaviour:
   lines:
   - speaker: {fileID: 0}
     text: "Evvel zaman i\xE7inde, kalbur saman i\xE7inde..."
+    voice: {fileID: 8300000, guid: f1640cb80e418dc168ed3871727bd8d0, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 0}
     text: "So\u011Fuk bir k\u0131\u015F gecesinde \xDClgen Han yery\xFCz\xFCn\xFC seyrederken, yeni do\u011Fmu\u015F ve donmak \xFCzere olan bir insan bebe\u011Fi g\xF6rd\xFC."
+    voice: {fileID: 8300000, guid: 0888dc6bea527fb1284c83f0d2b210ac, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 0}
     text: "Ona k\u0131yamad\u0131 ve onu kendi himayesi alt\u0131na ald\u0131. O bebe\u011Fin ad\u0131 B\xF6r\xFChan'd\u0131."
+    voice: {fileID: 8300000, guid: dde81e15b9ac2e1e1a3a5c839165696a, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 0}
     text: "G\xF6klerin oca\u011F\u0131nda, y\u0131ld\u0131zlar\u0131n diliyle b\xFCy\xFCt\xFCld\xFC; demir tozuyla biledi bileklerini, r\xFCzg\xE2r\u0131n f\u0131s\u0131lt\u0131s\u0131yla ku\u015Fand\u0131 ruhunu."
+    voice: {fileID: 8300000, guid: 463deb22d3b562481ba22f8dd4fb4615, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 0}
     text: "Fakat yeralt\u0131n\u0131n efendisi Erlik Han, k\u0131skan\xE7l\u0131\u011F\u0131 ve nefretiyle bir tuzak kurarak \xDClgen Han'\u0131 gafil avlad\u0131."
+    voice: {fileID: 8300000, guid: 56fe3e2bec08b225e9227394b7474982, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 0}
     text: "G\xF6klerin nuru s\xF6n\xFCp \xDClgen Han yeralt\u0131n\u0131n dokuzuncu kat\u0131ndaki pasl\u0131 demir kaz\u0131klara mahk\xFBm edildi\u011Finde..."
+    voice: {fileID: 8300000, guid: 55b1b0a52984309eb8ee8ed77eb37672, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 0}
     text: "...B\xF6r\xFChan i\xE7in art\u0131k \xE7ocukluk \xE7ok geride kalm\u0131\u015Ft\u0131."
+    voice: {fileID: 8300000, guid: 1b7c0379abc7145a08998a6126a4ac4b, type: 3}
     duration: 0
     setFlag: 

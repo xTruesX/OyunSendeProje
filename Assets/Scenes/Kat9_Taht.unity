@@ -45747,6 +45747,7 @@ GameObject:
   - component: {fileID: 273004666}
   - component: {fileID: 273004665}
   - component: {fileID: 273004664}
+  - component: {fileID: 273004667}
   m_Layer: 0
   m_Name: Ruh
   m_TagString: Untagged
@@ -45897,6 +45898,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 1
   m_BlendShapeWeights: []
+--- !u!114 &273004667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 273004662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74701a14aeb5c19119677df750117378, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Animations.CharacterAnimator
+  animations: {fileID: 11400000, guid: 905908a25c06fbd78847eef2d46ab44d, type: 2}
+  target: {fileID: 0}
+  walkThreshold: 0.2
 --- !u!1 &294743481
 GameObject:
   m_ObjectHideFlags: 0
@@ -46052,6 +46068,8 @@ MonoBehaviour:
   id: Kat9_Taht_salon1
   message: 
   healAmount: 40
+  grantFlag: 
+  pickupDialogue: {fileID: 0}
 --- !u!58 &307838383
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -46740,6 +46758,7 @@ GameObject:
   - component: {fileID: 584257136}
   - component: {fileID: 584257135}
   - component: {fileID: 584257134}
+  - component: {fileID: 584257137}
   m_Layer: 0
   m_Name: KutOcagi
   m_TagString: Untagged
@@ -46902,6 +46921,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 1
   m_BlendShapeWeights: []
+--- !u!114 &584257137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584257132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38db498d04d338dacb6c13208a916932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Story.SavePoint
+  blockedMessage: "Kut Oca\u011F\u0131'n\u0131n ate\u015Fi titriyor...\nSava\u015F s\xFCrerken burada dinlenemezsin."
 --- !u!1 &597200061
 GameObject:
   m_ObjectHideFlags: 0
@@ -47179,6 +47211,7 @@ GameObject:
   - component: {fileID: 751091614}
   - component: {fileID: 751091616}
   - component: {fileID: 751091615}
+  - component: {fileID: 751091617}
   m_Layer: 0
   m_Name: UlganHan
   m_TagString: Untagged
@@ -47308,6 +47341,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 1
   m_BlendShapeWeights: []
+--- !u!114 &751091617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 751091613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74701a14aeb5c19119677df750117378, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Animations.CharacterAnimator
+  animations: {fileID: 11400000, guid: 0350237068019500199f555daa8b4e65, type: 2}
+  target: {fileID: 0}
+  walkThreshold: 0.2
 --- !u!1 &772450038
 GameObject:
   m_ObjectHideFlags: 0
@@ -48304,6 +48352,8 @@ MonoBehaviour:
   id: Kat9_Taht_salon2
   message: 
   healAmount: 40
+  grantFlag: 
+  pickupDialogue: {fileID: 0}
 --- !u!58 &1478327929
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -85360,6 +85410,7 @@ MonoBehaviour:
   boss: {fileID: 480049222}
   defeatedFlag: erlik_han_yenildi
   victoryDialogue: {fileID: 11400000, guid: 5b89dcac4c99af58a9afee67557422f6, type: 2}
+  rewardItem: {fileID: 0}
   nextScene: Son
   nextSpawn: 
 --- !u!4 &1936284990

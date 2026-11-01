@@ -15,5 +15,6 @@ MonoBehaviour:
   lines:
   - speaker: {fileID: 0}
     text: "Sand\u0131k art\u0131k bo\u015F."
+    voice: {fileID: 8300000, guid: 06580c2d9041ccc48ae9c70268ce81e1, type: 3}
     duration: 0
     setFlag: 

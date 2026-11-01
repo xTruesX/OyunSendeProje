@@ -15,13 +15,16 @@ MonoBehaviour:
   lines:
   - speaker: {fileID: 0}
     text: "B\xF6r\xFChan ya\u015Fad\u0131\u011F\u0131 ota\u011Fda, \xDClgen Han'\u0131n ona verdi\u011Fi t\u0131ls\u0131m\u0131 d\xFC\u015F\xFCn\xFCyordu."
+    voice: {fileID: 8300000, guid: 46238aa1a02c8148fa538e3125ebe7c6, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 0}
     text: "\u0130\xE7inde bir h\xFCz\xFCn ve bir nefret vard\u0131. \u0130ntikam almak istiyordu, ama yeterince g\xFC\xE7l\xFC de\u011Fildi."
+    voice: {fileID: 8300000, guid: 5ac79e56649c2e93db1b2aa5d2e5a7a4, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 11400000, guid: 1b85c12ef309323b2bffc83efae91dcb, type: 2}
     text: "Babam... Seni o karanl\u0131kta nas\u0131l bulaca\u011F\u0131m?"
+    voice: {fileID: 8300000, guid: 795a8f08f6d1a4f48b3fcf5fe177a48a, type: 3}
     duration: 0
     setFlag: 

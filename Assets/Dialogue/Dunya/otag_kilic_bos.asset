@@ -15,5 +15,6 @@ MonoBehaviour:
   lines:
   - speaker: {fileID: 0}
     text: "Ask\u0131 art\u0131k bo\u015F. K\u0131l\u0131\xE7 B\xF6r\xFChan'\u0131n belinde."
+    voice: {fileID: 8300000, guid: 77171563b6063be9d9c3ea5363e3c1af, type: 3}
     duration: 0
     setFlag: 

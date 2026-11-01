@@ -194,6 +194,8 @@ namespace Boruhan.EditorTools
                 : PrologueBuilder.Art("YeniNesne", 16, 16, new Color32(150, 120, 80, 255), Shape.Box);
             var go = PrologueBuilder.Prop(Parent(), npc ? "NPC" : "Nesne", sprite, PlacePoint(), 0.5f);
             PrologueBuilder.Interact(go, npc && prompt == "Bak" ? "Konuş" : prompt, dialogue);
+            if (npc)
+                go.AddComponent<Boruhan.Animations.CharacterAnimator>().Animations = AnimationKit.CreatePlaceholderSet("YeniNPC", sprite, AnimationKit.NpcStates);
             Created(go, npc ? "NPC" : "Etkileşim nesnesi");
         }
 

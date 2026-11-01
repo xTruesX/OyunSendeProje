@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6401d5c821fc6f3b9b557cced08e1c0, type: 3}
+  m_Name: AynaKopya_Animasyon
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Animations.AnimationSet
+  mirrorForLeft: 1
+  clips:
+  - state: 0
+    customName: 
+    direction: 0
+    frames:
+    - {fileID: -3199645566920279688, guid: 4d163840b1ea46d9bbc746cf3b0b8312, type: 3}
+    - {fileID: -2408643991405049749, guid: 4d163840b1ea46d9bbc746cf3b0b8312, type: 3}
+    fps: 2
+    loop: 1
+  - state: 1
+    customName: 
+    direction: 0
+    frames:
+    - {fileID: -8810817265843838765, guid: e87160d53fc1d49f791d0e9e10c97bd7, type: 3}
+    - {fileID: -3880369900394634087, guid: e87160d53fc1d49f791d0e9e10c97bd7, type: 3}
+    - {fileID: 3323387338144732508, guid: e87160d53fc1d49f791d0e9e10c97bd7, type: 3}
+    - {fileID: 6059866367566009406, guid: e87160d53fc1d49f791d0e9e10c97bd7, type: 3}
+    fps: 8
+    loop: 1
+  - state: 2
+    customName: 
+    direction: 0
+    frames:
+    - {fileID: 3257400482541764291, guid: b6ec45a576c077758b49fb3f656c70ed, type: 3}
+    - {fileID: 5336333513033948736, guid: b6ec45a576c077758b49fb3f656c70ed, type: 3}
+    - {fileID: -189199061447834973, guid: b6ec45a576c077758b49fb3f656c70ed, type: 3}
+    fps: 14
+    loop: 0
+  - state: 5
+    customName: 
+    direction: 0
+    frames:
+    - {fileID: -1021904955809862589, guid: d61cf7865c4b46ff18ae216e0e9b43c3, type: 3}
+    - {fileID: 1947165720339636743, guid: d61cf7865c4b46ff18ae216e0e9b43c3, type: 3}
+    fps: 10
+    loop: 0
+  - state: 4
+    customName: 
+    direction: 0
+    frames:
+    - {fileID: 4479594328799468984, guid: 98480f85eed69e783bf6e3f1f4f13f67, type: 3}
+    - {fileID: 7992267714939262625, guid: 98480f85eed69e783bf6e3f1f4f13f67, type: 3}
+    - {fileID: -8388431373770252023, guid: 98480f85eed69e783bf6e3f1f4f13f67, type: 3}
+    fps: 12
+    loop: 0
+  - state: 6
+    customName: 
+    direction: 0
+    frames:
+    - {fileID: 683689511450684753, guid: 8219044c57f2b7a31a895bbb53842d48, type: 3}
+    - {fileID: 6258262025617945609, guid: 8219044c57f2b7a31a895bbb53842d48, type: 3}
+    fps: 12
+    loop: 0
+  - state: 7
+    customName: 
+    direction: 0
+    frames:
+    - {fileID: 3755540160729488199, guid: a6d8371ee5f94cfa4b308968d86332d9, type: 3}
+    - {fileID: 7100302179958099188, guid: a6d8371ee5f94cfa4b308968d86332d9, type: 3}
+    - {fileID: -8163179303338285058, guid: a6d8371ee5f94cfa4b308968d86332d9, type: 3}
+    - {fileID: -1904475337493974354, guid: a6d8371ee5f94cfa4b308968d86332d9, type: 3}
+    fps: 7
+    loop: 1
+  - state: 8
+    customName: 
+    direction: 0
+    frames:
+    - {fileID: -7580624243253463842, guid: 6883681e8857cfa91af5e15e7124748c, type: 3}
+    - {fileID: 8167008022199533734, guid: 6883681e8857cfa91af5e15e7124748c, type: 3}
+    - {fileID: -7694304640582428420, guid: 6883681e8857cfa91af5e15e7124748c, type: 3}
+    - {fileID: -1040456969261105256, guid: 6883681e8857cfa91af5e15e7124748c, type: 3}
+    - {fileID: -713667369, guid: 6883681e8857cfa91af5e15e7124748c, type: 3}
+    fps: 10
+    loop: 0

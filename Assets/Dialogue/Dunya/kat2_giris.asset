@@ -15,17 +15,21 @@ MonoBehaviour:
   lines:
   - speaker: {fileID: 0}
     text: "B\xF6r\xFChan \xE7\xF6l\xFC ge\xE7ti ve cehennemin ikinci kat\u0131na indi: Z\u0131rhl\u0131lar Ge\xE7idi."
+    voice: {fileID: 8300000, guid: 9520d59efeb21dc59be8c59d68c3cc5e, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 0}
     text: "Buras\u0131 Erlik Han'\u0131n yeralt\u0131ndaki silahhanesi ve devasa demir at\xF6lyesiydi."
+    voice: {fileID: 8300000, guid: 12fc168a6492ada748e4c968510e5acb, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 0}
     text: "Havada k\xF6m\xFCr karas\u0131 tozlar, dev k\xF6r\xFCklerin sesi ve k\u0131zg\u0131n demir kokusu vard\u0131."
+    voice: {fileID: 8300000, guid: a55bbd97679d408d191586678d96604e, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 0}
     text: "Zeminde yer yer dipsiz \xE7ukurlar a\xE7\u0131l\u0131yordu. Ayna S\u0131\xE7ramas\u0131 burada i\u015Fine yarayacakt\u0131."
+    voice: {fileID: 8300000, guid: 7aa88090d4683cedf8d5783952177aea, type: 3}
     duration: 0
     setFlag: 

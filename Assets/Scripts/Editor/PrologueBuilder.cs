@@ -37,11 +37,11 @@ namespace Boruhan.EditorTools
         public const string SkipHintText = "Atlamak için Enter / Boşluk / Tıkla";
         const string InputActionsPath = "Assets/Settings/InputSystem_Actions.inputactions";
 
-        static readonly Color Gold = new Color32(212, 168, 75, 255);
-        static readonly Color TextLight = new Color32(230, 222, 205, 255);
+        internal static readonly Color Gold = new Color32(212, 168, 75, 255);
+        internal static readonly Color TextLight = new Color32(230, 222, 205, 255);
 
         static Font uiFont;
-        static Font titleFont;
+        internal static Font titleFont;
         static Scene previousActive;
 
         internal enum Shape { Box, Circle, Tile, Steps, Figure, Mountain, Crescent }
@@ -78,7 +78,7 @@ namespace Boruhan.EditorTools
                 : "[Börühan] Tüm sahneler zaten var; yeniden oluşturmak için sahne dosyasını silin.");
         }
 
-        static void EnsureFonts()
+        internal static void EnsureFonts()
         {
             if (uiFont == null)
                 uiFont = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
@@ -438,10 +438,10 @@ namespace Boruhan.EditorTools
             light.transform.localPosition = new Vector3(0f, 0.6f, 0f);
             PointLight(light, new Color(1f, 0.95f, 0.85f), 0.6f, 4.5f);
 
-            // Kayra Han's spark: flaming sword and red eyes. Hidden until the kut_kivilcimi flag.
+            // Kayra Han's spark: red eyes and the blade's glow. Hidden until the kut_kivilcimi flag.
+            // (The sword itself is drawn in Börühan's sword animations, see AnimationKit.)
             var spark = new GameObject("KutKivilcimi");
             spark.transform.SetParent(go.transform, false);
-            SpriteObject(spark.transform, "AlevliKilic", Art("AlevliKilic", 4, 14, new Color32(255, 130, 40, 255), Shape.Box), new Vector2(0.45f, 0.2f), 2);
             SpriteObject(spark.transform, "KizilGozler", Art("KizilGozler", 6, 1, new Color32(255, 40, 40, 255), Shape.Box, false), new Vector2(0f, 1.12f), 1);
             var flame = new GameObject("AlevIsigi").AddComponent<Light2D>();
             flame.transform.SetParent(spark.transform, false);
@@ -605,6 +605,7 @@ namespace Boruhan.EditorTools
             video.renderMode = VideoRenderMode.CameraNearPlane;
             video.targetCamera = cam;
             video.aspectRatio = VideoAspectRatio.FitInside;
+            video.audioOutputMode = VideoAudioOutputMode.None; // the video's own sound is never played
 
             var canvas = CreateCanvas("Canvas", 10);
             var placeholder = UIObject("VideoYerTutucu", canvas.transform);
@@ -659,9 +660,8 @@ namespace Boruhan.EditorTools
             Interact(hearth, "Bak", d.hearth);
 
             var chest = Prop(ctx.world, "Sandik", Art("Otag_Sandik", 24, 16, new Color32(120, 80, 40, 255), Shape.Box), new Vector2(3.5f, 1.6f), 0.8f);
-            var talisman = SpriteObject(chest.transform, "Tilsim", Art("Tilsim", 8, 8, new Color32(140, 220, 255, 255), Shape.Circle), new Vector2(0f, 0.8f), 1);
+            // The Tılsım shows on Börühan once taken (his Tılsım animations).
             Interact(chest, "Bak", d.takeTalisman, completedFlag: StoryFlags.TalismanTaken, repeat: d.chestEmpty);
-            Activator(ctx.world, "TilsimGorunurlugu", StoryFlags.TalismanTaken, false, talisman);
 
             Spawn(ctx.world, "kapi", new Vector2(0f, -2.6f));
             Door(ctx.world, "Kapi", new Vector2(0f, area.yMin - 0.9f), new Vector2(1.8f, 0.8f), SceneNames.Overworld, "otag_kapisi", StoryFlags.TalismanTaken, d.yurtDoorLocked);
@@ -1042,7 +1042,7 @@ namespace Boruhan.EditorTools
             return canvas;
         }
 
-        static GameObject UIObject(string name, Transform parent)
+        internal static GameObject UIObject(string name, Transform parent)
         {
             var go = new GameObject(name, typeof(RectTransform));
             go.transform.SetParent(parent, false);
@@ -1069,7 +1069,7 @@ namespace Boruhan.EditorTools
             return text;
         }
 
-        static Text Sized(Text text, float width, float height)
+        internal static Text Sized(Text text, float width, float height)
         {
             var layout = text.gameObject.AddComponent<LayoutElement>();
             layout.preferredWidth = width;
@@ -1104,7 +1104,7 @@ namespace Boruhan.EditorTools
             rect.sizeDelta = new Vector2(700f, 40f);
         }
 
-        static Button MakeButton(Transform parent, string name, string label)
+        internal static Button MakeButton(Transform parent, string name, string label)
         {
             var go = UIObject(name, parent);
             go.AddComponent<Image>().color = new Color32(40, 33, 42, 255);

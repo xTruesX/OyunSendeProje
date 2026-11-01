@@ -1,0 +1,566 @@
+fileFormatVersion: 2
+guid: 12634725cb74bb093a82d8428ce13350
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7829539750565900053
+    second: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_0"
+  - first:
+      213: -3297291515549137360
+    second: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_1"
+  - first:
+      213: -7453728519298457349
+    second: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_2"
+  - first:
+      213: 8091385012036925874
+    second: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_3"
+  - first:
+      213: -1672960958881878996
+    second: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_4"
+  - first:
+      213: 7708472578602692772
+    second: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_5"
+  - first:
+      213: 3645826147429650587
+    second: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_6"
+  - first:
+      213: 2730380702919695660
+    second: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_7"
+  - first:
+      213: -1672340427770693758
+    second: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_8"
+  - first:
+      213: 7550651333337359506
+    second: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_9"
+  - first:
+      213: -893071697126469272
+    second: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_10"
+  - first:
+      213: -7671590531679655195
+    second: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_11"
+  - first:
+      213: 6243463305895976439
+    second: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_12"
+  - first:
+      213: 2660795957972106596
+    second: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_13"
+  - first:
+      213: -6236591437524463226
+    second: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_14"
+  - first:
+      213: 7204443646019954278
+    second: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_15"
+  - first:
+      213: -257074493304702254
+    second: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_16"
+  - first:
+      213: 8694649791228522346
+    second: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_17"
+  - first:
+      213: 4764994618464116873
+    second: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_18"
+  - first:
+      213: -1049642989490789145
+    second: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_19"
+  - first:
+      213: 4189014282295176355
+    second: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_20"
+  - first:
+      213: -892727749625329298
+    second: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_21"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_0_0"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 48
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 743f699b031644375b2a676b01b5d3f4
+      internalID: -1767013593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_0_1"
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 192
+        width: 48
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b759f314d813221169c544215506407b
+      internalID: 1013700240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_0_2"
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 48
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38fad2a0219538a08b6111a37afd38ea
+      internalID: 1071939131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_0_3"
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 192
+        width: 48
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34c25b9cea7bee9ddb8defb620c403bd
+      internalID: -1876503592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_1_0"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 48
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 314b78bba07387718aa3ada8de723d3d
+      internalID: -1525595734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_1_1"
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 128
+        width: 48
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a632755b6b9463859cf238d13444929
+      internalID: -675312305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_1_2"
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 128
+        width: 48
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db7e79657c19f81f7bd061eb803639e8
+      internalID: 530054966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_1_3"
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 128
+        width: 48
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 867d0d76cf37c5ae5b4ad24eb9013b1f
+      internalID: -1003419760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_2_0"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 48
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 252f9301a30a3f91db3a670906e4829f
+      internalID: 902091121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_2_1"
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 64
+        width: 48
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5789c5624fe1a22a78e2067850b208c3
+      internalID: 704844296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_2_2"
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 48
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d38ddef14ff2fc0e8ef26a84443787b
+      internalID: 1092048901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_2_3"
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 64
+        width: 48
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 762e655ab7905ce33a21ac3aa07316d2
+      internalID: 91019967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_3_0"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 48
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1da63f3755fea92b81a60ad6640bfef
+      internalID: -1524962478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_3_1"
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 48
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d03f247847757a24b78695c4537863e
+      internalID: -1332890214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_3_2"
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 48
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66e4ccee0cba28f63aa285e1fe80a0eb
+      internalID: 1240801735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_3_3"
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 48
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63ed9323a1faf9848999d479ee6bee97
+      internalID: -156021668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 2503ff38f8eab3c22a2462895e0bdbfe
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_0_0": -1767013593
+      "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_0_1": 1013700240
+      "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_0_2": 1071939131
+      "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_0_3": -1876503592
+      "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_1_0": -1525595734
+      "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_1_1": -675312305
+      "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_1_2": 530054966
+      "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_1_3": -1003419760
+      "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_2_0": 902091121
+      "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_2_1": 704844296
+      "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_2_2": 1092048901
+      "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_2_3": 91019967
+      "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_3_0": -1524962478
+      "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_3_1": -1332890214
+      "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_3_2": 1240801735
+      "Mete Han \u2014 Y\xFCr\xFCme \u2022 4 y\xF6n \xD7 4 kare \u2022 120 ms_3_3": -156021668
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -15,13 +15,16 @@ MonoBehaviour:
   lines:
   - speaker: {fileID: 0}
     text: "Ve sonunda B\xF6r\xFChan son kata ula\u015Ft\u0131."
+    voice: {fileID: 8300000, guid: 3a026a3486a3a8273a4649ae9933a21b, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 0}
     text: "Erlik Han'\u0131n taht\u0131 ve \xDClgen Han'\u0131n tutuldu\u011Fu yer."
+    voice: {fileID: 8300000, guid: f730af99401d2b83587beb878fe82962, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 0}
     text: "Yerler simsiyah, so\u011Fuk obsidyen ta\u015Flar\u0131yla kapl\u0131yd\u0131. \xC7evrede g\xF6\u011F\xFC ve yeri tuttu\u011Fu s\xF6ylenen, ama art\u0131k paslanm\u0131\u015F devasa demir s\xFCtunlar uzan\u0131yordu."
+    voice: {fileID: 8300000, guid: 25f88814b65e12919a247513ecf0c813, type: 3}
     duration: 0
     setFlag: 

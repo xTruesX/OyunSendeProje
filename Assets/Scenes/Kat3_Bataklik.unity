@@ -2065,6 +2065,8 @@ MonoBehaviour:
   id: Kat3_Bataklik_orman
   message: 
   healAmount: 40
+  grantFlag: 
+  pickupDialogue: {fileID: 0}
 --- !u!58 &273335672
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3242,6 +3244,7 @@ GameObject:
   - component: {fileID: 587309754}
   - component: {fileID: 587309753}
   - component: {fileID: 587309752}
+  - component: {fileID: 587309755}
   m_Layer: 0
   m_Name: KutOcagi
   m_TagString: Untagged
@@ -3404,6 +3407,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 1
   m_BlendShapeWeights: []
+--- !u!114 &587309755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 587309750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38db498d04d338dacb6c13208a916932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Story.SavePoint
+  blockedMessage: "Kut Oca\u011F\u0131'n\u0131n ate\u015Fi titriyor...\nSava\u015F s\xFCrerken burada dinlenemezsin."
 --- !u!1 &605784963
 GameObject:
   m_ObjectHideFlags: 0
@@ -4059,6 +4075,8 @@ MonoBehaviour:
   id: Kat3_Bataklik_tapinak
   message: 
   healAmount: 40
+  grantFlag: 
+  pickupDialogue: {fileID: 0}
 --- !u!58 &718987945
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -6879,6 +6897,7 @@ GameObject:
   - component: {fileID: 1189154783}
   - component: {fileID: 1189154782}
   - component: {fileID: 1189154781}
+  - component: {fileID: 1189154784}
   m_Layer: 0
   m_Name: Ruh
   m_TagString: Untagged
@@ -7029,6 +7048,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 1
   m_BlendShapeWeights: []
+--- !u!114 &1189154784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189154779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74701a14aeb5c19119677df750117378, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Animations.CharacterAnimator
+  animations: {fileID: 11400000, guid: 905908a25c06fbd78847eef2d46ab44d, type: 2}
+  target: {fileID: 0}
+  walkThreshold: 0.2
 --- !u!1 &1206558712
 GameObject:
   m_ObjectHideFlags: 0
@@ -71896,6 +71930,7 @@ GameObject:
   - component: {fileID: 1438834713}
   - component: {fileID: 1438834712}
   - component: {fileID: 1438834711}
+  - component: {fileID: 1438834714}
   m_Layer: 0
   m_Name: KutOcagi
   m_TagString: Untagged
@@ -72058,6 +72093,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 1
   m_BlendShapeWeights: []
+--- !u!114 &1438834714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1438834709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38db498d04d338dacb6c13208a916932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Story.SavePoint
+  blockedMessage: "Kut Oca\u011F\u0131'n\u0131n ate\u015Fi titriyor...\nSava\u015F s\xFCrerken burada dinlenemezsin."
 --- !u!1 &1471956919
 GameObject:
   m_ObjectHideFlags: 0
@@ -161485,6 +161533,8 @@ MonoBehaviour:
   id: Kat3_Bataklik_koy
   message: 
   healAmount: 40
+  grantFlag: 
+  pickupDialogue: {fileID: 0}
 --- !u!58 &1686096922
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -162771,6 +162821,8 @@ MonoBehaviour:
   id: Kat3_Bataklik_bataklik
   message: 
   healAmount: 40
+  grantFlag: 
+  pickupDialogue: {fileID: 0}
 --- !u!58 &1830930105
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -164856,6 +164908,7 @@ GameObject:
   - component: {fileID: 2079644576}
   - component: {fileID: 2079644575}
   - component: {fileID: 2079644574}
+  - component: {fileID: 2079644577}
   m_Layer: 0
   m_Name: KutOcagi
   m_TagString: Untagged
@@ -165018,6 +165071,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 1
   m_BlendShapeWeights: []
+--- !u!114 &2079644577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2079644572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38db498d04d338dacb6c13208a916932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Boruhan.Story.SavePoint
+  blockedMessage: "Kut Oca\u011F\u0131'n\u0131n ate\u015Fi titriyor...\nSava\u015F s\xFCrerken burada dinlenemezsin."
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

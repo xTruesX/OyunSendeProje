@@ -5,6 +5,7 @@ using Boruhan.Audio;
 using Boruhan.Combat;
 using Boruhan.Core;
 using Boruhan.Dialogue;
+using Boruhan.Events;
 using Boruhan.Gameplay;
 using Boruhan.Map;
 using Boruhan.Story;
@@ -43,6 +44,29 @@ namespace Boruhan.EditorTools
         public const string Kat9 = "Kat9_Taht";
         public const string Ending = "Son";
 
+        // Boss victory (when it falls) and reward (when its dropped item is picked up).
+        const string MirrorVictory =
+            "Anlatıcı: Börühan korkularının üstesinden geldi. Kopya bir ayna gibi paramparça oldu ve kristal tozlara dönüştü.\n" +
+            "Anlatıcı: Tozların arasında parlayan bir şey kaldı.";
+        const string MirrorReward =
+            "Anlatıcı: Börühan kılıcını tozlara saplayarak kalıntının özünü içine aldı.\n" +
+            "Anlatıcı: AYNA SIÇRAMASI — Kaçış tuşu (Shift) artık seni kısa bir mesafe ileri ışınlar. Daha uzağa gitmez, ama çukurların üzerinden geçebilirsin.\n" +
+            "Anlatıcı: Kumların ortasında, aşağıya inen bir yarık açıldı.";
+        const string TemirVictory =
+            "Anlatıcı: Dev parçalandı; içindeki lavlar etrafa aktı.\n" +
+            "Anlatıcı: Devin ellerinden biri metal bir eldivene dönüştü ve yere düştü.";
+        const string TemirReward =
+            "Anlatıcı: Börühan eldiveni aldı.\n" +
+            "Anlatıcı: DEMİR ELDİVEN — Artık ağır saldırı yapabilirsin: K / Sağ Tık.\n" +
+            "Anlatıcı: Ağır saldırı kalkanları ve çatlak duvarları kırar, düşmanı sersemletir. Dengesi bozulan düşmana vurursan Kut Yıkımı olur. Eldiven ağırdır; sersemletme her an kullanılamaz.\n" +
+            "Anlatıcı: Börühan daha da güçlendiğini hissetti, ama hâlâ hazır değildi. Aşağıya inen bir yarık açıldı.";
+        const string CalisVictory =
+            "Anlatıcı: Ağır darbeler ve uzun bir savaşın sonunda Çalış Han yenildi.\n" +
+            "Anlatıcı: Etraftaki zehirli gaz dağıldı. Geride yeşil bir ışıkla parlayan bir öz kaldı.";
+        const string CalisReward =
+            "Anlatıcı: Börühan Çalış Han'ın özünü içine aldı ve zehir ve veba bağışıklığı elde etti. Artık zehirler onu etkileyemezdi.\n" +
+            "Anlatıcı: Ve yerin en dibine, son kata inen yol açıldı.";
+
         static Dictionary<string, EnemyDefinition> enemies;
         static Dictionary<string, DialogueSpeaker> speakers;
 
@@ -54,6 +78,7 @@ namespace Boruhan.EditorTools
             CombatKit.Setup();
             enemies = CombatKit.EnsureEnemies();
             EnsureFloorEnemies();
+            CombatKit.EnsureHealthOrbs();
             EnsureSpeakers();
 
             BuildScene(Kat1, BuildKat1);
@@ -63,11 +88,7 @@ namespace Boruhan.EditorTools
                     "Anlatıcı: Kendisi.\n" +
                     "Ayna Kopya: Ülgen Han seni hiç sevmedi. Ben biliyorum... çünkü ben senim.\n" +
                     "Anlatıcı: Bu sahte kopya kendini çoğaltabiliyor, Börühan'ın korkularına bürünüp onu yavaşlatabiliyor ve vuruşlarını daha güçlü yansıtabiliyordu."),
-                Dialogue("kat1_ayna_zafer",
-                    "Anlatıcı: Börühan korkularının üstesinden geldi. Kopya bir ayna gibi paramparça oldu ve kristal tozlara dönüştü.\n" +
-                    $"Anlatıcı: Börühan kılıcını tozlara saplayarak kalıntının özünü içine aldı. [bayrak: {StoryFlags.MirrorLeap}]\n" +
-                    "Anlatıcı: AYNA SIÇRAMASI — Kaçış tuşu (Shift) artık seni kısa bir mesafe ileri ışınlar. Daha uzağa gitmez, ama çukurların üzerinden geçebilirsin.\n" +
-                    "Anlatıcı: Kumların ortasında, aşağıya inen bir yarık açıldı."),
+                Dialogue("kat1_ayna_zafer", MirrorVictory), StoryFlags.MirrorLeap, Dialogue("kat1_ayna_odul", MirrorReward),
                 Kat2Intro, null));
 
             BuildScene(Kat2Intro, () => FloorIntro("2. KAT\nZırhlılar Geçidi", Dialogue("kat2_giris",
@@ -82,11 +103,7 @@ namespace Boruhan.EditorTools
                     "Anlatıcı: Sona geldiğinde, önünde kanlarında lav akan, taştan bir dev belirdi. Elinde devasa bir metal balyoz vardı.\n" +
                     "Temir Han: Erlik'in örsüne bir demir daha... Gel, seni de döveyim!\n" +
                     "Anlatıcı: Temir Han yavaştı ama sert vuruyordu. Tek bir darbesi bile neredeyse ölümcüldü."),
-                Dialogue("kat2_temir_zafer",
-                    "Anlatıcı: Dev parçalandı; içindeki lavlar etrafa aktı.\n" +
-                    $"Anlatıcı: Devin ellerinden biri metal bir eldivene dönüştü. Börühan eldiveni aldı. [bayrak: {StoryFlags.IronGauntlet}]\n" +
-                    "Anlatıcı: DEMİR ELDİVEN — Ağır saldırın artık düşmanı sersemletir ve çatlak duvarları kırar. Eldiven ağırdır; sersemletme her an kullanılamaz.\n" +
-                    "Anlatıcı: Börühan daha da güçlendiğini hissetti, ama hâlâ hazır değildi."),
+                Dialogue("kat2_temir_zafer", TemirVictory), StoryFlags.IronGauntlet, Dialogue("kat2_temir_odul", TemirReward),
                 Kat3Intro, null));
 
             BuildScene(Kat3Intro, () => FloorIntro("3. KAT\nHastalık ve Çürüme Diyarı", Dialogue("kat3_giris",
@@ -101,11 +118,7 @@ namespace Boruhan.EditorTools
                     "Anlatıcı: Börühan bataklığın sonunda Çalış Han ile yüzleşti.\n" +
                     "Çalış Han: Nefes al, yiğit... Her nefes seni bana biraz daha yaklaştırır.\n" +
                     "Anlatıcı: Etrafa zehirli gaz bulutları yayıyor, bataklığın derinliklerinden yeni yaratıklar çağırıyordu."),
-                Dialogue("kat3_calis_zafer",
-                    "Anlatıcı: Ağır darbeler ve uzun bir savaşın sonunda Çalış Han yenildi.\n" +
-                    "Anlatıcı: Etraftaki zehirli gaz dağıldı.\n" +
-                    $"Anlatıcı: Börühan Çalış Han'ın özünden zehir ve veba bağışıklığı elde etti. Artık zehirler onu etkileyemezdi. [bayrak: {StoryFlags.PoisonImmunity}]\n" +
-                    "Anlatıcı: Ve yerin en dibine, son kata inen yol açıldı."),
+                Dialogue("kat3_calis_zafer", CalisVictory), StoryFlags.PoisonImmunity, Dialogue("kat3_calis_odul", CalisReward),
                 Kat9Intro, null));
 
             BuildScene(Kat9Intro, () => FloorIntro("9. KAT\nErlik'in Tahtı", Dialogue("kat9_giris",
@@ -610,6 +623,7 @@ namespace Boruhan.EditorTools
             Glow(go, new Color(1f, 0.6f, 0.25f), 1.1f, 4.5f);
             PrologueBuilder.Interact(go, "Dinlen", Dialogue("kut_ocagi", "Anlatıcı: Kut Ocağı'nın ateşi Börühan'ı sardı. Yaraları kapandı ve yolu kaydedildi."));
             UnityEventTools.AddPersistentListener(go.GetComponent<Interactable>().onFinished, f.utility.RestAtShrine);
+            go.AddComponent<SavePoint>();
             PrologueBuilder.Spawn(f.world, $"ocak_{id}", new Vector2(x, y - 1.3f));
         }
 
@@ -996,7 +1010,7 @@ namespace Boruhan.EditorTools
         // ================= Boss arenas, intros and the ending =================
 
         static void BossArena(string scene, string location, int floorNumber, string themeName, EnemyDefinition boss, string defeatedFlag,
-            DialogueAsset intro, DialogueAsset victory, string riftScene, string nextScene)
+            DialogueAsset intro, DialogueAsset victory, string rewardFlag, DialogueAsset rewardDialogue, string riftScene, string nextScene)
         {
             var g = new MapGrid(26, 24);
             g.Rect(0, 0, 20, 18);
@@ -1023,12 +1037,191 @@ namespace Boruhan.EditorTools
             PrologueBuilder.Set(encounter, "defeatedFlag", defeatedFlag);
             PrologueBuilder.Set(encounter, "victoryDialogue", victory);
             PrologueBuilder.Set(encounter, "nextScene", nextScene ?? "");
+            PrologueBuilder.Set(encounter, "rewardItem", RewardItem(f.world, rewardFlag, rewardDialogue, new Vector2(0, 2)));
 
             if (riftScene != null)
             {
+                // The way down opens when the reward is picked up.
                 var rift = Gate(f, "Yarik", 0, 4, riftScene, "");
-                PrologueBuilder.Activator(f.world, "YarikGorunurlugu", defeatedFlag, true, rift);
+                PrologueBuilder.Activator(f.world, "YarikGorunurlugu", rewardFlag, true, rift);
             }
+        }
+
+        /// <summary>A generic placeholder story item (inactive until a boss drops it). Replace OzelEsya.png for real art.</summary>
+        static Pickup RewardItem(Transform parent, string grantFlag, DialogueAsset pickupDialogue, Vector2 position)
+        {
+            var go = new GameObject($"Odul_{grantFlag}");
+            go.transform.SetParent(parent, false);
+            go.transform.position = position;
+            var sr = go.AddComponent<SpriteRenderer>();
+            sr.sprite = PrologueBuilder.Art(PrologueBuilder.ArtDir, "OzelEsya", 12, 12, new Color32(255, 215, 90, 255), Shape.Circle, new Vector2(0.5f, 0.5f));
+            sr.sortingOrder = 1;
+            var col = go.AddComponent<CircleCollider2D>();
+            col.isTrigger = true;
+            col.radius = 0.5f;
+            var pickup = go.AddComponent<Pickup>();
+            PrologueBuilder.Set(pickup, "kind", (int)PickupKind.OzelEsya);
+            PrologueBuilder.Set(pickup, "grantFlag", grantFlag);
+            PrologueBuilder.Set(pickup, "pickupDialogue", pickupDialogue);
+            Glow(go, new Color(1f, 0.85f, 0.4f), 1f, 3f);
+            go.SetActive(false);
+            return pickup;
+        }
+
+        const string KayraFlagSwordDropped = "kayra_kilic_birakti";
+
+        const string KayraTalk =
+            "Anlatıcı: Börühan ona her şeyi anlatmak istiyordu, ama Kayra Han zaten her şeyi biliyordu.\n" +
+            "Kayra Han: Seni yukarıdan izledim, evlat. Çok zor zamanlar geçiriyorsun.\n" +
+            "Kayra Han: Söyle bakalım, nedir benden istediğin?\n" +
+            "Börühan: Ulu Kayra Han... Yeterince güçlü değilim. Elimde bir silahım bile yok. Ülgen Han'a nasıl ulaşacağımı da bilmiyorum.\n" +
+            "Kayra Han: Önce bir kılıç. Yıldızların demirinden dövülmüş, yalnızca doğru olan için çekilecek bir kılıç.\n" +
+            "Anlatıcı: Kayra Han elini kaldırdı. Börühan'ın önüne, ışıklar saçan bir kılıç düştü. [bayrak: kayra_kilic_birakti]\n" +
+            "Kayra Han: Al onu, evlat.";
+
+        const string KayraSword =
+            "Anlatıcı: Börühan kılıcı yerden aldı. Kılıç, elinde yıldızlar gibi parladı.\n" +
+            "Anlatıcı: Saldırı: J / Sol Tık · Kaçış: Shift · Savuşturma: Q\n" +
+            "Kayra Han: Ama yalnız demir yetmez. Sana gücümden bir parça vereyim. Bir kıvılcım...\n" +
+            "Anlatıcı: Börühan'ın kılıcı alev aldı, gözleri kızıla döndü. İçinde bir güç kabardığını hissetti. [bayrak: kut_kivilcimi]\n" +
+            "Kayra Han: Bu kıvılcım seni yalnızca korur. Erlik'i yenmek istiyorsan, yeraltının katlarında yendiğin her dehşetin özünü kendi ellerinle söküp almalısın.\n" +
+            "Kayra Han: Karanlıktan da karanlık bir mağarada, aradığın yeri bulacaksın.\n" +
+            "Börühan: Sağ ol, Ulu Han. Babamı geri getireceğim.";
+
+        /// <summary>
+        /// The sword comes from Kayra Han: his talk drops it at Börühan's feet, picking it up continues his
+        /// speech (the spark, the cave). Also removes the old sword from the Otağ. Safe to run more than once.
+        /// </summary>
+        [MenuItem("Börühan/Bakım/Kılıcı Kayra Han'a Taşı")]
+        public static void MoveSwordToKayra()
+        {
+            var talk = AssetDatabase.LoadAssetAtPath<DialogueAsset>("Assets/Dialogue/21_Gok_KayraHan.asset");
+            if (talk != null)
+            {
+                talk.lines = DialogueAssetEditor.Parse(KayraTalk, out _);
+                EditorUtility.SetDirty(talk);
+            }
+            else
+            {
+                talk = Dialogue("gok_kayra_konusma", KayraTalk);
+            }
+            var swordTaken = Dialogue("gok_kilic", KayraSword);
+            var takeIt = Dialogue("gok_kayra_kilicini_al", "Kayra Han: Kılıcını al, evlat. Önünde duruyor.");
+            var farewell = AssetDatabase.LoadAssetAtPath<DialogueAsset>("Assets/Dialogue/22_Gok_KayraHan_Tekrar.asset")
+                           ?? Dialogue("gok_kayra_veda", "Kayra Han: Yolun açık olsun, evlat. Karanlıktan da karanlık mağara seni bekliyor.");
+
+            EditScene(SceneNames.Yurt, s =>
+            {
+                var world = s.GetRootGameObjects().First(r => r.name == "Dunya").transform;
+                foreach (var name in new[] { "Kilic_Esya", "KilicAskisi", "AskiKilici" })
+                {
+                    var old = world.Find(name);
+                    if (old != null)
+                        Object.DestroyImmediate(old.gameObject);
+                }
+            });
+
+            EditScene(SceneNames.SkyRealm, s =>
+            {
+                var world = s.GetRootGameObjects().First(r => r.name == "Dunya").transform;
+                if (world.Find("KayraHan_Olay") != null)
+                    return;
+
+                var throne = world.Find("Taht");
+                if (throne != null && throne.TryGetComponent<Interactable>(out var oldTalk))
+                    Object.DestroyImmediate(oldTalk);
+
+                // Kayra Han's conversation as an event: talk → "take your sword" → farewell.
+                var go = new GameObject("KayraHan_Olay");
+                go.transform.SetParent(world, false);
+                go.transform.position = new Vector2(0f, 1.9f);
+                var ev = go.AddComponent<GameEvent>();
+                var talkPage = ev.Pages[0];
+                talkPage.note = "İlk konuşma: kılıcı bırakır";
+                talkPage.prompt = "Konuş";
+                talkPage.solid = false;
+                talkPage.size = new Vector2(2f, 0.6f);
+                talkPage.commands.Add(new ShowDialogueCommand { dialogue = talk });
+                ev.Pages.Add(new EventPage
+                {
+                    note = "Kılıç henüz alınmadı",
+                    conditions = { new EventCondition { kind = ConditionKind.FlagSet, key = KayraFlagSwordDropped } },
+                    prompt = "Konuş", solid = false, size = new Vector2(2f, 0.6f),
+                    commands = { new ShowDialogueCommand { dialogue = takeIt } },
+                });
+                ev.Pages.Add(new EventPage
+                {
+                    note = "Kıvılcım verildi",
+                    conditions = { new EventCondition { kind = ConditionKind.FlagSet, key = StoryFlags.KutSpark } },
+                    prompt = "Konuş", solid = false, size = new Vector2(2f, 0.6f),
+                    commands = { new ShowDialogueCommand { dialogue = farewell } },
+                });
+                EditorUtility.SetDirty(ev);
+
+                // The sword appears in front of the throne when Kayra Han drops it.
+                var sword = new GameObject("Kilic_Esya");
+                sword.transform.SetParent(world, false);
+                sword.transform.position = new Vector2(1.6f, 0.4f);
+                sword.transform.rotation = Quaternion.Euler(0f, 0f, 70f);
+                var sr = sword.AddComponent<SpriteRenderer>();
+                sr.sprite = PrologueBuilder.Art("Kilic", 3, 12, new Color32(205, 210, 220, 255), Shape.Box);
+                sr.sortingOrder = 1;
+                var col = sword.AddComponent<CircleCollider2D>();
+                col.isTrigger = true;
+                col.radius = 0.5f;
+                var pickup = sword.AddComponent<Pickup>();
+                PrologueBuilder.Set(pickup, "kind", (int)PickupKind.OzelEsya);
+                PrologueBuilder.Set(pickup, "grantFlag", StoryFlags.Sword);
+                PrologueBuilder.Set(pickup, "pickupDialogue", swordTaken);
+                Glow(sword, new Color(0.8f, 0.85f, 1f), 0.8f, 2.2f);
+                PrologueBuilder.Activator(world, "KilicGorunurlugu", KayraFlagSwordDropped, true, sword);
+            });
+            AssetDatabase.SaveAssets();
+        }
+
+        /// <summary>
+        /// Brings already-built scenes up to date: boss rewards become dropped items, the sword becomes a
+        /// floor pickup. Safe to run more than once.
+        /// </summary>
+        [MenuItem("Börühan/Bakım/Eşyaları Yerden Alınır Yap")]
+        public static void MigrateItemsToPickups()
+        {
+            void Rewrite(string file, string script)
+            {
+                var asset = AssetDatabase.LoadAssetAtPath<DialogueAsset>($"{DialogueDir}/{file}.asset");
+                if (asset == null)
+                    return;
+                asset.lines = DialogueAssetEditor.Parse(script, out _);
+                EditorUtility.SetDirty(asset);
+            }
+            Rewrite("kat1_ayna_zafer", MirrorVictory);
+            Rewrite("kat2_temir_zafer", TemirVictory);
+            Rewrite("kat3_calis_zafer", CalisVictory);
+
+            foreach (var (scene, flag, rewardFile, rewardText) in new[]
+                     {
+                         (Kat1Boss, StoryFlags.MirrorLeap, "kat1_ayna_odul", MirrorReward),
+                         (Kat2Boss, StoryFlags.IronGauntlet, "kat2_temir_odul", TemirReward),
+                         (Kat3Boss, StoryFlags.PoisonImmunity, "kat3_calis_odul", CalisReward),
+                     })
+            {
+                var dialogue = Dialogue(rewardFile, rewardText);
+                EditScene(scene, s =>
+                {
+                    var roots = s.GetRootGameObjects();
+                    var world = roots.First(r => r.name == "Dunya").transform;
+                    var encounter = roots.Select(r => r.GetComponent<BossEncounter>()).First(e => e != null);
+                    var existing = world.Find($"Odul_{flag}");
+                    var pickup = existing != null ? existing.GetComponent<Pickup>() : RewardItem(world, flag, dialogue, new Vector2(0, 2));
+                    PrologueBuilder.Set(encounter, "rewardItem", pickup);
+                    var rift = world.Find("YarikGorunurlugu");
+                    if (rift != null)
+                        PrologueBuilder.Set(rift.GetComponent<FlagActivator>(), "flag", flag);
+                });
+            }
+
+            MoveSwordToKayra();
+            AssetDatabase.SaveAssets();
         }
 
         static void SetMusic(MusicTrack track)
@@ -1102,21 +1295,7 @@ namespace Boruhan.EditorTools
                 PrologueBuilder.Set(cutscene, "closingTitle", "");
             });
 
-            EditScene(SceneNames.Yurt, scene =>
-            {
-                var world = scene.GetRootGameObjects().First(r => r.name == "Dunya").transform;
-                if (world.Find("KilicAskisi") != null)
-                    return;
-                var rack = PrologueBuilder.Prop(world, "KilicAskisi", PrologueBuilder.Art("KilicAskisi", 14, 22, new Color32(110, 80, 50, 255), Shape.Box), new Vector2(-1.5f, 2.2f), 0.4f);
-                var sword = PrologueBuilder.SpriteObject(rack.transform, "Kilic", PrologueBuilder.Art("Kilic", 3, 12, new Color32(205, 210, 220, 255), Shape.Box), new Vector2(0f, 0.25f), 1);
-                PrologueBuilder.Interact(rack, "Al", Dialogue("otag_kilic",
-                    "Anlatıcı: Askıda, Ülgen Han'ın ona armağan ettiği kılıç asılıydı.\n" +
-                    "Ülgen Han: Bu kılıç yıldızların demirinden dövüldü. Onu yalnızca doğru olan için çek.\n" +
-                    $"Anlatıcı: Börühan kılıcı kuşandı. [bayrak: {StoryFlags.Sword}]\n" +
-                    "Anlatıcı: Hafif saldırı: J / Sol Tık · Ağır saldırı: K / Sağ Tık · Kaçış: Shift · Savuşturma: Q"),
-                    completedFlag: StoryFlags.Sword, repeat: Dialogue("otag_kilic_bos", "Anlatıcı: Askı artık boş. Kılıç Börühan'ın belinde."));
-                PrologueBuilder.Activator(world, "AskiKilici", StoryFlags.Sword, false, sword);
-            });
+            MoveSwordToKayra();
 
             EditScene(SceneNames.Overworld, scene =>
             {

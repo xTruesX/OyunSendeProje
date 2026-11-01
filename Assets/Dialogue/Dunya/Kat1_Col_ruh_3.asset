@@ -15,13 +15,16 @@ MonoBehaviour:
   lines:
   - speaker: {fileID: 11400000, guid: 230add4ab1e11c222994fbfce38d7ded, type: 2}
     text: "Ben karde\u015Fimi bir avu\xE7 alt\u0131n i\xE7in satt\u0131m..."
+    voice: {fileID: 8300000, guid: ce40c1e222cf2baad85da029395d3e9f, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 11400000, guid: 230add4ab1e11c222994fbfce38d7ded, type: 2}
     text: "\u015Eimdi r\xFCzg\xE2r onun sesiyle bana f\u0131s\u0131ld\u0131yor. Her g\xFCn, her gece."
+    voice: {fileID: 8300000, guid: 8c1ba1794f5f7d88aae20a88d80435ae, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 11400000, guid: 230add4ab1e11c222994fbfce38d7ded, type: 2}
     text: "Sen kimseyi satma, yi\u011Fit. Kuzeydeki kervan yolunda, ihanetin g\xF6lgeleri pusuya yatar."
+    voice: {fileID: 8300000, guid: eb31cb5f3b5b6cfcda014c6011454e65, type: 3}
     duration: 0
     setFlag: 

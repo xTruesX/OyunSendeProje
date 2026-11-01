@@ -15,13 +15,16 @@ MonoBehaviour:
   lines:
   - speaker: {fileID: 11400000, guid: 8b94b3c1adaddf071a195d1bfe91b2ff, type: 2}
     text: "Temir Han'\u0131n damarlar\u0131nda kan de\u011Fil, lav akar."
+    voice: {fileID: 8300000, guid: 5694eab2d6bf3c0a6a406c12a57b97b6, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 11400000, guid: 8b94b3c1adaddf071a195d1bfe91b2ff, type: 2}
     text: "Bir darbesi da\u011Flar\u0131 yarar... Ama yava\u015Ft\u0131r, \xE7ok yava\u015F. Vuru\u015Funu bekle, sonra yan\u0131na ka\xE7."
+    voice: {fileID: 8300000, guid: 0d0f995ca72f013d18ddaa225f9f3080, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 11400000, guid: 8b94b3c1adaddf071a195d1bfe91b2ff, type: 2}
     text: "Dengesini bozarsan, Kut'unla y\u0131k onu."
+    voice: {fileID: 8300000, guid: 054114f55e5fc683786b12a688955206, type: 3}
     duration: 0
     setFlag: 

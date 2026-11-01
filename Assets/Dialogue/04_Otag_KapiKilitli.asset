@@ -15,5 +15,6 @@ MonoBehaviour:
   lines:
   - speaker: {fileID: 11400000, guid: 1b85c12ef309323b2bffc83efae91dcb, type: 2}
     text: "T\u0131ls\u0131m\u0131 almadan gidemem."
+    voice: {fileID: 8300000, guid: 0acb3edc2b85f3220a7ab385b22cb85f, type: 3}
     duration: 0
     setFlag: 

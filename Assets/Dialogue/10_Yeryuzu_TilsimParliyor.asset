@@ -15,13 +15,16 @@ MonoBehaviour:
   lines:
   - speaker: {fileID: 0}
     text: "B\xF6r\xFChan ota\u011Fdan \xE7\u0131kt\u0131\u011F\u0131nda t\u0131ls\u0131m birden parlamaya ba\u015Flad\u0131."
+    voice: {fileID: 8300000, guid: e297a72135935d93aa23f48f2f8ec525, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 0}
     text: "Bir y\xF6ne d\xF6nd\xFC\u011F\xFCnde parl\u0131yor, ba\u015Fka y\xF6ne gitti\u011Finde s\xF6n\xFCyordu."
+    voice: {fileID: 8300000, guid: 7b7c954d3c71a1fe49fb891ec2d38c94, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 11400000, guid: 1b85c12ef309323b2bffc83efae91dcb, type: 2}
     text: "Bana yol g\xF6steriyor... I\u015F\u0131\u011F\u0131n\u0131 takip etmeliyim."
+    voice: {fileID: 8300000, guid: 5afa24da9ab39be068268eb32eb85feb, type: 3}
     duration: 0
     setFlag: 

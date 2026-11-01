@@ -14,6 +14,7 @@ namespace Boruhan.EditorTools
     ///   Börühan: Babam beni bekliyor.
     ///   Anlatıcı: Yer yarıldı! [bayrak: yarik_acildi]
     ///   Kayra Han: Yolun açık olsun. [süre: 4]
+    /// Also makes the empty voice files (Seslendirme) that every line plays.
     /// </summary>
     [CustomEditor(typeof(DialogueAsset))]
     public class DialogueAssetEditor : Editor
@@ -68,6 +69,15 @@ namespace Boruhan.EditorTools
             }
 
             EditorGUILayout.Space();
+            int missing = asset.lines.Count(l => l.voice == null);
+            if (missing > 0 && GUILayout.Button($"Seslendirme: {missing} satır için boş ses dosyası oluştur"))
+            {
+                CreateVoicePlaceholders(asset);
+                WriteVoiceScript();
+                AssetDatabase.SaveAssets();
+            }
+
+            EditorGUILayout.Space();
             EditorGUILayout.LabelField("Satırlar", EditorStyles.boldLabel);
             DrawDefaultInspector();
         }
@@ -75,6 +85,7 @@ namespace Boruhan.EditorTools
         void Apply(DialogueAsset asset)
         {
             var lines = Parse(script, out unknownSpeakers);
+            KeepVoices(asset.lines, lines);
             Undo.RecordObject(asset, "Diyalog metni uygula");
             asset.lines = lines;
             EditorUtility.SetDirty(asset);
@@ -131,6 +142,123 @@ namespace Boruhan.EditorTools
                 lines.Add(line);
             }
             return lines;
+        }
+
+        /// <summary>Rewritten lines keep their recordings: same text first, otherwise the line at the same place.</summary>
+        static void KeepVoices(List<DialogueLine> before, List<DialogueLine> after)
+        {
+            var unused = before.Where(l => l.voice != null).ToList();
+            foreach (var line in after)
+            {
+                var same = unused.FirstOrDefault(l => l.text == line.text);
+                if (same != null)
+                {
+                    line.voice = same.voice;
+                    unused.Remove(same);
+                }
+            }
+            for (int i = 0; i < after.Count && i < before.Count; i++)
+            {
+                if (after[i].voice == null && unused.Contains(before[i]))
+                {
+                    after[i].voice = before[i].voice;
+                    unused.Remove(before[i]);
+                }
+            }
+        }
+
+        // ================= Seslendirme =================
+
+        const string VoiceDir = "Assets/Audio/Seslendirme";
+
+        /// <summary>
+        /// Gives every dialogue line without a recording an empty (silent) WAV in
+        /// Assets/Audio/Seslendirme/&lt;dialogue&gt;/&lt;no&gt;_&lt;speaker&gt;.wav. Record over the file (same name, .wav)
+        /// and the line plays it. Seslendirme.txt next to them lists every file with its text.
+        /// </summary>
+        [MenuItem("Börühan/Bakım/Seslendirme Dosyalarını Oluştur")]
+        public static void CreateAllVoicePlaceholders()
+        {
+            int made = 0;
+            foreach (var guid in AssetDatabase.FindAssets("t:DialogueAsset"))
+            {
+                var asset = AssetDatabase.LoadAssetAtPath<DialogueAsset>(AssetDatabase.GUIDToAssetPath(guid));
+                if (asset != null)
+                    made += CreateVoicePlaceholders(asset);
+            }
+            WriteVoiceScript();
+            AssetDatabase.SaveAssets();
+            Debug.Log($"[Seslendirme] {made} boş ses dosyası oluşturuldu. Liste: {VoiceDir}/Seslendirme.txt");
+        }
+
+        public static int CreateVoicePlaceholders(DialogueAsset asset)
+        {
+            int made = 0;
+            for (int i = 0; i < asset.lines.Count; i++)
+            {
+                var line = asset.lines[i];
+                if (line.voice != null)
+                    continue;
+                var path = VoicePath(asset, i);
+                if (!System.IO.File.Exists(path))
+                {
+                    WriteSilence(path);
+                    AssetDatabase.ImportAsset(path);
+                    made++;
+                }
+                line.voice = AssetDatabase.LoadAssetAtPath<AudioClip>(path);
+                EditorUtility.SetDirty(asset);
+            }
+            return made;
+        }
+
+        static string VoicePath(DialogueAsset asset, int index)
+        {
+            var line = asset.lines[index];
+            var who = line.speaker != null ? FileSafe(line.speaker.displayName) : "Anlatici";
+            return $"{VoiceDir}/{asset.name}/{index + 1:00}_{who}.wav";
+        }
+
+        static string FileSafe(string s)
+        {
+            s = s.Replace('ı', 'i').Replace('İ', 'I').Replace('ö', 'o').Replace('Ö', 'O').Replace('ü', 'u').Replace('Ü', 'U')
+                 .Replace('ş', 's').Replace('Ş', 'S').Replace('ğ', 'g').Replace('Ğ', 'G').Replace('ç', 'c').Replace('Ç', 'C');
+            return new string(s.Where(char.IsLetterOrDigit).ToArray());
+        }
+
+        // A tenth of a second of silence, 16-bit mono.
+        static void WriteSilence(string path)
+        {
+            System.IO.Directory.CreateDirectory(System.IO.Path.GetDirectoryName(path));
+            const int rate = 22050, count = rate / 10;
+            using var w = new System.IO.BinaryWriter(System.IO.File.Create(path));
+            w.Write("RIFF".ToCharArray()); w.Write(36 + count * 2); w.Write("WAVEfmt ".ToCharArray());
+            w.Write(16); w.Write((short)1); w.Write((short)1); w.Write(rate); w.Write(rate * 2); w.Write((short)2); w.Write((short)16);
+            w.Write("data".ToCharArray()); w.Write(count * 2);
+            w.Write(new byte[count * 2]);
+        }
+
+        /// <summary>Seslendirme.txt: every voice file with who says what, to read from while recording.</summary>
+        static void WriteVoiceScript()
+        {
+            var sb = new StringBuilder();
+            sb.AppendLine("Seslendirme listesi. Her dosyanın üzerine aynı adla (.wav) kaydedin.").AppendLine();
+            foreach (var guid in AssetDatabase.FindAssets("t:DialogueAsset").OrderBy(g => AssetDatabase.GUIDToAssetPath(g)))
+            {
+                var asset = AssetDatabase.LoadAssetAtPath<DialogueAsset>(AssetDatabase.GUIDToAssetPath(guid));
+                if (asset == null || asset.lines.Count == 0)
+                    continue;
+                sb.AppendLine($"== {asset.name} ==");
+                foreach (var line in asset.lines)
+                {
+                    var file = line.voice != null ? AssetDatabase.GetAssetPath(line.voice).Replace(VoiceDir + "/", "") : "(ses yok)";
+                    sb.AppendLine($"{file}  |  {(line.speaker != null ? line.speaker.displayName : Narrator)}: {line.text}");
+                }
+                sb.AppendLine();
+            }
+            System.IO.Directory.CreateDirectory(VoiceDir);
+            System.IO.File.WriteAllText($"{VoiceDir}/Seslendirme.txt", sb.ToString());
+            AssetDatabase.ImportAsset($"{VoiceDir}/Seslendirme.txt");
         }
 
         public static string ToScript(DialogueAsset asset)

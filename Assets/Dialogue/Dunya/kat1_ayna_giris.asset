@@ -15,17 +15,21 @@ MonoBehaviour:
   lines:
   - speaker: {fileID: 0}
     text: "\xC7\xF6l\xFCn sonunda a\u015F\u0131r\u0131 tan\u0131d\u0131k bir y\xFCz vard\u0131."
+    voice: {fileID: 8300000, guid: b531081445ef09f378fc0cd6d522c2d2, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 0}
     text: Kendisi.
+    voice: {fileID: 8300000, guid: 9e0556de005be6bec9684f6459bd4bc1, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 11400000, guid: d599435c125d9fb89be9cbac5fed7f24, type: 2}
     text: "\xDClgen Han seni hi\xE7 sevmedi. Ben biliyorum... \xE7\xFCnk\xFC ben senim."
+    voice: {fileID: 8300000, guid: 82118cc32283d4adc823664bc204f144, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 0}
     text: "Bu sahte kopya kendini \xE7o\u011Faltabiliyor, B\xF6r\xFChan'\u0131n korkular\u0131na b\xFCr\xFCn\xFCp onu yava\u015Flatabiliyor ve vuru\u015Flar\u0131n\u0131 daha g\xFC\xE7l\xFC yans\u0131tabiliyordu."
+    voice: {fileID: 8300000, guid: e60d18384e2317068a659e937a6ee8f4, type: 3}
     duration: 0
     setFlag: 

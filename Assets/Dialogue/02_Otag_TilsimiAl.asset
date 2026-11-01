@@ -15,21 +15,26 @@ MonoBehaviour:
   lines:
   - speaker: {fileID: 0}
     text: "Sand\u0131\u011F\u0131n i\xE7inde, \xDClgen Han'\u0131n ona b\u0131rakt\u0131\u011F\u0131 t\u0131ls\u0131m duruyordu."
+    voice: {fileID: 8300000, guid: daaff6695a492a0498e686aba0608433, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 0}
     text: "Bir anda \xDClgen Han'\u0131n s\xF6yledi\u011Fi bir s\xF6z akl\u0131na geldi."
+    voice: {fileID: 8300000, guid: e572b558391eb794eb8b65d7f9b57572, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 11400000, guid: 3e7b2198f83b50c2cba876a3a693f5ed, type: 2}
     text: "E\u011Fer bir g\xFCn \xE7aresiz hissedersen, o t\u0131ls\u0131m sana yol g\xF6sterecek."
+    voice: {fileID: 8300000, guid: cb410e0fdf43d90ef84a8631a94d13da, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 11400000, guid: 1b85c12ef309323b2bffc83efae91dcb, type: 2}
     text: "Yol g\xF6ster \xF6yleyse..."
+    voice: {fileID: 8300000, guid: 56eee5bba05c8295da296b3d324a45d7, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 0}
     text: "B\xF6r\xFChan t\u0131ls\u0131m\u0131 ald\u0131 ve yolculu\u011Fa haz\u0131rland\u0131."
+    voice: {fileID: 8300000, guid: ea1677ddacf1e819b86144a3bf19df0e, type: 3}
     duration: 0
     setFlag: tilsim_alindi

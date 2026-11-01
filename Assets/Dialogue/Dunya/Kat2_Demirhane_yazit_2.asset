@@ -15,9 +15,11 @@ MonoBehaviour:
   lines:
   - speaker: {fileID: 0}
     text: "\"Tun\xE7 Ordu da bu \xF6rslerde d\xF6v\xFCld\xFC.\""
+    voice: {fileID: 8300000, guid: 4fa5164fe1783f6e6822c84da6616de6, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 0}
     text: "\"Yeralt\u0131n\u0131n ba\u015Fka bir kat\u0131nda, atlar\u0131yla birlikte uyand\u0131r\u0131lmay\u0131 bekliyorlar.\""
+    voice: {fileID: 8300000, guid: c5c58c47b6ee61272acc1d184acd23e4, type: 3}
     duration: 0
     setFlag: 

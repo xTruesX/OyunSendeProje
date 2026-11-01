@@ -15,9 +15,11 @@ MonoBehaviour:
   lines:
   - speaker: {fileID: 11400000, guid: 1b85c12ef309323b2bffc83efae91dcb, type: 2}
     text: "Zifiri karanl\u0131k bir ma\u011Fara... \u0130\xE7eriden so\u011Fuk bir r\xFCzg\xE2r esiyor."
+    voice: {fileID: 8300000, guid: 54d33e3ffd82567c5b05fdd51da666e3, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 0}
     text: "\u015Eimdilik burada yapacak bir \u015Feyi yoktu."
+    voice: {fileID: 8300000, guid: 9e7e296f315b360cd8612790d91477f5, type: 3}
     duration: 0
     setFlag: 

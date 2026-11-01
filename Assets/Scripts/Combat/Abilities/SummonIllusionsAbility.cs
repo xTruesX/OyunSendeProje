@@ -13,6 +13,10 @@ namespace Boruhan.Combat
         public float lifetime = 10f;
         [Tooltip("Trade places with one of the copies so the player loses track of the real one.")]
         public bool swapWithCopy = true;
+        [Header("Şifa Küresi")]
+        [Tooltip("Chance (0-1) that each copy drops a health orb when killed.")]
+        [Range(0f, 1f)] public float healthOrbChance;
+        public HealthOrb healthOrb;
 
         public override IEnumerator Perform(EnemyController enemy)
         {
@@ -33,6 +37,8 @@ namespace Boruhan.Combat
                 var copy = Object.Instantiate(enemy.gameObject, spot, Quaternion.identity).GetComponent<EnemyController>();
                 copy.name = enemy.name + " (Yanılsama)";
                 copy.MakeIllusion(lifetime);
+                copy.DropOnDeath = healthOrb;
+                copy.DropChance = healthOrbChance;
                 CombatFx.Burst(CombatFx.Circle, spot + Vector2.up * 0.5f, 0.3f, 1.5f, new Color(0.8f, 0.6f, 1f, 0.6f), 0.3f);
                 last = copy;
             }

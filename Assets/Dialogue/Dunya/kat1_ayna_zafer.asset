@@ -15,17 +15,11 @@ MonoBehaviour:
   lines:
   - speaker: {fileID: 0}
     text: "B\xF6r\xFChan korkular\u0131n\u0131n \xFCstesinden geldi. Kopya bir ayna gibi parampar\xE7a oldu ve kristal tozlara d\xF6n\xFC\u015Ft\xFC."
+    voice: {fileID: 8300000, guid: 589f65c5e198866b29f39cda72840416, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 0}
-    text: "B\xF6r\xFChan k\u0131l\u0131c\u0131n\u0131 tozlara saplayarak kal\u0131nt\u0131n\u0131n \xF6z\xFCn\xFC i\xE7ine ald\u0131."
-    duration: 0
-    setFlag: ayna_sicramasi
-  - speaker: {fileID: 0}
-    text: "AYNA SI\xC7RAMASI \u2014 Ka\xE7\u0131\u015F tu\u015Fu (Shift) art\u0131k seni k\u0131sa bir mesafe ileri \u0131\u015F\u0131nlar. Daha uza\u011Fa gitmez, ama \xE7ukurlar\u0131n \xFCzerinden ge\xE7ebilirsin."
-    duration: 0
-    setFlag: 
-  - speaker: {fileID: 0}
-    text: "Kumlar\u0131n ortas\u0131nda, a\u015Fa\u011F\u0131ya inen bir yar\u0131k a\xE7\u0131ld\u0131."
+    text: "Tozlar\u0131n aras\u0131nda parlayan bir \u015Fey kald\u0131."
+    voice: {fileID: 8300000, guid: 6581b936d90ebe378897d012847c15b2, type: 3}
     duration: 0
     setFlag: 

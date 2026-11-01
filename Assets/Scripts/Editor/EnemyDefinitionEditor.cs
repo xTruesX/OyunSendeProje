@@ -43,6 +43,8 @@ namespace Boruhan.EditorTools
             serializedObject.Update();
             DrawPropertiesExcluding(serializedObject, "m_Script", "abilities");
             serializedObject.ApplyModifiedProperties();
+            if (def.animations == null && def.sprite != null && GUILayout.Button("Animasyon Seti Oluştur (sprite'tan yer tutucu)"))
+                AnimationKit.CreateForEnemy(def);
 
             EditorGUILayout.Space(10);
             EditorGUILayout.LabelField($"Hareket Seti ({def.abilities.Count})", EditorStyles.boldLabel);

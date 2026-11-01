@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Boruhan.Animations;
 using Boruhan.Dialogue;
 using Boruhan.Gameplay;
 using Boruhan.UI;
@@ -19,6 +20,7 @@ namespace Boruhan.Combat
         [SerializeField] SpriteRenderer bodyRenderer;
 
         Rigidbody2D body;
+        CharacterAnimator animator;
         float[] readyAt;
         Coroutine action;
         readonly List<GameObject> temporary = new List<GameObject>();
@@ -46,6 +48,10 @@ namespace Boruhan.Combat
         public bool IsStaggered => Time.time < staggerUntil;
         /// <summary>Enemies this one has summoned (Çağırma).</summary>
         public List<EnemyController> Minions { get; } = new List<EnemyController>();
+        /// <summary>Dropped on death with DropChance (summons set this). Not dropped when an illusion just fades.</summary>
+        public HealthOrb DropOnDeath { get; set; }
+        public float DropChance { get; set; }
+        bool expired;
 
         /// <summary>Creates an enemy at runtime (used for summons).</summary>
         public static EnemyController Spawn(EnemyDefinition definition, Vector2 position)
@@ -105,6 +111,7 @@ namespace Boruhan.Combat
                 return;
             }
 
+            SetupAnimator();
             Health.Setup(Team.Enemy, definition.maxHealth);
             Health.AddFilter(FilterDamage);
             Health.Damaged += OnDamaged;
@@ -157,6 +164,19 @@ namespace Boruhan.Combat
             }
         }
 
+        /// <summary>Plays the definition's Animasyon Seti on the body sprite (an animator already on it is kept).</summary>
+        void SetupAnimator()
+        {
+            if (bodyRenderer == null)
+                return;
+            animator = bodyRenderer.GetComponent<CharacterAnimator>();
+            if (definition.animations == null)
+                return;
+            if (animator == null)
+                animator = bodyRenderer.gameObject.AddComponent<CharacterAnimator>();
+            animator.Setup(definition.animations, definition.sprite);
+        }
+
         // ---------------- Brain ----------------
 
         void Update()
@@ -203,8 +223,12 @@ namespace Boruhan.Combat
             if (aggro)
                 return;
             aggro = true;
-            if (definition.isBoss && !IsIllusion && BossHealthBar.Instance != null)
-                BossHealthBar.Instance.Show(this);
+            if (definition.isBoss && !IsIllusion)
+            {
+                BossFight.Begin(this);
+                if (BossHealthBar.Instance != null)
+                    BossHealthBar.Instance.Show(this);
+            }
         }
 
         int ChooseAbility()
@@ -244,6 +268,8 @@ namespace Boruhan.Combat
         {
             var ability = definition.abilities[index];
             velocity = Vector2.zero;
+            if (animator != null)
+                animator.PlayAction(ability.animationState, float.PositiveInfinity, ability.customAnimation);
             yield return ability.Perform(this);
             readyAt[index] = Time.time + ability.cooldown;
             EndAction();
@@ -319,6 +345,8 @@ namespace Boruhan.Combat
         {
             Aggro();
             Flash(Color.white, 0.08f);
+            if (animator != null)
+                animator.PlayHurt();
 
             var push = (Position - info.source);
             push = push.sqrMagnitude > 0.0001f ? push.normalized : Vector2.up;
@@ -371,19 +399,31 @@ namespace Boruhan.Combat
             Reflecting = false;
             velocity = Vector2.zero;
             SetAlpha(1f);
+            if (animator != null)
+                animator.StopAction();
         }
+
+        void OnDestroy() => BossFight.End(this);
 
         void OnDied()
         {
+            BossFight.End(this);
             Interrupt();
             foreach (var col in GetComponents<Collider2D>())
                 col.enabled = false;
+            if (animator != null)
+                animator.PlayDeath();
+            if (DropOnDeath != null && !expired && Random.value < DropChance)
+                DropOnDeath.Drop(BodyCenter);
             StartCoroutine(DeathRoutine());
         }
 
         IEnumerator DeathRoutine()
         {
             CombatFx.Burst(CombatFx.Circle, BodyCenter, 0.5f, 2.2f, new Color(tint.r, tint.g, tint.b, 0.8f), 0.4f);
+            // Let the Ölüm animation play out before fading.
+            if (animator != null && animator.DeathDuration > 0f)
+                yield return Wait(animator.DeathDuration);
             for (float t = 0f; t < 0.4f; t += Time.deltaTime)
             {
                 SetAlpha(1f - t / 0.4f);
@@ -415,6 +455,7 @@ namespace Boruhan.Combat
         IEnumerator Expire(float lifetime)
         {
             yield return Wait(lifetime);
+            expired = true;
             if (!Health.IsDead)
                 Health.Damage(new DamageInfo { amount = 999f, source = Position });
         }
@@ -492,7 +533,13 @@ namespace Boruhan.Combat
                 c = Color.Lerp(tint, new Color(1f, 0.9f, 0.4f), 0.5f);
             c.a *= alpha;
             bodyRenderer.color = c;
-            if (Player != null)
+            if (animator != null)
+            {
+                animator.Staggered = IsStaggered;
+                if (Player != null)
+                    animator.Facing = DirectionToPlayer;
+            }
+            else if (Player != null)
                 bodyRenderer.flipX = Player.transform.position.x < transform.position.x;
         }
 

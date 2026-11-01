@@ -15,29 +15,36 @@ MonoBehaviour:
   lines:
   - speaker: {fileID: 0}
     text: "Yar\u0131k, B\xF6r\xFChan'\u0131n arkas\u0131ndan kapand\u0131."
+    voice: {fileID: 8300000, guid: 761be48ce4e4b89b8b542347cb1c316e, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 0}
     text: "Cehennemin ilk kat\u0131ndayd\u0131: Yalanlar ve S\u0131rlar \xC7\xF6l\xFC."
+    voice: {fileID: 8300000, guid: 2147ab54ad6405f57b642ceb0be77b0e, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 0}
     text: "Buras\u0131, yery\xFCz\xFCndeyken birbirine ihanet etmi\u015F, dostunu s\u0131rt\u0131ndan vurmu\u015F ya da s\u0131r saklay\u0131p g\xFCveni zedelemi\u015F ruhlar\u0131n cezaland\u0131r\u0131ld\u0131\u011F\u0131 yerdi."
+    voice: {fileID: 8300000, guid: d8f66de991a91704db924dc77e7aabdd, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 0}
     text: "\xC7\xF6l\xFCn r\xFCzg\xE2r\u0131, insan\u0131n kula\u011F\u0131na en g\xFCvendi\u011Fi ki\u015Filerin sesleriyle f\u0131s\u0131ldar; yalanlar\u0131, iftiralar\u0131 ve \u015F\xFCpheyi b\xFCy\xFCterek kalbi kurutur."
+    voice: {fileID: 8300000, guid: fba8b0e5d397fde698d301f6eb1480d5, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 11400000, guid: 84ebdd9607b946e368d16726ebe1701c, type: 2}
     text: "\xDClgen Han seni ger\xE7ekten evlad\u0131 olarak m\u0131 sevdi... yoksa seni kendi b\xFCy\xFCk plan\u0131 i\xE7in bir ara\xE7 m\u0131 yapt\u0131?"
+    voice: {fileID: 8300000, guid: 97b874291a87383528d32eb509e77fcb, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 11400000, guid: 84ebdd9607b946e368d16726ebe1701c, type: 2}
     text: "Ya bir g\xFCn seni y\xFCz\xFCst\xFC b\u0131rak\u0131rsa?"
+    voice: {fileID: 8300000, guid: 295588a6cfa1a5913b59d938ac6def6b, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 11400000, guid: 1b85c12ef309323b2bffc83efae91dcb, type: 2}
     text: "Susun... Onu tan\u0131yorum. Sizi dinlemeyece\u011Fim."
+    voice: {fileID: 8300000, guid: 1f3c745182fb1b01db669c74a4368cbc, type: 3}
     duration: 0
     setFlag: 

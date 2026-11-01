@@ -15,5 +15,6 @@ MonoBehaviour:
   lines:
   - speaker: {fileID: 11400000, guid: 1b85c12ef309323b2bffc83efae91dcb, type: 2}
     text: "Buraya kadar geldim. \xD6nce onunla konu\u015Fmal\u0131y\u0131m."
+    voice: {fileID: 8300000, guid: be9bf560544993adda766490edd312c8, type: 3}
     duration: 0
     setFlag: 

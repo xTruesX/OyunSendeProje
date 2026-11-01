@@ -15,17 +15,21 @@ MonoBehaviour:
   lines:
   - speaker: {fileID: 0}
     text: "\u0130kisi birlikte yery\xFCz\xFCne d\xF6nd\xFC."
+    voice: {fileID: 8300000, guid: 25d3d80db6118c4bfa62d9de10347ae5, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 0}
     text: "Aradan uzun zaman ge\xE7ti."
+    voice: {fileID: 8300000, guid: 04598b99bce25098489e5280a8d7df83, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 0}
     text: "\xDClgen Han iyile\u015Fti; eskisinden de g\xFC\xE7l\xFC, eskisinden de parlak."
+    voice: {fileID: 8300000, guid: 3ea117383c0416fafaa38fcb83067ab3, type: 3}
     duration: 0
     setFlag: 
   - speaker: {fileID: 0}
     text: "\u0130yilik k\xF6t\xFCl\xFC\u011F\xFCn \xFCstesinden gelmi\u015F, mutlak denge yeniden sa\u011Flanm\u0131\u015Ft\u0131."
+    voice: {fileID: 8300000, guid: 66edc49610c076c5889559176860ac0b, type: 3}
     duration: 0
     setFlag: oyun_bitti
